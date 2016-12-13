@@ -1,0 +1,176 @@
+/**
+ * 3.2 - Header
+ */
+// @package Album
+
+.masthead {
+
+	padding: ( $grid-line-height * 2 ) ( $grid-gutter );
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.branding {
+
+		/*@replace fade-in 1.2s, slide-from-right 1.2s*/
+		@include animation( #{fade-in 1.2s, slide-from-left 1.2s} );
+
+		.custom-logo-link {
+
+			float: left;
+			margin-right: $style-element-spacing;
+			margin-left: 0;
+
+			img {
+
+				max-height: 3rem;
+				width: auto;
+				display: block;
+
+			}
+
+		}
+
+		.site-name {
+
+			float: left;
+
+		}
+
+		.site-title {
+
+			font-family: $font-family-header;
+			@include modular-scale( epsilon );
+			font-weight: bold;
+			margin: 0;
+			display: block;
+
+		}
+
+		.site-description {
+
+			font-family: $font-family-header;
+			@include modular-scale( eta );
+			margin: 0;
+			dipslay: block;
+
+		}
+
+	}
+
+	// align, menu color
+	@include display-menu( right, $canvas-grey-10 );
+
+	.menu {
+
+		/*@replace fade-in 1.2s, slide-from-left 1.2s*/
+		@include animation( #{fade-in 1.2s, slide-from-right 1.2s} );
+
+		a {
+
+
+		}
+
+		li {
+
+			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 3 );
+
+			&.search {
+
+				padding-left: $grid-gutter / 3;
+				padding-right: 0;
+
+				button {
+
+					background: transparent;
+					color: $canvas-grey-100;
+					line-height: 1;
+					padding: 0;
+					vertical-align: middle;
+
+				}
+
+				svg {
+
+					height: 1em;
+					width: 1em;
+
+				}
+
+			}
+
+			&.menu-item-has-children > a,
+			> a {
+
+				padding: 0;
+
+			}
+
+			> a {
+
+				color: $canvas-grey-100;
+
+				&:hover {
+
+					@include border-hover;
+
+				}
+
+			}
+
+			&.menu-item-has-children {
+
+				padding-right: $grid-gutter;
+
+				> a:after {
+
+					right: -1.2rem;
+					left: auto;
+
+				}
+
+			}
+
+			ul {
+
+				li {
+
+					a {
+
+						&:hover {
+
+							box-shadow: none;
+
+						}
+
+					}
+
+				}
+
+			}
+
+			&.current-menu-item > a {
+
+				font-weight: bold;
+				text-decoration: none;
+
+			}
+
+		}
+
+	}
+
+}
+
+a.header-image {
+
+	display: block;
+
+	img {
+
+		display: block;
+		margin: 0 auto;
+
+	}
+
+}

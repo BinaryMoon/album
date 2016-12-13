@@ -1,0 +1,105 @@
+/**
+ * 3.5 - Footer
+ */
+// @package Album
+
+#footer {
+
+	padding: $grid-line-height ( $grid-gutter / 2 ) 0 ( $grid-gutter / 2 );
+
+	&:empty {
+
+		display: none;
+
+	}
+
+	&:before {
+
+		@include title-border( #{calc( 100% - 3rem )} );
+		margin: ( $grid-line-height * 2 ) ( $grid-gutter / 2 );
+
+	}
+
+	.footer-widgets {
+
+		margin-bottom: $grid-line-height * 3;
+		width: 100%;
+		@include clear;
+
+		.grid-sizer {
+
+			width: $album-footer-widget-width;
+
+		}
+
+		.widget {
+
+			float: left;
+			padding: $grid-line-height ( $grid-gutter / 2 );
+			width: $album-footer-widget-width;
+
+			.widget-title {
+
+				&:after {
+
+					display: none;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.credits {
+
+	background: $canvas-grey-10;
+	padding: ( $grid-line-height * 2 ) $grid-gutter;
+	@include clear;
+
+	.sep {
+
+		margin: 0 $style-spacing;
+		opacity: $style-opacity-separator;
+
+	}
+
+	.footer-wrap {
+
+		float: left;
+
+		a {
+
+			&:hover {
+
+				@include border-hover;
+
+			}
+
+		}
+
+	}
+
+	.jetpack-social-navigation {
+
+		float: right;
+		margin: 0;
+
+		ul {
+
+			margin: 0;
+
+		}
+
+		li {
+
+			margin: 0 ( $grid-gutter / 6 );
+
+		}
+
+	}
+
+}

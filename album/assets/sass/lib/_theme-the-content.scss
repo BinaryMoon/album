@@ -1,0 +1,15 @@
+/**
+ * 3.7 - The Content
+ * Styles for blog post content
+ * Includes special styles such as drop caps, and intro text
+ */
+// @package Album
+
+.the-content {
+
+	@include clear;
+	margin-bottom: $grid-line-height;
+
+	@include the-content();
+
+}
