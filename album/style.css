@@ -2616,6 +2616,7 @@ a:hover img {
   /*@replace fade-in 1.2s, slide-from-right 1.2s*/
   -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
           animation: fade-in 1.2s, slide-from-left 1.2s;
+  min-width: 25%;
 }
 
 .masthead .branding .custom-logo-link {
@@ -2987,7 +2988,6 @@ body.single #site-content {
   width: 25%;
   padding-right: 2%;
   padding-left: 0;
-  opacity: 0.6;
 }
 
 .content-posts article .post-meta-data .meta {
@@ -2998,6 +2998,10 @@ body.single #site-content {
   font-size: 17px;
   font-size: 1.0625rem;
   line-height: 1.75;
+}
+
+.content-posts article .post-meta-data .posted-on {
+  opacity: 0.6;
 }
 
 .content-posts article .entry {

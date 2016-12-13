@@ -14,6 +14,7 @@
 
 		/*@replace fade-in 1.2s, slide-from-right 1.2s*/
 		@include animation( #{fade-in 1.2s, slide-from-left 1.2s} );
+		min-width: 25%;
 
 		.custom-logo-link {
 

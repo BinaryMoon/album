@@ -33,12 +33,25 @@
 
 	<div class="entry">
 
-		<?php if ( is_page() ) { album_breadcrumbs(); } ?>
+<?php
+	if ( is_page() ) {
+		album_breadcrumbs();
+	}
 
+	if ( ! is_singular() || is_front_page() ) {
+?>
 		<a href="<?php the_permalink(); ?>" rel="bookmark">
-			<?php the_title( '<' . $title_tag . ' class="entry-title">', '</' . $title_tag . '>' ); ?>
-		</a>
+<?php
+	}
 
+	the_title( '<' . $title_tag . ' class="entry-title">', '</' . $title_tag . '>' );
+
+	if ( ! is_singular() || is_front_page() ) {
+?>
+		</a>
+<?php
+	}
+?>
 	</div>
 
 	<?php get_template_part( 'parts/edit-post' ); ?>
