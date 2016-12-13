@@ -2987,6 +2987,7 @@ body.single #site-content {
   width: 25%;
   padding-right: 2%;
   padding-left: 0;
+  opacity: 0.6;
 }
 
 .content-posts article .post-meta-data .meta {
