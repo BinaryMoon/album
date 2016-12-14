@@ -408,21 +408,68 @@
 
 					e.preventDefault();
 
+					// Add styles to filter links.
 					var $this = $( this );
 					var $parent = $this.parent();
 
 					$parent.find( 'a' ).removeClass( 'current-page' );
 					$this.addClass( 'current-page' );
 
+					// Get selected tag to filter.
 					var tag = $this.data( 'tag' );
 
-					$( '.content-projects' ).find( 'article' ).removeClass( 'disabled' );
+					/**
+					 * Filter the items.
+					 */
 
-					if ( 'all' !== tag ) {
-						$( '.content-projects .jetpack-portfolio-type-' + tag ).addClass( 'disabled' );
-					}
+					// Grab a list of all items to iterate through.
+					var items = $grid.masonry( 'getItemElements' );
 
-					$grid.masonry( 'reloadItems' );
+					// Items to reveal.
+					var reveal_items = [];
+
+					// Items to hide.
+					var hide_items = [];
+
+					// Tag to search for.
+					var new_tag = 'jetpack-portfolio-type-' + tag;
+
+					// Loop through items.
+					$.each(
+						items,
+						function( i ) {
+							// Store item to reference later.
+							var item = items[i];
+
+							// Get jquery version of item.
+							var $element = $( item );
+
+							// Is it the selected item or should we force it to be displayed.
+							if ( $element.hasClass( new_tag ) || 'album-show-all' === tag ) {
+								// Only display if currently invisble.
+								if ( ! $element.is( ':visible' ) ) {
+									// Make sure it's positioned with masonry.
+									$grid.masonry( 'unignore', item );
+									// Add to the reveal list.
+									reveal_items.push( item );
+								}
+							} else {
+								// Only hide if currently visible.
+								if ( $element.is( ':visible' ) ) {
+									// Remove from masonry layout.
+									$grid.masonry( 'ignore', item );
+									// Add to hide list.
+									hide_items.push( item );
+								}
+							}
+						}
+					);
+
+					// Hide items not in filter.
+					$grid.masonry( 'hideItemElements', hide_items );
+					// Display items to be shown.
+					$grid.masonry( 'revealItemElements', reveal_items );
+					// Do layout again.
 					$grid.masonry( 'layout' );
 
 				}

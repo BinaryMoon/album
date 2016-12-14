@@ -413,7 +413,7 @@ function album_project_terms() {
 			<?php esc_html_e( 'Categories', 'album' ); ?>
 		</strong>
 
-		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>" data-tag="all"><?php esc_html_e( 'All', 'album' ); ?></a>
+		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>" data-tag="album-show-all"><?php esc_html_e( 'All', 'album' ); ?></a>
 
 <?php
 		foreach ( $terms as $t ) {
