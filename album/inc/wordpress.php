@@ -36,7 +36,7 @@ function album_enqueue() {
 
 	// Javascript.
 	// Always loaded in customizer for cases where widgets are added to an empty sidebar.
-	if ( is_active_sidebar( 'sidebar-2' ) || ! is_singular() || is_customize_preview() ) {
+	if ( is_active_sidebar( 'sidebar-2' ) || is_page_template( 'templates/portfolio-page.php' ) || is_customize_preview() ) {
 		wp_enqueue_script( 'masonry' );
 	}
 
