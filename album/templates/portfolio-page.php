@@ -30,12 +30,13 @@
 
 			the_title( '<h1 class="entry-title">', '</h1>' );
 
+			if ( get_the_content() ) {
 ?>
 			<div class="entry">
 				<?php the_content(); ?>
 			</div>
 <?php
-
+			}
 		}
 	}
 ?>
