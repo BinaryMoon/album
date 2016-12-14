@@ -500,8 +500,8 @@ h3 {
 }
 
 h1 {
-  font-size: 55.25px;
-  font-size: 3.45312rem;
+  font-size: 62.00002px;
+  font-size: 3.875rem;
   line-height: 1.25;
 }
 
@@ -2626,7 +2626,7 @@ a:hover img {
 }
 
 .masthead .branding .custom-logo-link img {
-  max-height: 3rem;
+  max-height: 4.5rem;
   width: auto;
   display: block;
 }
@@ -3070,8 +3070,8 @@ body.single #site-content {
 
 /* single post and page */
 .content-single article .entry-title {
-  font-size: 55.25px;
-  font-size: 3.45312rem;
+  font-size: 62.00002px;
+  font-size: 3.875rem;
   line-height: 1.25;
   font-weight: lighter;
 }
@@ -3332,7 +3332,7 @@ body.single #site-content {
 }
 
 .jetpack-projects-page .content-projects-header {
-  padding: 12% 0;
+  padding: 12% 0 13% 0;
   -webkit-animation: slide-from-left 1.2s;
           animation: slide-from-left 1.2s;
 }
@@ -3354,8 +3354,8 @@ body.single #site-content {
 }
 
 .jetpack-projects-page .content-projects-header h1.entry-title {
-  font-size: 55.25px;
-  font-size: 3.45312rem;
+  font-size: 62.00002px;
+  font-size: 3.875rem;
   line-height: 1.25;
   font-weight: lighter;
 }
@@ -3429,10 +3429,6 @@ body.single #site-content {
 .jetpack-projects-page .content-projects {
   width: calc( 80% + 3rem);
   float: left;
-}
-
-.jetpack-projects-page .content-projects article.disabled {
-  display: none;
 }
 
 .jetpack-projects-archive {
@@ -3642,8 +3638,8 @@ a.thumbnail img {
 }
 
 .post-cover .entry .entry-title {
-  font-size: 55.25px;
-  font-size: 3.45312rem;
+  font-size: 62.00002px;
+  font-size: 3.875rem;
   line-height: 1.25;
   font-weight: lighter;
   max-width: 48rem;
