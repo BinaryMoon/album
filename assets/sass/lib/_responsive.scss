@@ -1,0 +1,81 @@
+// @package Album
+
+@media only screen and ( max-width: 1200px ) {
+
+	html {
+
+		font-size: ( ( $font-size * 1 ) * 1% );
+
+	}
+
+}
+
+
+@media only screen and ( max-width: 899px ) {
+
+	html {
+
+		font-size: ( ( $font-size * 0.95 ) * 1% );
+
+	}
+
+}
+
+
+@media only screen and ( max-width: $wp-responsive-width-2 ) {
+
+	.masthead {
+
+		.menu ul.menu-wrap {
+
+			background: rgba( $canvas-grey-90, 0.9 );
+			padding: ( $grid-line-height * 4 ) ( $grid-gutter );
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			li {
+
+				display: block;
+				text-align: center;
+
+				a {
+
+					color: $canvas-white;
+					display: inline;
+
+				}
+
+			}
+
+		}
+		//@include display-menu-responsive();
+
+	}
+
+	html {
+
+		font-size: ( ( $font-size * 0.9 ) * 1% );
+
+	}
+
+}
+
+
+@media only screen and ( max-width: $wp-responsive-width-1 ) {
+
+	html {
+
+		font-size: ( ( $font-size * 0.85 ) * 1% );
+
+	}
+
+	.widget {
+
+		width: 100%;
+
+	}
+
+}
