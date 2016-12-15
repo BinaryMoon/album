@@ -41,14 +41,6 @@
 					margin-left: 0.5em;
 					margin-right: 0;
 
-					.menu-rows-1,
-					.menu-rows-2,
-					.menu-rows-3 {
-
-						@include transition;
-
-					}
-
 				}
 
 			}
@@ -124,7 +116,22 @@
 				.icon {
 
 					.menu-rows-1 {
-						transform: rotate3d(0, 0, 1, 45deg);
+
+						transform: rotate3d(0, 0, 1, 45deg) translate3d( 22%, 220%, 0 );
+
+					}
+
+					.menu-rows-2 {
+
+						transform: scale3d(0, 0, 1);
+						opacity: 0;
+
+					}
+
+					.menu-rows-3 {
+
+						transform: rotate3d(0, 0, 1, -45deg) translate3d( 22%, -220%, 0 );
+
 					}
 				}
 

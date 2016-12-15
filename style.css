@@ -2819,6 +2819,23 @@ a:hover img {
           animation: fade-in 1.2s, slide-from-right 1.2s;
 }
 
+.masthead .menu .menu-toggle .icon .menu-rows-1,
+.masthead .menu .menu-toggle .icon .menu-rows-2,
+.masthead .menu .menu-toggle .icon .menu-rows-3 {
+  -webkit-transform: rotate3d(0, 0, 1, 0) translate3d(0, 0, 0);
+          transform: rotate3d(0, 0, 1, 0) translate3d(0, 0, 0);
+  opacity: 1;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.device-click .masthead .menu .menu-toggle .icon .menu-rows-1, .device-click
+.masthead .menu .menu-toggle .icon .menu-rows-2, .device-click
+.masthead .menu .menu-toggle .icon .menu-rows-3 {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
 .masthead .menu li {
   padding: 0.75rem 1rem;
 }
@@ -4297,12 +4314,6 @@ blockquote {
     margin-left: 0.5em;
     margin-right: 0;
   }
-  .device-click .masthead .menu .menu-toggle .icon .menu-rows-1, .device-click
-  .masthead .menu .menu-toggle .icon .menu-rows-2, .device-click
-  .masthead .menu .menu-toggle .icon .menu-rows-3 {
-    -webkit-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
-  }
   .masthead .menu ul.menu-wrap {
     background: rgba(26, 27, 29, 0.95);
     padding: 6rem 3rem;
@@ -4349,8 +4360,17 @@ blockquote {
     margin: 0;
   }
   .masthead .menu.menu-on .icon .menu-rows-1 {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-            transform: rotate3d(0, 0, 1, 45deg);
+    -webkit-transform: rotate3d(0, 0, 1, 45deg) translate3d(22%, 220%, 0);
+            transform: rotate3d(0, 0, 1, 45deg) translate3d(22%, 220%, 0);
+  }
+  .masthead .menu.menu-on .icon .menu-rows-2 {
+    -webkit-transform: scale3d(0, 0, 1);
+            transform: scale3d(0, 0, 1);
+    opacity: 0;
+  }
+  .masthead .menu.menu-on .icon .menu-rows-3 {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(22%, -220%, 0);
+            transform: rotate3d(0, 0, 1, -45deg) translate3d(22%, -220%, 0);
   }
   .masthead .menu ul ul li.focus > ul,
   .masthead .menu ul ul li:hover > ul {

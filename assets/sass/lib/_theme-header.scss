@@ -72,6 +72,25 @@
 
 		}
 
+		.menu-toggle {
+
+			.icon {
+
+				.menu-rows-1,
+				.menu-rows-2,
+				.menu-rows-3 {
+
+					@include transition;
+					transform: rotate3d( 0, 0, 1, 0 ) translate3d( 0, 0, 0 );
+					opacity: 1;
+					transform-origin: center center;
+
+				}
+
+			}
+
+		}
+
 		li {
 
 			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 3 );
