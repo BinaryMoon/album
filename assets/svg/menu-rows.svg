@@ -1,1 +1,5 @@
-<svg aria-hidden="true" role="img" class="icon" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M2 4h28v4H2V4zm0 10h28v4H2v-4zm0 10h28v4H2v-4z"  fill-rule="evenodd"/></svg>
+<svg aria-hidden="true" role="img" class="icon" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+	<rect class="menu-rows-1" width="28" height="3" x="2" y="6"></rect>
+	<rect class="menu-rows-3" width="28" height="3" x="2" y="15"></rect>
+	<rect class="menu-rows-4" width="28" height="3" x="2" y="24"></rect>
+</svg>

@@ -26,35 +26,145 @@
 
 	.masthead {
 
-		.menu ul.menu-wrap {
+		.menu {
 
-			background: rgba( $canvas-grey-90, 0.9 );
-			padding: ( $grid-line-height * 4 ) ( $grid-gutter );
-			position: fixed;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-
-			li {
+			.menu-toggle {
 
 				display: block;
-				text-align: center;
+				color: $canvas-grey-80;
+				position: relative;
+				z-index: layer( menu_toggle );
 
-				a {
+				.icon {
 
-					color: $canvas-white;
-					display: inline;
+					vertical-align: middle;
+					margin-left: 0.5em;
+					margin-right: 0;
+
+					.menu-rows-1,
+					.menu-rows-2,
+					.menu-rows-3 {
+
+						@include transition;
+
+					}
 
 				}
 
 			}
 
+			ul.menu-wrap {
+
+				background: rgba( $canvas-grey-90, 0.95 );
+				padding: ( $grid-line-height * 4 ) ( $grid-gutter );
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				overflow: auto;
+				display: none;
+
+				li {
+
+					display: block;
+					text-align: center;
+					padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+
+					a {
+
+						color: $canvas-white;
+						display: inline-block;
+						@include modular-scale( epsilon );
+
+					}
+
+					ul {
+
+						position: relative;
+						width: auto;
+						left: 0;
+						right: 0;
+						display: block;
+						background: rgba( $canvas-grey-70, 0.4 );
+
+						a {
+
+							&:hover {
+
+								color: $canvas-white;
+								@include border-hover;
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+			&.menu-on {
+
+				ul.menu-wrap {
+
+					display: block;
+					@include animation( #{fade-in 0.8s, slide-from-top 0.8s} )
+
+				}
+
+				.menu-toggle {
+
+					color: $canvas-white;
+					margin: 0;
+
+				}
+
+				.icon {
+
+					.menu-rows-1 {
+						transform: rotate3d(0, 0, 1, 45deg);
+					}
+				}
+
+			}
+
+			ul ul li.focus > ul,
+			ul ul li:hover > ul {
+
+				left: 0;
+				right: 0;
+
+			}
+
+			li.menu-item-has-children {
+
+				padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+
+				> a {
+
+					margin-bottom: $grid-line-height / 2;
+
+					&:after {
+
+						display: none;
+
+					}
+
+				}
+
+			}
+
+			li.search button {
+
+				color: $canvas-white;
+
+			}
+
 		}
-		//@include display-menu-responsive();
 
 	}
-
 	html {
 
 		font-size: ( ( $font-size * 0.9 ) * 1% );

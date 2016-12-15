@@ -4,6 +4,17 @@
  */
 // @package Album
 
+
+body {
+
+	&.menu-on {
+
+		overflow: hidden;
+
+	}
+
+}
+
 /* layout */
 main {
 

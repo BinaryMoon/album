@@ -333,6 +333,7 @@
 					var $this = $( this );
 
 					$parent.toggleClass( 'menu-on' );
+					$( 'body' ).toggleClass( 'menu-on' );
 
 					// Menu is shown.
 					if ( $parent.hasClass( 'menu-on' ) ) {

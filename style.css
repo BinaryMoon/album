@@ -2886,6 +2886,10 @@ a.header-image img {
  * 3.3 - Body
  * Site content, blog posts etc
  */
+body.menu-on {
+  overflow: hidden;
+}
+
 /* layout */
 main {
   width: 66.66667%;
@@ -3875,7 +3879,7 @@ a.thumbnail img {
 }
 
 .modal {
-  background: rgba(26, 27, 29, 0.9);
+  background: rgba(26, 27, 29, 0.95);
   padding: 6rem 3rem;
   -webkit-box-pack: center;
      -moz-box-pack: center;
@@ -4282,22 +4286,88 @@ blockquote {
 }
 
 @media only screen and (max-width: 782px) {
+  .masthead .menu .menu-toggle {
+    display: block;
+    color: #43444b;
+    position: relative;
+    z-index: 101;
+  }
+  .masthead .menu .menu-toggle .icon {
+    vertical-align: middle;
+    margin-left: 0.5em;
+    margin-right: 0;
+  }
+  .device-click .masthead .menu .menu-toggle .icon .menu-rows-1, .device-click
+  .masthead .menu .menu-toggle .icon .menu-rows-2, .device-click
+  .masthead .menu .menu-toggle .icon .menu-rows-3 {
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
   .masthead .menu ul.menu-wrap {
-    background: rgba(26, 27, 29, 0.9);
+    background: rgba(26, 27, 29, 0.95);
     padding: 6rem 3rem;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    overflow: auto;
+    display: none;
   }
   .masthead .menu ul.menu-wrap li {
     display: block;
     text-align: center;
+    padding: 0.75rem 1.5rem;
   }
   .masthead .menu ul.menu-wrap li a {
     color: #FFFFFF;
-    display: inline;
+    display: inline-block;
+    font-size: 21.25px;
+    font-size: 1.32812rem;
+    line-height: 1.5;
+  }
+  .masthead .menu ul.menu-wrap li ul {
+    position: relative;
+    width: auto;
+    left: 0;
+    right: 0;
+    display: block;
+    background: rgba(87, 94, 106, 0.4);
+  }
+  .masthead .menu ul.menu-wrap li ul a:hover {
+    color: #FFFFFF;
+    box-shadow: inset 0 -8px 0 #58C6FF;
+    text-decoration: none;
+  }
+  .masthead .menu.menu-on ul.menu-wrap {
+    display: block;
+    -webkit-animation: fade-in 0.8s, slide-from-top 0.8s;
+            animation: fade-in 0.8s, slide-from-top 0.8s;
+  }
+  .masthead .menu.menu-on .menu-toggle {
+    color: #FFFFFF;
+    margin: 0;
+  }
+  .masthead .menu.menu-on .icon .menu-rows-1 {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+            transform: rotate3d(0, 0, 1, 45deg);
+  }
+  .masthead .menu ul ul li.focus > ul,
+  .masthead .menu ul ul li:hover > ul {
+    left: 0;
+    right: 0;
+  }
+  .masthead .menu li.menu-item-has-children {
+    padding: 0.75rem 1.5rem;
+  }
+  .masthead .menu li.menu-item-has-children > a {
+    margin-bottom: 0.75rem;
+  }
+  .masthead .menu li.menu-item-has-children > a:after {
+    display: none;
+  }
+  .masthead .menu li.search button {
+    color: #FFFFFF;
   }
   html {
     font-size: 95.625%;
