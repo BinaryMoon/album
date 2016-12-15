@@ -67,12 +67,23 @@
 		/*@replace fade-in 1.2s, slide-from-left 1.2s*/
 		@include animation( #{fade-in 1.2s, slide-from-right 1.2s} );
 
-		a {
-
-
-		}
-
 		li {
+
+			li {
+				line-height: 1.35;
+				&:hover {
+					background-color: #fff;
+					@include transition( all 0.15s ease-in-out );
+				}
+			}
+
+
+			&:hover {
+				cursor: pointer;
+				a {
+					text-decoration: none !important
+				}
+			}
 
 			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 3 );
 
@@ -125,8 +136,10 @@
 
 				> a:after {
 
-					right: -1.2rem;
+					right: -1rem;
+					opacity: .7;
 					left: auto;
+					font-size: .75rem;
 
 				}
 
