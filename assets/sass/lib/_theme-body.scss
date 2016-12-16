@@ -284,6 +284,12 @@ main {
 			margin-bottom: $grid-line-height * 2;
 			@include animation( fade-in 1.2s );
 
+			@include for-tablet() {
+
+				padding-bottom: ( $album-cover-height + 14 );
+
+			}
+
 		}
 
 	}

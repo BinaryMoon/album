@@ -5,7 +5,7 @@
 
 .masthead {
 
-	padding: ( $grid-line-height * 2 ) ( $grid-gutter );
+	padding: ( $grid-line-height * 2 ) grid-gutter( 12 );
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

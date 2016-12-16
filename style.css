@@ -2606,7 +2606,7 @@ a:hover img {
  * 3.2 - Header
  */
 .masthead {
-  padding: 3rem 3rem;
+  padding: 3rem 4.16667%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3156,6 +3156,12 @@ body.single #site-content {
   margin-bottom: 3rem;
   -webkit-animation: fade-in 1.2s;
           animation: fade-in 1.2s;
+}
+
+@media only screen and (max-width: 782px) {
+  .content-single article .entry-header {
+    padding-bottom: 50%;
+  }
 }
 
 /* comments layout */
