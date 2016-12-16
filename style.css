@@ -3707,7 +3707,7 @@ a.thumbnail img {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 3rem 2.25rem 3rem;
+  padding: 0 4.16667% 2.25rem 4.16667%;
 }
 
 .post-cover .entry .entry-title {
@@ -3727,6 +3727,23 @@ a.thumbnail img {
   width: 2rem;
   height: 0.25rem;
   margin-top: 0.75rem;
+}
+
+@media only screen and (max-width: 782px) {
+  .post-cover .entry .entry-title {
+    font-size: 29.75px;
+    font-size: 1.85938rem;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .post-cover .entry .entry-title {
+    margin-bottom: 0;
+  }
+  .post-cover .entry .entry-title:after {
+    display: none;
+  }
 }
 
 .post-cover .entry .entry-breadcrumbs .current-page,

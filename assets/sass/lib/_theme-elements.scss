@@ -521,7 +521,7 @@ a.thumbnail {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 0 $grid-gutter ( $grid-line-height * 1.5 ) $grid-gutter;
+		padding: 0 grid-gutter( 12 ) ( $grid-line-height * 1.5 ) grid-gutter( 12 );
 
 		.entry-title {
 
@@ -537,6 +537,23 @@ a.thumbnail {
 
 			}
 
+			@include for-tablet() {
+
+				@include modular-scale( delta );
+
+			}
+
+			@include for-phone() {
+
+				margin-bottom: 0;
+
+				&:after {
+
+					display: none;
+
+				}
+
+			}
 		}
 
 		.entry-breadcrumbs {
