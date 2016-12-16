@@ -2927,6 +2927,12 @@ main.full-width .the-content {
   padding: 0 4.16667%;
 }
 
+@media only screen and (max-width: 782px) {
+  main.full-width .the-content {
+    width: 100%;
+  }
+}
+
 main.full-width .taxonomies,
 main.full-width div.sharedaddy {
   width: 25%;
@@ -2934,6 +2940,13 @@ main.full-width div.sharedaddy {
   min-height: 1em;
   padding: 0 4.16667%;
   clear: none;
+}
+
+@media only screen and (max-width: 782px) {
+  main.full-width .taxonomies,
+  main.full-width div.sharedaddy {
+    width: 100%;
+  }
 }
 
 main.full-width div#jp-relatedposts {
@@ -3052,9 +3065,21 @@ body.single #site-content {
   opacity: 0.6;
 }
 
+@media only screen and (max-width: 782px) {
+  .content-posts article .post-meta-data {
+    display: none;
+  }
+}
+
 .content-posts article .entry {
   float: right;
   width: 75%;
+}
+
+@media only screen and (max-width: 782px) {
+  .content-posts article .entry {
+    width: 100%;
+  }
 }
 
 .content-posts article .thumbnail {

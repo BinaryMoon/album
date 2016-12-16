@@ -29,6 +29,12 @@ main {
 
 			@include grid( 9 );
 
+			@include for-tablet() {
+
+				width: 100%;
+
+			}
+
 		}
 
 		.taxonomies,
@@ -36,6 +42,12 @@ main {
 
 			@include grid( 3 );
 			clear: none;
+
+			@include for-tablet() {
+
+				width: 100%;
+
+			}
 
 		}
 
@@ -149,12 +161,24 @@ main {
 
 			}
 
+			@include for-tablet() {
+
+				display: none;
+
+			}
+
 		}
 
 		.entry {
 
 			float: right;
 			width: 75%;
+
+			@include for-tablet() {
+
+				width: 100%;
+
+			}
 
 		}
 

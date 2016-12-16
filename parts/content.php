@@ -25,9 +25,6 @@
 
 <?php
 	}
-
-	get_template_part( 'parts/post-meta' );
-
 ?>
 
 	<section class="entry entry-archive">
@@ -43,5 +40,11 @@
 		<p><a href="<?php the_permalink(); ?>" class="read-more"><?php album_read_more_text(); ?></a></p>
 
 	</section>
+
+<?php
+
+	get_template_part( 'parts/post-meta' );
+
+?>
 
 </article>
