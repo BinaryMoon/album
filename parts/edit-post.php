@@ -14,6 +14,6 @@
 			wp_kses( __( 'Edit<span class="screen-reader-text"> %s</span>', 'album' ), array( 'span' => array( 'class' => array() ) ) ),
 			get_the_title()
 		),
-		'<span class="edit-link meta">',
+		'&nbsp;&nbsp;<span class="edit-link meta">',
 		'</span>'
 	);
