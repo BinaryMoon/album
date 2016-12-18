@@ -71,6 +71,7 @@
 
 			li {
 				line-height: 1.35;
+
 				&:hover {
 					background-color: #fff;
 					@include transition( all 0.15s ease-in-out );
@@ -86,6 +87,7 @@
 			}
 
 			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 3 );
+			padding-left:1.3rem;
 
 			&.search {
 
