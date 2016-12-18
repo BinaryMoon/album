@@ -2543,9 +2543,13 @@ main {
 
 /* post thumbnails generic styles */
 a.thumbnail {
-  display: block; }
+  display: block;
+  background: #43444b; }
   a.thumbnail img {
+    opacity: .91;
     display: block; }
+    a.thumbnail img:hover {
+      opacity: 1; }
 
 /* breadcrumbs */
 .entry-breadcrumbs {
@@ -3017,6 +3021,9 @@ form.search-form {
 
 #jp-relatedposts .jp-relatedposts-post-context {
   display: none; }
+
+.jetpack-projects-page .projects-terms a.current-page {
+  outline: none; }
 
 blockquote {
   border-left: 1px solid #BfC1CC; }

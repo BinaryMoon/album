@@ -371,10 +371,15 @@
 a.thumbnail {
 
 	display:block;
+	background: rgba(67,68,75, 1);
 
 	img {
-
+		opacity:.91;
 		display:block;
+
+		&:hover {
+			opacity: 1;
+		}
 
 	}
 
