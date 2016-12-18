@@ -2067,7 +2067,10 @@ a {
           color: #000000;
           line-height: 1;
           padding: 0;
-          vertical-align: middle; }
+          vertical-align: middle;
+          opacity: .7; }
+          .masthead .menu li.search button:hover {
+            opacity: 1; }
         .masthead .menu li.search svg {
           height: 1em;
           width: 1em; }
