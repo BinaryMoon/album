@@ -103,6 +103,5 @@
 
 	<div class="container" id="site-content">
 <?php
-	album_header();
 
 	get_template_part( 'parts/jetpack-featured-content' );

@@ -11,41 +11,6 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-/**
- * Display header image and link to homepage.
- *
- * On singular pages display featured image if it is large enough to fill the
- * space.
- */
-function album_header() {
-
-	$header_image = get_header_image();
-	$header_image_width = get_theme_support( 'custom-header', 'width' );
-	$header_image_actual_width = get_custom_header()->width;
-	$header_image_actual_height = get_custom_header()->height;
-
-	// Use custom headers on singular pages, but only if the image is large enough.
-	if ( is_singular() ) {
-
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'album-header' );
-
-		if ( ! empty( $image ) && $image[1] >= $header_image_width ) {
-			$header_image = $image[0];
-			$header_image_actual_width = $image[1];
-			$header_image_actual_height = $image[2];
-		}
-	}
-
-	if ( ! empty( $header_image ) ) {
-?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="header-image">
-			<img src="<?php echo esc_url( $header_image ); ?>" width="<?php echo (int) $header_image_actual_width; ?>" height="<?php echo (int) $header_image_actual_height; ?>" alt="" />
-		</a>
-<?php
-	}
-
-}
-
 
 /**
  * Display the post time in a human readable format.
