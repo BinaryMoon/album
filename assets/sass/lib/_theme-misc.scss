@@ -40,6 +40,34 @@ blockquote {
 
 }
 
+.comment-form-comment textarea {
+	background: #fff;
+	border:none;
+	padding:1rem;
+}
+
+input[type=submit], a.button, button {
+	font-family: $font-family-header;
+	padding:.8rem 1.6rem;
+	letter-spacing: 0.05em;
+}
+
+main.full-width .the-content {
+	max-width: 60rem;
+	float:none;
+	margin:0 auto;
+}
+
+.gallery .gallery-item img {
+	opacity: 1;
+}
+
+.the-content .gallery-item a {
+	border:none;
+	box-shadow: none;
+}
+
+
 .category-description {
 
 	&:after {
