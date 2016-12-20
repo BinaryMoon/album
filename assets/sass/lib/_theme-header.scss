@@ -53,7 +53,8 @@
 			font-family: $font-family-header;
 			@include modular-scale( eta );
 			margin: 0;
-			dipslay: block;
+			display: block;
+			opacity: .6
 
 		}
 

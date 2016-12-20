@@ -1942,7 +1942,8 @@ a {
       font-size: 0.79688rem;
       line-height: 1.75;
       margin: 0;
-      dipslay: block; }
+      display: block;
+      opacity: 0.6; }
   .masthead .menu {
     position: relative;
     text-align: right; }
