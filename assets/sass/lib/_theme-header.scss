@@ -68,6 +68,8 @@
 		@include animation( #{fade-in 1.2s, slide-from-right 1.2s} );
 
 		li {
+			margin-left: .5rem;
+			margin-right: .5rem;
 
 			li {
 				line-height: 1.35;

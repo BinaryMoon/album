@@ -2047,6 +2047,8 @@ a {
     /*@replace fade-in 1.2s, slide-from-left 1.2s*/
     animation: fade-in 1.2s, slide-from-right 1.2s; }
     .masthead .menu li {
+      margin-left: .5rem;
+      margin-right: .5rem;
       padding: 0.75rem 1rem;
       padding-left: 1.3rem; }
       .masthead .menu li li {
@@ -2536,7 +2538,7 @@ main {
       font-size: 1.32813rem;
       line-height: 1.5;
       line-height: 1.2;
-      margin: 12px 0 4px; }
+      margin: 12px 0 2px; }
     .content-projects article .thumbnail {
       margin-bottom: 0.375rem; }
     .content-projects article .entry,
@@ -2846,7 +2848,10 @@ a.thumbnail {
     position: absolute;
     top: 3rem;
     right: 3rem;
-    left: auto; }
+    left: auto;
+    color: #b6b6b6; }
+    .modal button.close:hover {
+      color: #fff; }
   .modal form {
     max-width: 28rem; }
   .modal.display {
