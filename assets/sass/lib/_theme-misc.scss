@@ -58,6 +58,10 @@ main.full-width .the-content {
 	margin:0 auto;
 }
 
+.gallery .gallery-item {
+	margin-top: 1rem;
+}
+
 .gallery .gallery-item img {
 	opacity: 1;
 }
@@ -67,6 +71,9 @@ main.full-width .the-content {
 	box-shadow: none;
 }
 
+p {
+	line-height: 1.6;
+}
 
 .category-description {
 
