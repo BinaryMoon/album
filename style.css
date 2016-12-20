@@ -2677,7 +2677,8 @@ a.thumbnail {
       line-height: 1.25;
       font-weight: lighter;
       max-width: 48rem;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      line-height: 1.05; }
       .post-cover .entry .entry-title:after {
         display: block;
         clear: both;
@@ -2685,7 +2686,7 @@ a.thumbnail {
         background: #BfC1CC;
         width: 2rem;
         height: 0.25rem;
-        margin-top: 0.75rem; }
+        margin-top: 1.5rem; }
     .post-cover .entry .entry-breadcrumbs .current-page,
     .post-cover .entry .entry-breadcrumbs a {
       color: #FFFFFF; }

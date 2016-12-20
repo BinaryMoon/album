@@ -534,11 +534,12 @@ a.thumbnail {
 			font-weight: lighter;
 			max-width: 48rem;
 			color: $canvas-white;
+			line-height: 1.05;
 
 			&:after {
 
 				@include title-border;
-				margin-top: $grid-line-height / 2;
+				margin-top: $grid-line-height;
 
 			}
 
