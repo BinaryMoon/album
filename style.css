@@ -2161,7 +2161,7 @@ main {
       padding: 0 4.16667%; } }
 
 #site-content {
-  margin-top: 3rem; }
+  margin: 3rem 0; }
   body.page-template-portfolio-page #site-content, body.themes-has-featured-posts #site-content, body.single #site-content {
     margin-top: 0; }
 
