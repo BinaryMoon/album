@@ -209,7 +209,6 @@
 		h1.entry-title {
 
 			@include modular-scale( beta );
-			font-weight: lighter;
 
 			&:after {
 
@@ -354,6 +353,12 @@
 		.post-meta-data {
 
 			opacity: $style-opacity-element;
+
+			.meta {
+
+				display: block;
+
+			}
 
 			.post-lead-category {
 

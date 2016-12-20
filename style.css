@@ -3436,7 +3436,6 @@ body.single #site-content {
   font-size: 62.00002px;
   font-size: 3.875rem;
   line-height: 1.25;
-  font-weight: lighter;
 }
 
 .jetpack-projects-page .content-projects-header h1.entry-title:after {
@@ -3553,6 +3552,10 @@ body.single #site-content {
 
 .content-projects article .post-meta-data {
   opacity: 0.6;
+}
+
+.content-projects article .post-meta-data .meta {
+  display: block;
 }
 
 .content-projects article .post-meta-data .post-lead-category {
