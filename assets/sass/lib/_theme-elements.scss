@@ -324,7 +324,7 @@
 
 			@include modular-scale( epsilon );
 			line-height: 1.2;
-			margin:12px 0 4px
+			margin:12px 0 2px
 		}
 
 		.thumbnail {
@@ -797,6 +797,10 @@ form.search-form {
 		top: $grid-line-height * 2;
 		right: $grid-gutter;
 		left: auto;
+		color:#b6b6b6;
+		&:hover {
+			color: #fff;
+		}
 
 	}
 
