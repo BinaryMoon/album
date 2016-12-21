@@ -53,7 +53,7 @@
 			font-family: $font-family-header;
 			@include modular-scale( eta );
 			margin: 0;
-			dipslay: block;
+			display: block;
 
 		}
 
@@ -66,11 +66,6 @@
 
 		/*@replace fade-in 1.2s, slide-from-left 1.2s*/
 		@include animation( #{fade-in 1.2s, slide-from-right 1.2s} );
-
-		a {
-
-
-		}
 
 		.menu-toggle {
 
@@ -93,7 +88,13 @@
 
 		li {
 
-			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 3 );
+			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+
+			&:hover {
+
+				cursor: pointer;
+
+			}
 
 			&.search {
 
@@ -107,6 +108,13 @@
 					line-height: 1;
 					padding: 0;
 					vertical-align: middle;
+					opacity: $style-opacity-element;
+
+					&:hover {
+
+						opacity: 1;
+
+					}
 
 				}
 
@@ -144,8 +152,10 @@
 
 				> a:after {
 
-					right: -1.2rem;
+					right: -1rem;
 					left: auto;
+					opacity: $style-opacity-element;
+					font-size: 0.75rem;
 
 				}
 
@@ -155,13 +165,23 @@
 
 				li {
 
+					line-height: 1.35;
+					@include transition( all 0.2s ease-in-out );
+
 					a {
 
 						&:hover {
 
+							text-decoration: none;
 							box-shadow: none;
 
 						}
+
+					}
+
+					&:hover {
+
+						background-color: $canvas-white;
 
 					}
 
@@ -173,6 +193,7 @@
 
 				font-weight: bold;
 				text-decoration: none;
+				@include border-hover;
 
 			}
 

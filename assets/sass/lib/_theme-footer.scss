@@ -79,7 +79,7 @@
 .credits {
 
 	background: $canvas-grey-10;
-	padding: ( $grid-line-height * 2 ) $grid-gutter;
+	padding: ( $grid-line-height * 3 ) $grid-gutter ( $grid-line-height * 2 ) $grid-gutter;
 	@include clear;
 
 	.sep {

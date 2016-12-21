@@ -13,6 +13,13 @@ body {
 
 	}
 
+
+	p {
+
+		line-height: 1.6;
+
+	}
+
 }
 
 /* layout */
@@ -87,7 +94,7 @@ main {
 
 #site-content {
 
-	margin-top: $grid-line-height * 2;
+	margin: ( $grid-line-height * 2 ) 0;
 
 	// Remove on these pages.
 	body.page-template-portfolio-page &,

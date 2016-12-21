@@ -248,6 +248,7 @@
 			margin-left: 1em;
 			line-height: 2.5;
 			opacity: $style-opacity-element;
+			outline: none;
 
 			&.current-page {
 
@@ -322,7 +323,7 @@
 
 			@include modular-scale( epsilon );
 			line-height: 1.2;
-			margin: 12px 0 4px 0;
+			margin: ( $grid-line-height / 2 ) 0 ( $grid-line-height / 6 ) 0;
 
 		}
 
@@ -375,11 +376,20 @@
 /* post thumbnails generic styles */
 a.thumbnail {
 
-	display:block;
+	display: block;
+	background: $canvas-grey-90;
 
 	img {
 
-		display:block;
+		display: block;
+		opacity: 0.9;
+		margin: 0 auto;
+
+		&:hover {
+
+			opacity: 1;
+
+		}
 
 	}
 
@@ -534,11 +544,12 @@ a.thumbnail {
 			font-weight: lighter;
 			max-width: 48rem;
 			color: $canvas-white;
+			line-height: 1.05;
 
 			&:after {
 
 				@include title-border;
-				margin-top: $grid-line-height / 2;
+				margin-top: $grid-line-height;
 
 			}
 
