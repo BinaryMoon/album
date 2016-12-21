@@ -2219,7 +2219,8 @@ main {
     .content-posts article .post-meta-data .post-lead-category {
       font-size: 17px;
       font-size: 1.0625rem;
-      line-height: 1.75; }
+      line-height: 1.75;
+      margin: 1px 0 -4px; }
     .content-posts article .post-meta-data .posted-on {
       opacity: 0.6; }
   .content-posts article .entry {
@@ -2353,7 +2354,7 @@ main {
     padding: 0 0.375em;
     display: inline-block; }
   .pagination span.current {
-    background: #58C6FF;
+    border: 1px solid #333;
     color: #000000; }
 
 /* blog post contributor/ author */
@@ -2926,6 +2927,9 @@ form.search-form {
       #footer .footer-widgets .widget,
       #footer .footer-widgets .grid-sizer {
         width: 100%; } }
+
+.widget {
+  color: #5d5e63; }
 
 .credits {
   background: #E8E9EE;
