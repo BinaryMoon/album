@@ -3533,7 +3533,8 @@ body.single #site-content {
   font-size: 21.25px;
   font-size: 1.32812rem;
   line-height: 1.5;
-  margin-bottom: 0;
+  line-height: 1.2;
+  margin: 12px 0 4px 0;
 }
 
 .content-projects article .thumbnail {
