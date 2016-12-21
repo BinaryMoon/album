@@ -125,7 +125,7 @@ function album_get_featured_posts() {
  */
 function album_has_featured_posts( $minimum = 1 ) {
 
-	if ( ! is_front_page() ) {
+	if ( ! is_front_page() && ! is_home() ) {
 		return false;
 	}
 

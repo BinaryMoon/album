@@ -37,7 +37,6 @@
 
 	<header class="masthead" id="header" role="banner">
 
-
 		<div class="branding">
 <?php
 	the_custom_logo();
