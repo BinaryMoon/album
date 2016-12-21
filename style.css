@@ -2913,6 +2913,10 @@ a:hover img {
   background-color: #FFFFFF;
 }
 
+.masthead .menu li ul li.current-menu-item > a {
+  box-shadow: none;
+}
+
 .masthead .menu li.current-menu-item > a {
   font-weight: bold;
   text-decoration: none;
