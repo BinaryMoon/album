@@ -2893,7 +2893,7 @@ form.search-form {
  * 3.5 - Footer
  */
 #footer {
-  padding: 0 3rem; }
+  padding: 3rem; }
   #footer:empty {
     display: none; }
   #footer:before {
