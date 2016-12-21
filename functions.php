@@ -17,10 +17,12 @@
 /**
  * TODO TO FINISH THE BUILD
  * ---
- * Projects layout
  * Sort out page template
  * single post meta in the sidebar
  * responsive layout
+ * pagination styles
+ * can we make the projects page display a loading spinner before displaying masonry layout?
+ * Use header image as default post-cover background?
  *
  * Waiting on Darren for Design
  * ---
@@ -79,9 +81,6 @@ include( 'inc/jetpack.php' );
 
 // Wordpress.com specific functionality.
 include( 'inc/wpcom.php' );
-
-// Custom Custmomizer controls.
-include( 'inc/class-custom-controls.php' );
 
 // Customizer controls for setting theme properties.
 include( 'inc/customizer.php' );
