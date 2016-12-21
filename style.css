@@ -2453,7 +2453,7 @@ main {
 .jetpack-projects-page {
   width: 100%; }
   .jetpack-projects-page .content-projects-header {
-    padding: 12% 0 13% 0;
+    padding: 14% 0 13%;
     animation: slide-from-left 1.2s; }
     .jetpack-projects-page .content-projects-header .entry,
     .jetpack-projects-page .content-projects-header h1.entry-title {
@@ -2930,6 +2930,10 @@ form.search-form {
 
 .widget {
   color: #5d5e63; }
+
+.sidebar-main .widget {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px 35px; }
 
 .credits {
   background: #E8E9EE;
