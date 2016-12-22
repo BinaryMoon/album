@@ -123,15 +123,22 @@ function album_get_featured_posts() {
  * @param integer $minimum Minimum number of posts to return. If there's less than this return false.
  * @return boolean True if has featured posts, otherwise false.
  */
-function album_has_featured_posts( $minimum = 1 ) {
+  function album_has_featured_posts( $minimum = 1 ) {
 
-	if ( ! is_front_page() && ! is_home() ) {
-		return false;
-	}
+ 	// Only show if on the front page or the blog page.
+  	if ( ! is_front_page() && ! is_home() ) {
+  		return false;
+  	}
 
-	if ( is_paged() ) {
+ 	// Disable featured content on the portfolio template.
+ 	if ( is_page_template( 'templates/portfolio-page.php' ) ) {
 		return false;
-	}
+ 	}
+
+	// Don't show if not on the first page.
+  	if ( is_paged() ) {
+  		return false;
+  	}
 
 	$minimum = absint( $minimum );
 	$featured_posts = apply_filters( 'album_get_featured_posts', array() );
