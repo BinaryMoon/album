@@ -486,14 +486,16 @@ a.thumbnail {
 
 		.tab {
 
-			display: block;
-			width: 1em;
-			height: 1em;
 			background: $canvas-grey-100;
-			float: left;
 			margin: $style-spacing;
 			padding: 0;
 			border: none;
+			width:.3em;
+			height: .3em;
+			display: inline-block;
+			top:450px;
+			position: relative;
+			border-radius: 100%;
 
 			&.selected {
 
@@ -506,6 +508,32 @@ a.thumbnail {
 	}
 
 }
+
+
+.showcase {
+	.arrow {
+		margin-top:15%;
+		background: transparent;
+		outline:none;
+		opacity: 0;
+		transition: .3s;
+	}
+	button {
+		outline:none;
+	}
+	nav {
+		text-align: center;
+	}
+	&:hover {
+		.arrow {
+			opacity:.82;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
 
 .post-cover {
 
