@@ -125,20 +125,20 @@ function album_get_featured_posts() {
  */
   function album_has_featured_posts( $minimum = 1 ) {
 
- 	// Only show if on the front page or the blog page.
-  	if ( ! is_front_page() && ! is_home() ) {
-  		return false;
-  	}
-
- 	// Disable featured content on the portfolio template.
- 	if ( is_page_template( 'templates/portfolio-page.php' ) ) {
+	// Only show if on the front page or the blog page.
+	if ( ! is_front_page() && ! is_home() ) {
 		return false;
- 	}
+	}
+
+	// Disable featured content on the portfolio template.
+	if ( is_page_template( 'templates/portfolio-page.php' ) ) {
+		return false;
+	}
 
 	// Don't show if not on the first page.
-  	if ( is_paged() ) {
-  		return false;
-  	}
+	if ( is_paged() ) {
+		return false;
+ 	}
 
 	$minimum = absint( $minimum );
 	$featured_posts = apply_filters( 'album_get_featured_posts', array() );
