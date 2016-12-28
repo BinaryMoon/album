@@ -23,6 +23,7 @@
  * pagination styles
  * can we make the projects page display a loading spinner before displaying masonry layout?
  * Use header image as default post-cover background?
+ * https://docs.google.com/document/d/1wN2-hK93sqVpMnRXX2D7iHyqJTP2D1410nqqNpebiz0/edit?ts=585b6301
  *
  * Waiting on Darren for Design
  * ---
