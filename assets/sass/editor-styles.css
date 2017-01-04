@@ -3,7 +3,7 @@ body#tinymce.wp-editor {
   font-size: 1.0625rem;
   line-height: 1.75;
   font-weight: normal;
-  font-family: "Inconsolata", courier;
+  font-family: "Roboto Mono", courier;
   color: #252628;
   direction: ltr;
   font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
@@ -21,7 +21,7 @@ body#tinymce.wp-editor html {
   font-size: 1.0625rem;
   line-height: 1.75;
   font-weight: normal;
-  font-family: "Inconsolata", courier;
+  font-family: "Roboto Mono", courier;
   color: #252628;
   direction: ltr;
   font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
@@ -173,7 +173,7 @@ body#tinymce.wp-editor .intro {
 
 body#tinymce.wp-editor .drop-cap {
   float: left;
-  font-family: "Inconsolata", courier;
+  font-family: "Roboto Mono", courier;
   font-weight: bold;
   margin: 0 0.05em 0 -0.2em;
   font-size: 68px;
