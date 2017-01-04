@@ -47,15 +47,6 @@ main {
 		.taxonomies,
 		div.sharedaddy {
 
-			@include grid( 3 );
-			clear: none;
-
-			@include for-tablet() {
-
-				width: 100%;
-
-			}
-
 		}
 
 		div#jp-relatedposts {
@@ -94,7 +85,7 @@ main {
 
 #site-content {
 
-	margin: ( $grid-line-height * 2 ) 0;
+	margin: ( $grid-line-height * 2 ) auto;
 
 	// Remove on these pages.
 	body.page-template-portfolio-page &,
