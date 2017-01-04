@@ -32,7 +32,13 @@
 		return;
 	}
 
-	if ( is_active_sidebar( 'sidebar-1' ) ) {
+	if ( is_page() ) {
+		return;
+	}
+
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		return;
+	}
 ?>
 
 <!-- Sidebar Main (1) -->
@@ -45,6 +51,3 @@
 ?>
 
 </aside>
-
-<?php
-	}
