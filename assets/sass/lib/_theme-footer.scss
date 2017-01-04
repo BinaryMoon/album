@@ -38,16 +38,6 @@
 			padding: $grid-line-height ( $grid-gutter / 2 );
 			width: $album-footer-widget-width;
 
-			.widget-title {
-
-				&:after {
-
-					display: none;
-
-				}
-
-			}
-
 		}
 
 		@include for-tablet {
