@@ -18,10 +18,6 @@
 
 <?php
 	get_template_part( 'parts/post-cover' );
-
-	//album_breadcrumbs();
-
-	//get_template_part( 'parts/post-meta' );
 ?>
 
 	</header>
