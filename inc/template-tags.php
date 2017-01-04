@@ -291,22 +291,19 @@ function album_contributor( $user_id = null, $post_count = null ) {
 		<h2>
 			<a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>" class="author vcard">
 				<?php the_author_meta( 'display_name', $user_id ); ?>
-				<small><?php esc_html_e( 'View All', 'album' ); ?></small>
 			</a>
 		</h2>
+
 <?php
 	echo wpautop( esc_html( get_the_author_meta( 'description', $user_id ) ) ); // WPCS: XSS OK.
+?>
 
-	if ( $post_count ) {
-?>
-		<p>
-			<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
-				<?php printf( esc_html( _nx( '%d Article', '%d Articles', (int) $post_count, 'contributor article count', 'album' ) ), (int) $post_count ); ?>
-			</a>
+		<p class="buttons">
+			<a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>"><?php esc_html_e( 'All Posts &rarr;', 'album' ); ?></a>
+
+			<?php echo album_author_website(); ?>
 		</p>
-<?php
-	}
-?>
+
 	</div>
 <?php
 
@@ -433,5 +430,21 @@ function album_svg( $name, $echo = true ) {
 		return $svg;
 
 	}
+
+}
+
+
+/**
+ * Get a html link that points to the current authors website.
+ *
+ * @return string|false false if no author url found, otherwise a html link that points to the authors specified website.
+ */
+function album_author_website() {
+
+	if ( get_the_author_meta( 'url' ) ) {
+		return '<a href="' . esc_url( get_the_author_meta( 'url' ) ) . '" rel="author external">' . esc_html__( 'Website &rarr;', 'album' ) . '</a>';
+	}
+
+	return false;
 
 }

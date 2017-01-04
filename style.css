@@ -2972,22 +2972,6 @@ main.full-width .the-content {
   }
 }
 
-main.full-width .taxonomies,
-main.full-width div.sharedaddy {
-  width: 25%;
-  float: left;
-  min-height: 1em;
-  padding: 0 4.16667%;
-  clear: none;
-}
-
-@media only screen and (max-width: 782px) {
-  main.full-width .taxonomies,
-  main.full-width div.sharedaddy {
-    width: 100%;
-  }
-}
-
 main.full-width div#jp-relatedposts {
   width: 100%;
   float: left;
@@ -3317,14 +3301,20 @@ body.single #site-content {
 
 /* blog post contributor/ author */
 .contributor {
-  padding: 0 0 0 7.5rem;
+  padding: 1.5rem 3rem 1.5rem 9rem;
   margin: 0 0 4.5rem 0;
-  min-height: 6rem;
+  min-height: 9rem;
   position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  clear: both;
 }
 
 .contributor h2 {
   margin-bottom: 0;
+  font-size: 21.25px;
+  font-size: 1.32812rem;
+  line-height: 1.5;
+  font-weight: bold;
 }
 
 .contributor h2 small {
@@ -3342,8 +3332,35 @@ body.single #site-content {
 .contributor .avatar {
   max-width: 6rem;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: auto;
+}
+
+.contributor .buttons {
+  margin: 0.75rem 0 0 0;
+}
+
+.contributor .buttons a {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  font-weight: bold;
+  color: #252628;
+  border: 0.2em solid #BfC1CC;
+  border-radius: 0.3em;
+  font-size: 12.75px;
+  font-size: 0.79688rem;
+  line-height: 1.75;
+  letter-spacing: 0.08em;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.contributor .buttons a:focus, .contributor .buttons a:hover {
+  background: #575e6a;
+  border-color: #575e6a;
+  color: #FFFFFF;
 }
 
 /* child pages (on child page template) */
@@ -3368,11 +3385,6 @@ body.single #site-content {
 .child-page:nth-child(2n + 1) {
   clear: both;
   padding-left: 0;
-}
-
-/* avatar */
-.avatar {
-  border-radius: 10rem;
 }
 
 /* testimonials */
@@ -3983,8 +3995,7 @@ a.thumbnail img:hover {
 }
 
 .infinite-scroll #infinite-handle button {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding: 0.75rem 1.5rem;
   background: transparent;
   font-weight: bold;
   color: #252628;
@@ -3996,6 +4007,7 @@ a.thumbnail img:hover {
   letter-spacing: 0.08em;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .infinite-scroll #infinite-handle button:focus, .infinite-scroll #infinite-handle button:hover {

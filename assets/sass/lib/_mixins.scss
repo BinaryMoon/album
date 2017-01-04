@@ -67,6 +67,31 @@
 
 }
 
+@mixin button-alt( $size: eta ) {
+
+	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+	background: transparent;
+	font-weight: bold;
+	color: $body-copy-color;
+	border: 0.2em solid $canvas-grey-40;
+	border-radius: 0.3em;
+	@include modular-scale( $size );
+	letter-spacing: 0.08em;
+	font-family: $font-family-sans;
+	text-transform: uppercase;
+	display: inline-block;
+
+	&:focus,
+	&:hover {
+
+		background: $canvas-grey-70;
+		border-color: $canvas-grey-70;
+		color: contrast( $canvas-grey-70 );
+
+	}
+
+}
+
 @mixin separator {
 
 	content: $separator;
