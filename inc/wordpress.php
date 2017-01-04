@@ -121,7 +121,7 @@ function album_fonts() {
 
 	$fonts = array();
 
-	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
+	/* translators: If there are characters in your language that are not supported by Roboto Mono, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== esc_html_x( 'on', 'Roboto Mono: on or off', 'album' ) ) {
 		$fonts['roboto-mono'] = 'Roboto Mono:400,700';
 	}
