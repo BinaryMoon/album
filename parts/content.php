@@ -20,7 +20,7 @@
 ?>
 
 	<a href="<?php echo esc_url( get_permalink() ); ?>" class="thumbnail">
-		<?php echo $image; ?>
+		<?php echo $image; // WPCS: XSS OK. ?>
 	</a>
 
 <?php
