@@ -259,21 +259,6 @@
 			}
 		);
 
-		// Testimonials.
-		$( 'body.archive .testimonials' ).imagesLoaded(
-			function() {
-
-				$( 'body.archive .testimonials' ).masonry(
-					{
-						itemSelector: '.testimonial',
-						gutter: 0,
-						isOriginLeft: ! $( 'body' ).is( '.rtl' )
-					}
-				);
-
-			}
-		);
-
 	};
 
 	/**

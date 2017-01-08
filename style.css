@@ -3446,34 +3446,29 @@ body.single #site-content {
   clear: both;
 }
 
-.content-testimonials .grid-sizer {
-  width: 50%;
-}
-
 .content-testimonials .testimonial {
-  width: 50%;
-  float: left;
-  min-height: 1em;
-  padding: 0 4.16667%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 4.5rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+     -moz-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .content-testimonials .testimonial .entry {
   padding: 0.75rem 1.5rem;
   background: rgba(128, 128, 128, 0.1);
-  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  margin-left: 0;
   position: relative;
-}
-
-.content-testimonials .testimonial .entry:after {
-  position: absolute;
-  border: 0.4em solid transparent;
-  content: "";
-  bottom: -0.4em;
-  left: 50%;
-  margin-left: -0.4em;
-  border-bottom-width: 0;
-  border-top-color: rgba(128, 128, 128, 0.1);
+  -webkit-box-flex: 2;
+     -moz-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 75%;
 }
 
 .content-testimonials .testimonial .entry p {
@@ -3484,6 +3479,29 @@ body.single #site-content {
   margin: 0;
 }
 
+.content-testimonials .testimonial .entry a {
+  color: #58C6FF;
+  font-weight: bold;
+}
+
+.content-testimonials .testimonial:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.content-testimonials .testimonial:nth-child(odd) .entry {
+  margin-right: 0;
+  margin-left: 1.5rem;
+}
+
+.content-testimonials .testimonial .entry-meta {
+  width: 25%;
+}
+
 .content-testimonials .testimonial .entry-meta h3 {
   font-size: 12.75px;
   font-size: 0.79688rem;
@@ -3492,6 +3510,7 @@ body.single #site-content {
   color: #252628;
   display: block;
   text-align: center;
+  margin: 0;
 }
 
 .content-testimonials .testimonial .entry-meta h3 a:hover {
@@ -3501,8 +3520,8 @@ body.single #site-content {
 .content-testimonials .testimonial .entry-meta .avatar {
   border: none;
   display: block;
-  max-height: 4.5rem;
-  width: auto;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto 0.75rem auto;
 }
 
