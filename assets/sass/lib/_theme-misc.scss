@@ -77,3 +77,50 @@ blockquote {
 	}
 
 }
+
+.attachment {
+
+	.image-navigation,
+	.attachment-caption {
+
+		text-align: center;
+		max-width: $grid-total-width / 2;
+		margin: 0 auto ( $grid-line-height * 2 ) auto;
+
+	}
+
+	.attachment-caption {
+
+		@include modular-scale( delta );
+
+	}
+
+	.image-navigation {
+
+		span {
+
+			margin: 0 ( $grid-line-height );
+
+		}
+
+		.nav-parent {
+
+			display: block;
+			font-weight: bold;
+			margin-bottom: $grid-line-height;
+
+		}
+
+		.nav-next,
+		.nav-previous {
+
+			a {
+
+				@include button-alt;
+
+			}
+
+		}
+
+	}
+}

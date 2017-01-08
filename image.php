@@ -19,7 +19,7 @@
 
 ?>
 
-	<main class="main-content content-single" role="main">
+	<main class="main-content content-single full-width" role="main">
 
 <?php
 		while ( have_posts() ) {
@@ -32,8 +32,8 @@
 			<header class="entry-header">
 
 <?php
-			the_title( '<h1 class="entry-title">', '</h1>' );
 			get_template_part( 'parts/post-meta' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
 ?>
 
 			</header>
