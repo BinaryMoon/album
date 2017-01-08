@@ -292,6 +292,18 @@ main {
 
 			}
 
+			.post-meta-data {
+
+				margin-bottom: $grid-line-height / 2;
+
+				span {
+
+					margin: 0 ( $grid-gutter / 3 );
+
+				}
+
+			}
+
 		}
 
 		img.attachment-album-post-cover {
