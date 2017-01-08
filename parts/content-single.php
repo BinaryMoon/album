@@ -16,11 +16,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php the_post_thumbnail( 'album-post-cover' ); ?>
+	<?php the_post_thumbnail( 'album-header' ); ?>
 
 	<header class="entry-header">
 
 <?php
+	get_template_part( 'parts/post-meta' );
 	the_title( '<h1 class="entry-title">', '</h1>' );
 ?>
 
