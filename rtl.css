@@ -119,7 +119,7 @@ a.button,
 button,
 input[type=submit] {
 	border-radius: 0;
-	padding: 0.25rem 1rem;
+	padding: 0.8rem 1.6rem;
 }
 
 .device-click a.button,
@@ -268,7 +268,7 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 .woocommerce input.button {
 	padding: 0.75rem 1.5rem;
 	border-radius: 0;
-	padding: 0.25rem 1rem;
+	padding: 0.8rem 1.6rem;
 }
 
 .device-click .woocommerce #respond input#submit,
@@ -294,7 +294,7 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
 	border-radius: 0;
-	padding: 0.25rem 1rem;
+	padding: 0.8rem 1.6rem;
 }
 
 .device-click .woocommerce #respond input#submit.alt,
@@ -699,7 +699,7 @@ object {
 }
 
 .masthead .menu li {
-	padding: 0.75rem 1rem;
+	padding: 0.75rem 1.5rem;
 }
 
 .masthead .menu li.search {
@@ -716,12 +716,24 @@ object {
 }
 
 .masthead .menu li.menu-item-has-children > a:after {
-	left: -1.2rem;
+	left: -1rem;
 	right: auto;
+}
+
+.device-click .masthead .menu li ul li {
+	transition: all 0.2s ease-in-out;
 }
 
 .masthead .menu li ul li a:hover {
 	box-shadow: none;
+}
+
+.masthead .menu li ul li.current-menu-item > a {
+	box-shadow: none;
+}
+
+.masthead .menu li.current-menu-item > a {
+	box-shadow: inset 0 -8px 0 #58c6ff;
 }
 
 a.header-image img {
@@ -736,13 +748,6 @@ main {
 main.full-width .the-content {
 	float: right;
 	padding: 0 4.16667%;
-}
-
-main.full-width .taxonomies,
-main.full-width div.sharedaddy {
-	float: right;
-	padding: 0 4.16667%;
-	clear: none;
 }
 
 main.full-width div#jp-relatedposts {
@@ -770,6 +775,10 @@ main.full-width div#jp-relatedposts {
 	}
 }
 
+#site-content {
+	margin: 3rem auto;
+}
+
 .content-posts article .post-meta-data {
 	float: right;
 	padding-left: 2%;
@@ -782,7 +791,7 @@ main.full-width div#jp-relatedposts {
 
 .content-posts article .read-more {
 	border-radius: 0;
-	padding: 0.25rem 1rem;
+	padding: 0.8rem 1.6rem;
 }
 
 .device-click .content-posts article .read-more {
@@ -817,12 +826,27 @@ main.full-width div#jp-relatedposts {
 }
 
 .contributor {
-	padding: 0 7.5rem 0 0;
+	padding: 1.5rem 9rem 1.5rem 3rem;
 	margin: 0 0 4.5rem;
 }
 
 .contributor .avatar {
-	right: 0;
+	right: 1.5rem;
+	left: auto;
+}
+
+.contributor .buttons {
+	margin: 0.75rem 0 0;
+}
+
+.contributor .buttons a {
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.3em;
+}
+
+.contributor .buttons a:focus,
+.contributor .buttons a:hover {
+	border-color: #575e6a;
 }
 
 .child-page {
@@ -836,10 +860,6 @@ main.full-width div#jp-relatedposts {
 
 .child-page:nth-child(2n+1) {
 	padding-right: 0;
-}
-
-.avatar {
-	border-radius: 10rem;
 }
 
 .content-testimonials .testimonial {
@@ -903,17 +923,25 @@ main.full-width div#jp-relatedposts {
 	padding: 0 1.5rem;
 }
 
+.content-projects article h2.entry-title {
+	margin: 0.75rem 0 0.25rem;
+}
+
+a.thumbnail img {
+	margin: 0 auto;
+}
+
 .showcase article {
 	right: 0;
 	left: 0;
 }
 
-.showcase .arrow {
-	border-radius: 0;
+.device-click .showcase .arrow {
+	transition: opacity 0.3s ease-in-out;
 }
 
 .showcase .arrow.arrow-next {
-	left: 20px;
+	left: 0;
 }
 
 .showcase .arrow.arrow-next:before {
@@ -926,7 +954,7 @@ main.full-width div#jp-relatedposts {
 }
 
 .showcase .arrow.arrow-prev {
-	right: 20px;
+	right: 0;
 }
 
 .showcase .arrow.arrow-prev:before {
@@ -938,9 +966,14 @@ main.full-width div#jp-relatedposts {
 	margin-right: 29px;
 }
 
+.showcase nav {
+	right: 0;
+	left: 0;
+}
+
 .showcase nav .tab {
-	float: right;
 	margin: 0.5em;
+	border-radius: 100%;
 }
 
 .post-cover,
@@ -962,7 +995,7 @@ main.full-width div#jp-relatedposts {
 .post-cover .edit-link a {
 	left: 3rem;
 	border-radius: 0;
-	padding: 0.25rem 1rem;
+	padding: 0.8rem 1.6rem;
 }
 
 .device-click .post-cover .edit-link a {
@@ -1000,6 +1033,7 @@ main.full-width div#jp-relatedposts {
 }
 
 .infinite-scroll #infinite-handle button {
+	padding: 0.75rem 1.5rem;
 	border-radius: 0.3em;
 }
 
@@ -1058,7 +1092,7 @@ form.search-form button.search-submit {
 }
 
 .credits {
-	padding: 3rem;
+	padding: 4.5rem 3rem 3rem;
 }
 
 .credits .sep {
@@ -1097,7 +1131,7 @@ form.search-form button.search-submit {
 
 .the-content .button {
 	border-radius: 0;
-	padding: 0.25rem 1rem;
+	padding: 0.8rem 1.6rem;
 }
 
 .device-click .the-content .button {
@@ -1115,6 +1149,18 @@ blockquote {
 
 .category-description:after {
 	margin: 0.75rem 0 4.5rem;
+}
+
+.comment-form-comment textarea {
+	padding: 1rem;
+}
+
+main.full-width .the-content {
+	margin: 0 auto;
+}
+
+.gallery .gallery-item a {
+	box-shadow: none;
 }
 
 @media only screen and (max-width:600px) {

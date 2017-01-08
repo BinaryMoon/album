@@ -13,7 +13,6 @@ body {
 
 	}
 
-
 	p {
 
 		line-height: 1.6;
@@ -32,20 +31,22 @@ main {
 		width: 100%;
 		padding: 0;
 
+		.contributor,
+		.taxonomies,
+		div.sharedaddy,
 		.the-content {
 
-			@include grid( 9 );
+			max-width: 45rem;
+			margin-left: auto;
+			margin-right: auto;
+			clear: both;
+			float: none;
 
 			@include for-tablet() {
 
 				width: 100%;
 
 			}
-
-		}
-
-		.taxonomies,
-		div.sharedaddy {
 
 		}
 
@@ -276,11 +277,14 @@ main {
 
 		.entry-header {
 
-			position: relative;
-			height: 0;
-			padding-bottom: $album-cover-height;
 			margin-bottom: $grid-line-height * 2;
-			@include animation( fade-in 1.2s );
+			width: 60rem;
+			text-align: center;
+			padding: ( $grid-line-height * 3 ) ( $grid-gutter * 2 ) ( $grid-line-height * 1 ) ( $grid-gutter * 2 );
+			margin-left: auto;
+			margin-right: auto;
+			background: $canvas-background;
+			z-index: 1;
 
 			@include for-tablet() {
 
@@ -290,7 +294,40 @@ main {
 
 		}
 
+		img.attachment-album-post-cover {
+
+			display: block;
+			margin: 0 auto;
+			@include animation( fade-in 1.2s );
+
+		}
+
+		&.post-has-thumbnail {
+
+			.entry-header {
+
+				margin-top: $grid-line-height * -3;
+				position: relative;
+				z-index: 1;
+
+			}
+
+		}
+
+		&.post-no-thumbnail {
+
+			&:before {
+
+				@include title-border( auto );
+				margin: 0 ( $grid-gutter );
+
+			}
+
+		}
+
 	}
+
+
 
 }
 

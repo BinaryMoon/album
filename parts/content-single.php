@@ -16,10 +16,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php the_post_thumbnail( 'album-post-cover' ); ?>
+
 	<header class="entry-header">
 
 <?php
-	get_template_part( 'parts/post-cover' );
+	the_title( '<h1 class="entry-title">', '</h1>' );
 ?>
 
 	</header>
@@ -27,6 +29,7 @@
 	<section class="entry entry-single">
 
 <?php
+
 	the_content(
 		sprintf(
 			esc_html__( 'Read more %s', 'album' ),
@@ -55,13 +58,18 @@
 </article>
 
 <?php
-	the_post_navigation(
-		array(
-			'next_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Next', 'album' ) . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Next', 'album' ) . '</span> ' .
-				'<span class="post-title">%title</span>',
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Previous', 'album' ) . '</span> ' .
-				'<span class="screen-reader-text">' . esc_html__( 'Previous', 'album' ) . '</span> ' .
-				'<span class="post-title">%title</span>',
-		)
-	);
+
+	if ( ! is_page() ) {
+
+		the_post_navigation(
+			array(
+				'next_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Next', 'album' ) . '</span> ' .
+					'<span class="screen-reader-text">' . esc_html__( 'Next', 'album' ) . '</span> ' .
+					'<span class="post-title">%title</span>',
+				'prev_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Previous', 'album' ) . '</span> ' .
+					'<span class="screen-reader-text">' . esc_html__( 'Previous', 'album' ) . '</span> ' .
+					'<span class="post-title">%title</span>',
+			)
+		);
+
+	}

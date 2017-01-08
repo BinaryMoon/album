@@ -15,7 +15,7 @@
 
 	&:before {
 
-		@include title-border( #{calc( 100% - 3rem )} );
+		@include title-border( auto );
 		margin: ( $grid-line-height * 2 ) ( $grid-gutter / 2 );
 
 	}
