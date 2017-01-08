@@ -62,9 +62,9 @@ $border-width: 1px;
 $border-radius: 0;
 
 $canvas-pre-color: $canvas-color;
-$canvas-pre-background: $canvas-grey-80;
+$canvas-pre-background: $canvas-grey-90;
 
-$form-input-background: transparent;
+$form-input-background: $canvas-white;
 $form-input-border-color: $canvas-grey-30;
 $form-input-border-focus: $canvas-grey-100;
 $form-input-border-width: 0 0 $border-width 0;
