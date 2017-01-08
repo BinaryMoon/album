@@ -20,10 +20,12 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	if ( is_404() ) {
+	// Only display on archives or blog homepage.
+	if ( ! is_archive() && ! is_home() ) {
 		return;
 	}
 
+	// Don't display on portfolio/ projects archives.
 	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
 		return;
 	}
@@ -32,10 +34,7 @@
 		return;
 	}
 
-	if ( is_page() ) {
-		return;
-	}
-
+	// Make sure the sidebar is active.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		return;
 	}

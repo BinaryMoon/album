@@ -39,8 +39,6 @@
 			'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'album' ) . ' </span>%',
 		)
 	);
-
-	get_sidebar();
 ?>
 
 	</section>

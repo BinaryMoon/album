@@ -14,14 +14,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	// Show in footer on all but Singular pages.
-	// Sidebar is also displayed on pages but is included in the
-	// parts/content-single-page.php partial
-	if ( ! is_singular() ) {
-
-		get_sidebar();
-
-	}
+	get_sidebar();
 ?>
 
 	</div>
