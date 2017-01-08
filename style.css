@@ -555,7 +555,7 @@ p:empty {
 
 pre {
   margin: 3rem 0;
-  background: #43444b;
+  background: #1a1b1d;
   color: #58C6FF;
   padding: 1.5rem 1.5rem;
   overflow: auto;
@@ -602,7 +602,7 @@ input.settings-input {
   min-height: 1.5rem;
   width: 100%;
   border-radius: 0;
-  background: transparent;
+  background: #FFFFFF;
   border: 1px solid #b3b3b3;
   border-width: 0 0 1px 0;
 }
@@ -3213,7 +3213,7 @@ body.single #site-content {
   margin: 0 1rem;
 }
 
-.content-single article img.attachment-album-post-cover {
+.content-single article img.attachment-album-header {
   display: block;
   margin: 0 auto;
   -webkit-animation: fade-in 1.2s;
@@ -4068,7 +4068,7 @@ a.thumbnail img:hover {
   font-weight: lighter;
 }
 
-.entry-archive-header .entry-archive-title span {
+.entry-archive-header .entry-archive-title span:not(.vcard) {
   display: block;
   opacity: 0.6;
   font-size: 12.75px;
@@ -4078,7 +4078,7 @@ a.thumbnail img:hover {
   color: #252628;
 }
 
-.entry-archive-header .entry-archive-title span a:hover {
+.entry-archive-header .entry-archive-title span:not(.vcard) a:hover {
   text-decoration: underline;
 }
 
@@ -4437,6 +4437,54 @@ blockquote {
 .gallery .gallery-item a {
   border: none;
   box-shadow: none;
+}
+
+.attachment .image-navigation,
+.attachment .attachment-caption {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto 3rem auto;
+}
+
+.attachment .attachment-caption {
+  font-size: 29.75px;
+  font-size: 1.85938rem;
+  line-height: 1.5;
+}
+
+.attachment .image-navigation span {
+  margin: 0 1.5rem;
+}
+
+.attachment .image-navigation .nav-parent {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.attachment .image-navigation .nav-next a,
+.attachment .image-navigation .nav-previous a {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  font-weight: bold;
+  color: #252628;
+  border: 0.2em solid #BfC1CC;
+  border-radius: 0.3em;
+  font-size: 12.75px;
+  font-size: 0.79688rem;
+  line-height: 1.75;
+  letter-spacing: 0.08em;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.attachment .image-navigation .nav-next a:focus, .attachment .image-navigation .nav-next a:hover,
+.attachment .image-navigation .nav-previous a:focus,
+.attachment .image-navigation .nav-previous a:hover {
+  background: #575e6a;
+  border-color: #575e6a;
+  color: #FFFFFF;
 }
 
 /**!
