@@ -207,7 +207,7 @@ function album_after_setup_theme() {
 	// Image for slider and post/ page headers. This needs to be big because it
 	// will is fixed position with size set to cover, which means it will be
 	// sized to fill the users monitor.
-	add_image_size( 'album-post-cover', 1440, 900, true );
+	add_image_size( 'album-post-cover', 1500, 900, true );
 
 	// Add selective refresh to widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
