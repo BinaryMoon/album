@@ -814,7 +814,7 @@ form.search-form {
 
 		font-weight: lighter;
 
-		span {
+		span:not(.vcard) {
 
 			display: block;
 			opacity: $style-opacity-element;
