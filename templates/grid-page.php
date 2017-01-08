@@ -17,7 +17,7 @@
 	get_template_part( 'parts/featured-content' );
 ?>
 
-	<main role="main">
+	<main role="main" class="full-width">
 
 		<div class="main-content content-single">
 
@@ -38,9 +38,10 @@
 
 <?php
 
-	// List child pages.
+	// Get a list of the children for the current page.
 	$child_pages = album_child_pages();
 
+	// If there are any children then display them below in a grid.
 	if ( $child_pages->have_posts() ) {
 ?>
 
