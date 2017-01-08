@@ -3205,6 +3205,14 @@ body.single #site-content {
   }
 }
 
+.content-single article .entry-header .post-meta-data {
+  margin-bottom: 0.75rem;
+}
+
+.content-single article .entry-header .post-meta-data span {
+  margin: 0 1rem;
+}
+
 .content-single article img.attachment-album-post-cover {
   display: block;
   margin: 0 auto;
