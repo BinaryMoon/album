@@ -20,8 +20,8 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	// Only display on archives or blog homepage.
-	if ( ! is_archive() && ! is_home() ) {
+	// Don't display on single posts/ pages.
+	if ( is_singular() ) {
 		return;
 	}
 
