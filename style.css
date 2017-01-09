@@ -2989,6 +2989,11 @@ main.full-width .the-content {
   }
 }
 
+main.full-width .contributor {
+  padding-left: 9rem;
+  padding-right: 1.5rem;
+}
+
 main.full-width div#jp-relatedposts {
   width: 100%;
   float: left;

@@ -52,6 +52,13 @@ main {
 
 		}
 
+		.contributor {
+
+			padding-left: $grid-gutter * 3;
+			padding-right: $grid-gutter / 2;
+
+		}
+
 		div#jp-relatedposts {
 
 			@include grid( 12 );
