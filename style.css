@@ -3190,7 +3190,8 @@ body.single #site-content {
 
 .content-single article .entry-header {
   margin-bottom: 3rem;
-  width: 60rem;
+  max-width: 60rem;
+  width: 100%;
   text-align: center;
   padding: 4.5rem 6rem 1.5rem 6rem;
   margin-left: auto;
@@ -3201,7 +3202,8 @@ body.single #site-content {
 
 @media only screen and (max-width: 782px) {
   .content-single article .entry-header {
-    padding-bottom: 50%;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 

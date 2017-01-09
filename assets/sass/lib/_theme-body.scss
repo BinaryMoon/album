@@ -278,7 +278,8 @@ main {
 		.entry-header {
 
 			margin-bottom: $grid-line-height * 2;
-			width: 60rem;
+			max-width: 60rem;
+			width: 100%;
 			text-align: center;
 			padding: ( $grid-line-height * 3 ) ( $grid-gutter * 2 ) ( $grid-line-height * 1 ) ( $grid-gutter * 2 );
 			margin-left: auto;
@@ -288,7 +289,8 @@ main {
 
 			@include for-tablet() {
 
-				padding-bottom: ( $album-cover-height + 14 );
+				padding-left: $grid-gutter;
+				padding-right: $grid-gutter;
 
 			}
 
