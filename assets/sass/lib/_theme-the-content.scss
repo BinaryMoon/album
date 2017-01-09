@@ -10,6 +10,36 @@
 	@include clear;
 	margin-bottom: $grid-line-height;
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	> p,
+	ul,
+	ol,
+	dl,
+	.sharedaddy,
+	.PDS_Poll,
+	.contact-form,
+	{
+
+		max-width: $grid-total-width * 0.5;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	ol,
+	ul {
+
+		padding-left: $grid-gutter;
+		padding-right: 0;
+
+	}
+
 	@include the-content();
 
 }

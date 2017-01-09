@@ -36,7 +36,9 @@ main {
 		div.sharedaddy,
 		.the-content {
 
-			max-width: 45rem;
+			max-width: $grid-total-width * 0.7;
+			padding-left: $grid-gutter / 2;
+			padding-right: $grid-gutter / 2;
 			margin-left: auto;
 			margin-right: auto;
 			clear: both;
@@ -351,7 +353,7 @@ main {
 	width: 100%;
 	padding-top: $grid-line-height * $grid-line-height-multiplier;
 	padding-bottom: $grid-line-height * $grid-line-height-multiplier;
-	max-width: $grid-total-width * 0.65;
+	max-width: $grid-total-width * 0.7;
 	margin-left: auto;
 	margin-right: auto;
 	clear: both;
