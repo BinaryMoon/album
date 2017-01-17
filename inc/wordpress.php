@@ -744,3 +744,26 @@ function album_nav_menu_html( $html, $args ) {
 }
 
 add_filter( 'wp_nav_menu', 'album_nav_menu_html', 10, 2 );
+
+
+/**
+ * Display a content intro.
+ *
+ * This is added to a low priority so that it is inserted before the wrapper.
+ *
+ * @param  string $content The post content.
+ * @return string
+ */
+function album_content_intro( $content ) {
+
+	if ( has_excerpt() ) {
+
+		$content = '<p class="intro">' . get_the_excerpt() . '</p>' . $content;
+
+	}
+
+	return $content;
+
+}
+
+add_filter( 'the_content', 'album_content_intro', 8 );
