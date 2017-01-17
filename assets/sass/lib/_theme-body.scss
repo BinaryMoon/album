@@ -195,8 +195,16 @@ main {
 
 		.read-more {
 
-			@include button;
+			@include button(transparent);
+			border:1px solid $canvas-grey-40;
+			color:inherit;
+			@include modular-scale( eta );
+			padding: 20px;
+    	line-height: 0;
 
+			&:hover {
+				background:$canvas-grey-40
+			}
 		}
 
 		h2.entry-title {
