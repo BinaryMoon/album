@@ -81,6 +81,13 @@ main {
 
 	}
 
+	.widget {
+
+		background:rgba( $canvas-white, 0.5 );
+		padding: $grid-line-height ( $grid-gutter * 0.75 );
+
+	}
+
 	@include for-tablet {
 
 		@include grid( 12 );
@@ -195,7 +202,7 @@ main {
 
 		.read-more {
 
-			@include button;
+			@include button( transparent );
 
 		}
 
