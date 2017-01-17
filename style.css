@@ -3049,6 +3049,11 @@ main.full-width .contributor {
   padding: 0 4.16667%;
 }
 
+.sidebar-main .widget {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem 2.25rem;
+}
+
 @media only screen and (max-width: 782px) {
   .sidebar-main {
     width: 100%;
@@ -3159,7 +3164,7 @@ body.single #site-content {
 }
 
 .content-posts article .read-more {
-  background: #43444b;
+  background: transparent;
   color: #FFFFFF;
   display: inline-block;
   text-decoration: none;
@@ -3177,7 +3182,7 @@ body.single #site-content {
 }
 
 .content-posts article .read-more:focus, .content-posts article .read-more:hover {
-  background: #1f1f23;
+  background: transparent;
   color: #FFFFFF;
   text-decoration: none;
   box-shadow: none;
@@ -3838,7 +3843,7 @@ a.thumbnail img:hover {
 }
 
 .showcase .arrow.arrow-next {
-  right: 0;
+  right: 1rem;
 }
 
 .showcase .arrow.arrow-next:before {
@@ -3856,7 +3861,7 @@ a.thumbnail img:hover {
 }
 
 .showcase .arrow.arrow-prev {
-  left: 0;
+  left: 1rem;
 }
 
 .showcase .arrow.arrow-prev:before {
@@ -4057,6 +4062,10 @@ a.thumbnail img:hover {
 }
 
 /* widgets generic styles */
+.widget {
+  color: #575e6a;
+}
+
 .widget .widget-title {
   font-size: 16px;
   font-size: 1rem;
@@ -4347,15 +4356,6 @@ form.search-form button.search-submit {
   #footer .footer-widgets .grid-sizer {
     width: 100%;
   }
-}
-
-.widget {
-  color: #5d5e63;
-}
-
-.sidebar-main .widget {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 25px 35px;
 }
 
 .credits {
