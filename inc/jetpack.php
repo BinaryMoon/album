@@ -360,8 +360,8 @@ function album_video_wrapper( $html ) {
  */
 function album_related_posts_thumbnail_size( $thumbnail_size ) {
 
-	$thumbnail_size['width'] = 500;
-	$thumbnail_size['height'] = 330;
+	$thumbnail_size['width'] = 400;
+	$thumbnail_size['height'] = 300;
 
 	return $thumbnail_size;
 
