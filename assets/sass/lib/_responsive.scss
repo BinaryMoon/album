@@ -82,12 +82,11 @@
 
 						a {
 
-							&:hover {
+							@include border-hover {
 
 								color: $canvas-white;
-								@include border-hover;
 
-							}
+							};
 
 						}
 

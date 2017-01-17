@@ -21,8 +21,8 @@
 	<header class="entry-header">
 
 <?php
-	get_template_part( 'parts/post-meta' );
 	the_title( '<h1 class="entry-title">', '</h1>' );
+	get_template_part( 'parts/post-meta' );
 ?>
 
 	</header>

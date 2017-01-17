@@ -1,6 +1,6 @@
 body#tinymce.wp-editor {
-  font-size: 17px;
-  font-size: 1.0625rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.75;
   font-weight: normal;
   font-family: "Roboto Mono", courier;
@@ -17,8 +17,8 @@ body#tinymce.wp-editor {
 
 body#tinymce.wp-editor body,
 body#tinymce.wp-editor html {
-  font-size: 17px;
-  font-size: 1.0625rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.75;
   font-weight: normal;
   font-family: "Roboto Mono", courier;
@@ -74,34 +74,34 @@ body#tinymce.wp-editor h3 {
 }
 
 body#tinymce.wp-editor h1 {
-  font-size: 62.00002px;
-  font-size: 3.875rem;
+  font-size: 58.35296px;
+  font-size: 3.64706rem;
   line-height: 1.25;
 }
 
 body#tinymce.wp-editor h2 {
-  font-size: 42.5px;
-  font-size: 2.65625rem;
+  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.25;
 }
 
 body#tinymce.wp-editor h3 {
-  font-size: 29.75px;
-  font-size: 1.85938rem;
+  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 1.5;
 }
 
 body#tinymce.wp-editor h4 {
-  font-size: 21.25px;
-  font-size: 1.32812rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.5;
   font-weight: bold;
 }
 
 body#tinymce.wp-editor h5,
 body#tinymce.wp-editor h6 {
-  font-size: 17px;
-  font-size: 1.0625rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.75;
   font-weight: bold;
 }
@@ -160,13 +160,23 @@ body#tinymce.wp-editor a {
 
 body#tinymce.wp-editor a:hover {
   color: #016ba0;
-  box-shadow: inset 0 -8px 0 #58C6FF;
+  background: linear-gradient(transparent 0%, transparent 60%, #58C6FF 60%, #58C6FF 100%);
+  background-position-y: 1em;
+  background-repeat: no-repeat;
+}
+
+.device-click body#tinymce.wp-editor a:hover {
+  transition: background 0.4s ease-in-out;
+}
+
+body#tinymce.wp-editor a:hover:hover {
+  background-position-y: 0;
   text-decoration: none;
 }
 
 body#tinymce.wp-editor .intro {
-  font-size: 21.25px;
-  font-size: 1.32812rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 4.5rem;
 }
@@ -176,8 +186,8 @@ body#tinymce.wp-editor .drop-cap {
   font-family: "Roboto Mono", courier;
   font-weight: bold;
   margin: 0 0.05em 0 -0.2em;
-  font-size: 68px;
-  font-size: 4.25rem;
+  font-size: 64px;
+  font-size: 4rem;
   line-height: 1.25;
   line-height: 0.75;
 }

@@ -85,11 +85,7 @@
 
 		a {
 
-			&:hover {
-
-				@include border-hover;
-
-			}
+			@include border-hover;
 
 		}
 

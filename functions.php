@@ -18,12 +18,10 @@
  * TODO TO FINISH THE BUILD
  * ---
  * Sort out page template
- * single post meta in the sidebar
  * responsive layout
  * pagination styles
  * can we make the projects page display a loading spinner before displaying masonry layout?
- * Use header image as default post-cover background?
- * https://docs.google.com/document/d/1wN2-hK93sqVpMnRXX2D7iHyqJTP2D1410nqqNpebiz0/edit?ts=585b6301
+ * Add 'intro' from custom excerpts
  *
  * Waiting on Darren for Design
  * ---

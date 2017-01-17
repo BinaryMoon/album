@@ -14,6 +14,7 @@
 
 	@include modular-scale( $font-size );
 	font-weight: normal;
+	letter-spacing: 0.05em;
 	color: $body-copy-color;
 
 	a {
@@ -100,21 +101,35 @@
 
 }
 
+$border-hover-background: linear-gradient( transparent 0%, transparent 60%, $canvas-color 60%, $canvas-color 100% );
+
 @mixin border-hover {
 
-	box-shadow: inset 0 -8px 0 $canvas-color;
-	text-decoration: none;
+	background: $border-hover-background;
+	background-position-y: 1em;
+	background-repeat: no-repeat;
+	@include transition( background 0.4s ease-in-out );
+
+	&:hover {
+
+		//box-shadow: inset 0 -8px 0 $canvas-color;
+		background-position-y: 0;
+		text-decoration: none;
+
+		@content;
+
+	}
 
 }
 
-@mixin title-border( $width: 2rem ) {
+@mixin title-border( $width: 2rem, $height: $grid-line-height / 6 ) {
 
 	display: block;
 	clear: both;
 	content: '';
 	background: $canvas-grey-40;
 	width: $width;
-	height: $grid-line-height / 6;
+	height: $height;
 
 }
 

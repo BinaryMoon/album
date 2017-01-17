@@ -32,7 +32,19 @@
 
 blockquote {
 
-	border-left: $border-width solid $canvas-grey-40;
+	@include modular-scale( epsilon );
+	font-style: normal;
+	text-align: center;
+	font-family: $font-family-sans;
+
+	&:after,
+	&:before {
+
+		@include title-border( ( $grid-gutter * 5 ), $border-width );
+		max-width: 50%;
+		margin: ( $grid-line-height * 2 ) auto;
+
+	}
 
 }
 

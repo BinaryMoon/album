@@ -8,10 +8,10 @@
 .taxonomies {
 
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	@include post-meta-data;
 
 	.taxonomy {
 
-		@include modular-scale( eta );
 		margin: 0;
 		color: $canvas-grey-40;
 
@@ -735,11 +735,7 @@ a.thumbnail {
 
 		font-weight: bold;
 
-		&:hover {
-
-			@include border-hover;
-
-		}
+		@include border-hover;
 
 	}
 

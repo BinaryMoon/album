@@ -15,7 +15,7 @@ body {
 
 	p {
 
-		line-height: 1.6;
+		line-height: 1.8;
 
 	}
 
@@ -31,10 +31,7 @@ main {
 		width: 100%;
 		padding: 0;
 
-		.contributor,
-		.taxonomies,
-		div.sharedaddy,
-		.the-content {
+		.entry-single {
 
 			max-width: $grid-total-width * 0.7;
 			padding-left: $grid-gutter / 2;
@@ -52,16 +49,15 @@ main {
 
 		}
 
+		.taxonomies,
+		main div.sharedaddy,
+		div#jp-relatedposts,
 		.contributor {
 
-			padding-left: $grid-gutter * 3;
-			padding-right: $grid-gutter / 2;
-
-		}
-
-		div#jp-relatedposts {
-
-			@include grid( 12 );
+			max-width: $grid-total-width * 0.5;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
 
 		}
 
@@ -210,11 +206,8 @@ main {
 
 			a {
 
-				&:hover {
+				@include border-hover;
 
-					@include border-hover;
-
-				}
 			}
 
 		}
@@ -280,6 +273,8 @@ main {
 			// is a static front page set.
 			@include modular-scale( beta );
 
+			margin-bottom: $grid-line-height / 2;
+
 			font-weight: lighter;
 
 		}
@@ -310,6 +305,12 @@ main {
 				span {
 
 					margin: 0 ( $grid-gutter / 3 );
+
+				}
+
+				.post-lead-category {
+
+					display: none;
 
 				}
 
