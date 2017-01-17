@@ -54,6 +54,7 @@
 			@include modular-scale( eta );
 			margin: 0;
 			display: block;
+			opacity: .6
 
 		}
 
@@ -66,6 +67,20 @@
 
 		/*@replace fade-in 1.2s, slide-from-left 1.2s*/
 		@include animation( #{fade-in 1.2s, slide-from-right 1.2s} );
+
+		li {
+
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
+
+			li {
+
+				line-height: 1.35;
+				margin:0;
+
+			}
+
+		}
 
 		.menu-toggle {
 

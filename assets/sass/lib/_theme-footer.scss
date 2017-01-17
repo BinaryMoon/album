@@ -5,7 +5,7 @@
 
 #footer {
 
-	padding: $grid-line-height ( $grid-gutter / 2 ) 0 ( $grid-gutter / 2 );
+	padding: $grid-gutter;
 
 	&:empty {
 
@@ -64,6 +64,15 @@
 
 	}
 
+}
+
+.widget {
+	color: #5d5e63;
+}
+
+.sidebar-main .widget {
+	background:rgba(255,255,255,.5);
+	padding:25px 35px;
 }
 
 .credits {

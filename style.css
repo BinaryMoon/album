@@ -2682,6 +2682,7 @@ a:hover img {
   line-height: 1.75;
   margin: 0;
   display: block;
+  opacity: .6;
 }
 
 .masthead .menu {
@@ -2838,6 +2839,16 @@ a:hover img {
   /*@replace fade-in 1.2s, slide-from-left 1.2s*/
   -webkit-animation: fade-in 1.2s, slide-from-right 1.2s;
           animation: fade-in 1.2s, slide-from-right 1.2s;
+}
+
+.masthead .menu li {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.masthead .menu li li {
+  line-height: 1.35;
+  margin: 0;
 }
 
 .masthead .menu .menu-toggle .icon .menu-rows-1,
@@ -3119,6 +3130,7 @@ body.single #site-content {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.75;
+  margin: 1px 0 -4px 0;
 }
 
 .content-posts article .post-meta-data .posted-on {
@@ -3391,7 +3403,7 @@ body.single #site-content {
 }
 
 .pagination span.current {
-  background: #58C6FF;
+  border: 1px solid #333;
   color: #000000;
 }
 
@@ -3580,7 +3592,7 @@ body.single #site-content {
 }
 
 .jetpack-projects-page .content-projects-header {
-  padding: 12% 0 13% 0;
+  padding: 14% 0 13% 0;
   -webkit-animation: slide-from-left 1.2s;
           animation: slide-from-left 1.2s;
 }
@@ -3704,7 +3716,7 @@ body.single #site-content {
   font-size: 1.25rem;
   line-height: 1.5;
   line-height: 1.2;
-  margin: 0.75rem 0 0.25rem 0;
+  margin: 12px 0 2px 0;
 }
 
 .content-projects article .thumbnail {
@@ -4218,6 +4230,11 @@ a.thumbnail img:hover {
   top: 3rem;
   right: 3rem;
   left: auto;
+  color: #b6b6b6;
+}
+
+.modal button.close:hover {
+  color: #fff;
 }
 
 .modal form {
@@ -4280,7 +4297,7 @@ form.search-form button.search-submit {
  * 3.5 - Footer
  */
 #footer {
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 3rem;
 }
 
 #footer:empty {
@@ -4330,6 +4347,15 @@ form.search-form button.search-submit {
   #footer .footer-widgets .grid-sizer {
     width: 100%;
   }
+}
+
+.widget {
+  color: #5d5e63;
+}
+
+.sidebar-main .widget {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px 35px;
 }
 
 .credits {
