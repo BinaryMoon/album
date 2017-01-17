@@ -353,6 +353,13 @@
 		.thumbnail {
 
 			margin-bottom: $grid-line-height / 4;
+			overflow: hidden;
+
+			img {
+
+				max-width: 100.5%;
+				
+			}
 
 		}
 
@@ -407,6 +414,7 @@ a.thumbnail {
 		display: block;
 		opacity: 0.9;
 		margin: 0 auto;
+		transform: rotate3d( 0, 0, 0, 0 );
 
 		&:hover {
 

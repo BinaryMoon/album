@@ -3709,6 +3709,11 @@ body.single #site-content {
 
 .content-projects article .thumbnail {
   margin-bottom: 0.375rem;
+  overflow: hidden;
+}
+
+.content-projects article .thumbnail img {
+  max-width: 100.5%;
 }
 
 .content-projects article .entry,
@@ -3743,6 +3748,8 @@ a.thumbnail img {
   display: block;
   opacity: 0.9;
   margin: 0 auto;
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+          transform: rotate3d(0, 0, 0, 0);
 }
 
 a.thumbnail img:hover {
