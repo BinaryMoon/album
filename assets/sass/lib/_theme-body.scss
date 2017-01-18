@@ -1,5 +1,5 @@
 /**
- * 3.3 - Body
+ * ## - Body
  * Site content, blog posts etc
  */
 // @package Album
@@ -78,6 +78,13 @@ main {
 	.page & {
 
 		@include grid( 3 );
+
+	}
+
+	.widget {
+
+		background:rgba( $canvas-white, 0.5 );
+		padding: $grid-line-height ( $grid-gutter * 0.75 );
 
 	}
 
@@ -200,7 +207,7 @@ main {
 			color:inherit;
 			@include modular-scale( eta );
 			padding: 20px;
-    	line-height: 0;
+    		line-height: 0;
 
 			&:hover {
 				background:$canvas-grey-40

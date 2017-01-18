@@ -1,5 +1,5 @@
 /**
- * 3.4 - Elements
+ * ## - Elements
  * Search form, author meta box, and other generic, reusable, elements.
  */
 // @package Album
@@ -360,7 +360,7 @@
 			img {
 
 				max-width: 100.5%;
-				
+
 			}
 
 		}
@@ -490,7 +490,7 @@ a.thumbnail {
 
 		&.arrow-next {
 
-			right: 0;
+			right: $grid-gutter / 3;
 
 			&:before {
 
@@ -503,7 +503,7 @@ a.thumbnail {
 
 		&.arrow-prev {
 
-			left: 0;
+			left: $grid-gutter / 3;
 
 			&:before {
 
@@ -725,6 +725,8 @@ a.thumbnail {
 
 /* widgets generic styles */
 .widget {
+
+	color: $canvas-grey-70;
 
 	.widget-title {
 
