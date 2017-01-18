@@ -747,10 +747,19 @@ a.thumbnail {
 
 	}
 
+	ol li + li, ul li + li {
+		margin-top: .75rem;
+	}
+
+	.post-date {
+		display: block;
+		@include modular-scale( eta );
+		margin-top: -4px;
+	}
+
 	a {
 
 		font-weight: bold;
-
 		@include border-hover;
 
 	}

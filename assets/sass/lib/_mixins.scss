@@ -76,7 +76,7 @@
 	color: $body-copy-color;
 	border: $border-width solid $canvas-grey-40;
 	border-radius: 0.2rem;
-	@include modular-scale( $size, 0 );
+	@include modular-scale($size);
 	letter-spacing: 0.08em;
 	font-family: $font-family-sans;
 	text-transform: uppercase;
