@@ -683,6 +683,11 @@ object {
 	margin-left: 0.5em;
 }
 
+.masthead .menu li {
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+}
+
 .masthead .menu .menu-toggle .icon .menu-rows-1,
 .masthead .menu .menu-toggle .icon .menu-rows-2,
 .masthead .menu .menu-toggle .icon .menu-rows-3 {
@@ -769,6 +774,10 @@ main.full-width main div.sharedaddy {
 	padding: 0 4.16667%;
 }
 
+.sidebar-main .widget {
+	padding: 1.5rem 2.25rem;
+}
+
 @media only screen and (max-width:782px) {
 	.sidebar-main {
 		float: right;
@@ -784,6 +793,10 @@ main.full-width main div.sharedaddy {
 	float: right;
 	padding-left: 2%;
 	padding-right: 0;
+}
+
+.content-posts article .post-meta-data .post-lead-category {
+	margin: 1px 0 -4px;
 }
 
 .content-posts article .entry {
@@ -904,7 +917,7 @@ main.full-width main div.sharedaddy {
 }
 
 .jetpack-projects-page .content-projects-header {
-	padding: 12% 0 13%;
+	padding: 14% 0 13%;
 }
 
 .jetpack-projects-page .content-projects-header .entry:after,
@@ -947,11 +960,13 @@ main.full-width main div.sharedaddy {
 }
 
 .content-projects article h2.entry-title {
-	margin: 0.75rem 0 0.25rem;
+	margin: 12px 0 2px;
 }
 
 a.thumbnail img {
 	margin: 0 auto;
+	-webkit-transform: rotate3d(0,0,0,0);
+	        transform: rotate3d(0,0,0,0);
 }
 
 .showcase article {
@@ -964,7 +979,7 @@ a.thumbnail img {
 }
 
 .showcase .arrow.arrow-next {
-	left: 0;
+	left: 1rem;
 }
 
 .showcase .arrow.arrow-next:before {
@@ -977,7 +992,7 @@ a.thumbnail img {
 }
 
 .showcase .arrow.arrow-prev {
-	right: 0;
+	right: 1rem;
 }
 
 .showcase .arrow.arrow-prev:before {
@@ -1102,7 +1117,7 @@ form.search-form button.search-submit {
 }
 
 #footer {
-	padding: 1.5rem 1.5rem 0;
+	padding: 3rem;
 }
 
 #footer:before {

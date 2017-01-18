@@ -160,53 +160,21 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /**
  *  ___        _____ _                  ___         _
  * | _ \_ _ __|_   _| |_  ___ _ __  ___|   \ ___ __(_)__ _ _ _
- * |  _/ '_/ _ \| | | ' \/ -_) '  \/ -_) |) / -_|_-< / _` | '  * |_| |_| \___/|_| |_||_\___|_|_|_\___|___/\___/__/_\__, |_||_|
+ * |  _/ '_/ _ \| | | ' \/ -_) '  \/ -_) |) / -_|_-< / _` | ' \
+ * |_| |_| \___/|_| |_||_\___|_|_|_\___|___/\___/__/_\__, |_||_|
  *                                                   |___/
  * WordPress Themes: https://prothemedesign.com/themes/
  */
 /**
  * Table of Contents
  *
- * 1.0 - CSS Library
- *		1.1 - CSS Reset
- *		1.2 - Typography
- *		1.3 - Forms
- *		1.4 - HTML Elements
- *		1.5 - Animations
- * 2.0 - WordPress
- *		2.1 - Required Elements
- *		2.2 - WordPress.com Specific Styles
- *		2.3 - Widgets
- *		2.4 - Gallery
- *		2.5 - Calendar
- *		2.6 - Edit Post Link
- *		2.7 - Password Required Form
- *		2.8 - Multi Author
- *		2.9 - Comments
- *		2.10 - Search Form
- *		2.11 - Embeds
- *		2.12 - Sticky
- * 3.0 - Website
- *		3.1 - General Properties
- *		3.2 - Header
- *		3.3 - Body
- *		3.4 - Elements
- *		3.5 - Footer
- *		3.6 - The Content
- *		3.7 - Misc
- * 4.0 - Plugins
- * 		4.1 - Jetpack
- * 		4.2 - WooCommerce
- * 		4.3 - WP Post Series
- * 5.0 - Media Queries
- *		5.1 - Responsive Styles
- *		5.2 - Print Styles
+ * [TOC]
  */
 /**
- * 1.0 - CSS Library
+ * # - CSS Library
  */
 /**
- * 1.1 - CSS Reset
+ * ## - CSS Reset
  * Set HTML styles to sensible defaults
  * loosely based on normalize.css, with a number of customisations
  */
@@ -440,7 +408,7 @@ svg path {
 }
 
 /**!
- * 1.2 - Typography
+ * ## - Typography
  */
 body,
 html {
@@ -573,7 +541,7 @@ pre.compress {
 }
 
 /**!
- * 1.3 - Forms
+ * ## - Forms
  */
 input.radio {
   margin-right: 0.5em;
@@ -851,7 +819,7 @@ fieldset ul.radio {
 }
 
 /**!
- * 1.4 - HTML Elements
+ * ## - HTML Elements
  */
 /* lists */
 ol,
@@ -966,7 +934,7 @@ table tr:last-child td {
 }
 
 /**!
- * 1.5 - Animations
+ * ## - Animations
  * Use with:
  * @include animation( animationName duration );
  * eg:
@@ -1057,10 +1025,10 @@ table tr:last-child td {
 }
 
 /**
- * 4.0 - Plugins
+ * # - Plugins
  */
 /**!
- * 4.1 - Jetpack
+ * ## - Jetpack
  */
 img#wpstats {
   position: absolute;
@@ -1388,7 +1356,7 @@ form.contact-form div.clear-form {
 }
 
 /**!
- * 4.2 - WooCommerce
+ * ## - WooCommerce
  */
 .woocommerce h1 {
   font-weight: bold;
@@ -1579,7 +1547,7 @@ form.contact-form div.clear-form {
 }
 
 /**!
- * 4.3 - WP Post Series
+ * ## - WP Post Series
  */
 .wp-post-series-box {
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -1605,7 +1573,7 @@ form.contact-form div.clear-form {
 }
 
 /**!
- * 4.4 - Landing Page
+ * ## - Landing Page
  */
 .landing-page {
   background: transparent center no-repeat;
@@ -1633,10 +1601,10 @@ form.contact-form div.clear-form {
 }
 
 /**
- * 2.0 - WordPress
+ * # - WordPress
  */
 /**!
- * 2.1 - Required WordPress Elements
+ * ## - Required Elements
  * Uses the defaults listed on the Codex (https://codex.wordpress.org/CSS)
  */
 .wp-caption {
@@ -1765,7 +1733,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.2 - WordPress.com Specific Styles
+ * ## - WordPress.com Specific Styles
  */
 #botd,
 #botd2 {
@@ -1806,7 +1774,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.3 - Widgets
+ * ## - Widgets
  */
 .widget {
   overflow: hidden;
@@ -2043,7 +2011,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.4 - Gallery Styles
+ * ## - Gallery
  * Default styles for the [gallery] shortcode
  */
 .gallery {
@@ -2149,7 +2117,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.5 - Calendar
+ * ## - Calendar
  */
 #wp-calendar {
   margin: 0;
@@ -2173,7 +2141,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.6 - Password Required Form
+ * ## - Password Required Form
  */
 .post-password-required form {
   margin-bottom: 3rem;
@@ -2194,7 +2162,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.7 - Comments
+ * ## - Comments
  */
 .content-comments ol.comment-list {
   list-style-type: none;
@@ -2464,7 +2432,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.8 - Search Form
+ * ## - Search Form
  */
 form.search-form {
   position: relative;
@@ -2509,7 +2477,7 @@ form.search-form button.search-submit:focus, form.search-form button.search-subm
 }
 
 /**!
- * 2.9 - Embeds
+ * ## - Embeds
  */
 iframe[src*="8tracks.com"], iframe[src*="bandcamp.com"], iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="viddler.com"], iframe[src*="soundcloud.com"], iframe[src*="itchi.io"], iframe.twitter-tweet, iframe.twitter-follow-button {
   display: block;
@@ -2528,14 +2496,17 @@ object {
 }
 
 /**!
- * 2.10 - Sticky Posts
+ * ## - Sticky Posts
  */
 .sticky .post-meta-data .posted-on {
   display: none;
 }
 
 /**
- * 3.1 - General Properties
+ * # - Theme layout
+ */
+/**
+ * ## - General Properties
  */
 a {
   color: #000000;
@@ -2624,7 +2595,7 @@ a:hover img {
 }
 
 /**
- * 3.2 - Header
+ * ## - Header
  */
 .masthead {
   padding: 3rem 4.16667%;
@@ -2976,7 +2947,7 @@ a.header-image img {
 }
 
 /**
- * 3.3 - Body
+ * ## - Body
  * Site content, blog posts etc
  */
 body.menu-on {
@@ -3174,6 +3145,13 @@ body.single #site-content {
   padding: 0.8rem 1.6rem;
   letter-spacing: 0.05em;
   text-align: center;
+  border: 1px solid #BfC1CC;
+  color: inherit;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  padding: 20px;
+  line-height: 0;
 }
 
 .device-click .content-posts article .read-more {
@@ -3186,6 +3164,10 @@ body.single #site-content {
   color: #FFFFFF;
   text-decoration: none;
   box-shadow: none;
+}
+
+.content-posts article .read-more:hover {
+  background: #BfC1CC;
 }
 
 .content-posts article h2.entry-title {
@@ -3369,7 +3351,7 @@ body.single #site-content {
 }
 
 /**
- * 3.4 - Elements
+ * ## - Elements
  * Search form, author meta box, and other generic, reusable, elements.
  */
 /* taxonomies - categories and tags on single posts */
@@ -4303,7 +4285,7 @@ form.search-form button.search-submit {
 }
 
 /**
- * 3.5 - Footer
+ * ## - Footer
  */
 #footer {
   padding: 3rem;
@@ -4422,7 +4404,7 @@ form.search-form button.search-submit {
 }
 
 /**
- * 3.7 - The Content
+ * ## - The Content
  * Styles for blog post content
  * Includes special styles such as drop caps, and intro text
  */
@@ -4554,7 +4536,7 @@ form.search-form button.search-submit {
 }
 
 /**
- * 3.7 - Misc
+ * ## - Misc
  * Other random styles that don't fit anywhere else
  */
 .header-404 .icon {
@@ -4667,8 +4649,11 @@ blockquote:after, blockquote:before {
   color: #FFFFFF;
 }
 
+/**
+ * # - Media Queries
+ */
 /**!
- * 5.1 - Responsive Styles
+ * ## - Responsive Styles
  */
 @media only screen and (max-width: 600px) {
   .content-comments ol.comment-list li.comment.depth-1 article {
@@ -4855,7 +4840,7 @@ blockquote:after, blockquote:before {
 }
 
 /**!
- * 5.2 - Print Styles
+ * ## - Print Styles
  */
 @media print {
   .masthead .branding,
