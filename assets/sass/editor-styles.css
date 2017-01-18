@@ -109,7 +109,7 @@ body#tinymce.wp-editor h6 {
 body#tinymce.wp-editor hr {
   margin: 3rem auto;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 body#tinymce.wp-editor p {
@@ -175,10 +175,12 @@ body#tinymce.wp-editor a:hover:hover {
 }
 
 body#tinymce.wp-editor .intro {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 1.5;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
   margin-bottom: 4.5rem;
+  opacity: 0.8;
 }
 
 body#tinymce.wp-editor .drop-cap {

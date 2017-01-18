@@ -7,13 +7,18 @@
 /* taxonomies - categories and tags on single posts */
 .taxonomies {
 
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-	@include post-meta-data;
-
 	.taxonomy {
 
+		font-weight: bold;
 		margin: 0;
-		color: $canvas-grey-40;
+
+		a {
+
+			font-weight: normal;
+
+			@include border-hover;
+
+		}
 
 	}
 
@@ -38,8 +43,8 @@
 
 	span.current {
 
-		//background: $canvas-color;
-		border:1px solid #333;
+		border: $border-width solid $canvas-grey-40;
+		border-radius: 0.2rem;
 		color: contrast( $canvas-color );
 
 	}

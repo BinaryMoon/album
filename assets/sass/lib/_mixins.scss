@@ -68,15 +68,15 @@
 
 }
 
-@mixin button-alt( $size: eta ) {
+@mixin button-alt( $size: eta, $weight: bold ) {
 
-	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+	padding: ( $grid-line-height ) ( $grid-gutter / 2 );
 	background: transparent;
-	font-weight: bold;
+	font-weight: $weight;
 	color: $body-copy-color;
-	border: 0.2em solid $canvas-grey-40;
-	border-radius: 0.3em;
-	@include modular-scale( $size );
+	border: $border-width solid $canvas-grey-40;
+	border-radius: 0.2rem;
+	@include modular-scale( $size, 0 );
 	letter-spacing: 0.08em;
 	font-family: $font-family-sans;
 	text-transform: uppercase;
@@ -178,8 +178,10 @@ $border-hover-background: linear-gradient( transparent 0%, transparent 60%, $can
 	// intro paragraph
 	.intro {
 
-		@include modular-scale( epsilon );
+		@include modular-scale( delta );
+		font-family: $font-family-sans;
 		margin-bottom: $grid-line-height * $grid-line-height-multiplier * $line-height-margin-multiplier;
+		opacity: 0.8;
 
 	}
 

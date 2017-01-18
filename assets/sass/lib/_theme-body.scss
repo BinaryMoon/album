@@ -15,7 +15,7 @@ body {
 
 	p {
 
-		line-height: 1.8;
+		line-height: 1.875;
 
 	}
 
@@ -49,8 +49,9 @@ main {
 
 		}
 
+		.post-navigation,
 		.taxonomies,
-		main div.sharedaddy,
+		div.sharedaddy,
 		div#jp-relatedposts,
 		.contributor {
 
@@ -124,6 +125,49 @@ main {
 
 		@include post-meta-data;
 		display: block;
+
+	}
+
+}
+
+.post-navigation {
+
+	border: ( $border-width / 2 ) solid $border-color;
+	border-width: ( $border-width / 2 ) 0;
+
+	.nav-links {
+
+		display: flex;
+
+		.nav-previous,
+		.nav-next {
+
+			width: 50%;
+			padding: ( $grid-gutter / 2 ) ( $grid-gutter / 2 );
+
+			.post-title {
+
+				font-weight: bold;
+
+				@include border-hover;
+
+			}
+
+		}
+
+		.nav-next {
+
+			text-align: right;
+			border-left: ( $border-width / 2 ) solid $border-color;
+
+		}
+
+		.nav-previous {
+
+			// Keep this here so it can be swapped for rtl.css
+			text-align: left;
+
+		}
 
 	}
 
@@ -203,16 +247,9 @@ main {
 
 		.read-more {
 
-			@include button(transparent);
-			border:1px solid $canvas-grey-40;
-			color:inherit;
-			@include modular-scale( eta );
-			padding: 20px;
-    		line-height: 0;
+			@include button-alt( eta, light );
+			border-width: 1px;
 
-			&:hover {
-				background:$canvas-grey-40
-			}
 		}
 
 		h2.entry-title {
