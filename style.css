@@ -2336,7 +2336,8 @@ main {
     font-family: "Roboto", "Helvetica Neue", sans-serif;
     text-transform: uppercase;
     display: inline-block;
-    border-width: 1px; }
+    border-width: 1px;
+    padding: .5rem 1.5rem; }
     .content-posts article .read-more:focus, .content-posts article .read-more:hover {
       background: #575e6a;
       border-color: #575e6a;
