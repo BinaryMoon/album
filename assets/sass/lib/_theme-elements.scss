@@ -615,8 +615,7 @@ a.thumbnail {
 
 		.entry-title {
 
-			@include modular-scale( beta );
-			font-weight: lighter;
+			@include modular-scale( delta );
 			max-width: 48rem;
 			color: $canvas-white;
 			line-height: 1.05;
@@ -832,8 +831,6 @@ form.search-form {
 .entry-archive-header {
 
 	.entry-archive-title {
-
-		font-weight: lighter;
 
 		span:not(.vcard) {
 

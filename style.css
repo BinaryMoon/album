@@ -3940,10 +3940,9 @@ a.thumbnail img:hover {
 }
 
 .post-cover .entry .entry-title {
-  font-size: 58.35296px;
-  font-size: 3.64706rem;
-  line-height: 1.25;
-  font-weight: lighter;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.5;
   max-width: 48rem;
   color: #FFFFFF;
   line-height: 1.05;
@@ -4153,10 +4152,6 @@ a.thumbnail img:hover {
   background: #575e6a;
   border-color: #575e6a;
   color: #FFFFFF;
-}
-
-.entry-archive-header .entry-archive-title {
-  font-weight: lighter;
 }
 
 .entry-archive-header .entry-archive-title span:not(.vcard) {
