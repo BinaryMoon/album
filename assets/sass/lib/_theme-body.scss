@@ -59,6 +59,7 @@ main {
 		.taxonomies,
 		div.sharedaddy,
 		div#jp-relatedposts,
+		.content-comments,
 		.contributor {
 
 			max-width: $grid-total-width * 0.5;
@@ -136,6 +137,7 @@ main {
 
 }
 
+.comment-navigation,
 .post-navigation {
 
 	border: ( $border-width / 2 ) solid $border-color;
@@ -161,17 +163,17 @@ main {
 
 		}
 
-		.nav-next {
-
-			text-align: right;
-			border-left: ( $border-width / 2 ) solid $border-color;
-
-		}
-
-		.nav-previous {
+		div:first-child {
 
 			// Keep this here so it can be swapped for rtl.css
 			text-align: left;
+
+		}
+
+		div:last-child {
+
+			text-align: right;
+			border-left: ( $border-width / 2 ) solid $border-color;
 
 		}
 
@@ -468,6 +470,18 @@ main {
 		}
 
 		li.comment {
+
+			footer {
+
+				margin-bottom: $grid-line-height;
+
+				.fn {
+
+					@include border-hover;
+
+				}
+
+			}
 
 			.reply {
 

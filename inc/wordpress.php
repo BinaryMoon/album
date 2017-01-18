@@ -25,7 +25,7 @@
 function album_enqueue() {
 
 	// Styles.
-	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.19' );
+	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.20' );
 
 	// Fonts.
 	$fonts_url = album_fonts();

@@ -28,15 +28,15 @@
 <?php
 		$comment_count = get_comments_number();
 		if ( 1 === $comment_count ) {
-			printf(
-				esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'album' ),
-				'<span>' . get_the_title() . '</span>'
-			);
+
+			esc_html_e( 'One Comment', 'album' );
+
 		} else {
+
 			printf( // WPCS: XSS OK.
-				esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'album' ) ),
-				number_format_i18n( $comment_count ),
-				'<span>' . get_the_title() . '</span>'
+				/* translators: placeholder is number of comments */
+				esc_html( _nx( '%1$s Comment', '%1$s Comments', $comment_count, 'comments title', 'album' ) ),
+				(int) number_format_i18n( $comment_count )
 			);
 		}
 ?>
