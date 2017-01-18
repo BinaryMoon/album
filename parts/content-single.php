@@ -12,11 +12,19 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
+	$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'album-header' );
+	$image_min_width = album_featured_image_min_width();
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php the_post_thumbnail( 'album-header' ); ?>
+<?php
+	// If image is too small then insert it under the post title.
+	if ( $image_data && $image_data[1] > $image_min_width ) {
+		the_post_thumbnail( 'album-header' );
+	}
+?>
 
 	<header class="entry-header">
 
@@ -30,6 +38,11 @@
 	<section class="entry entry-single">
 
 <?php
+
+	// Image is too small so insert it under the post title.
+	if ( $image_data && $image_data[1] <= $image_min_width ) {
+		the_post_thumbnail( 'album-header' );
+	}
 
 	the_content(
 		sprintf(

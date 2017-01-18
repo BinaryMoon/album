@@ -25,7 +25,7 @@
 function album_enqueue() {
 
 	// Styles.
-	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.18' );
+	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.19' );
 
 	// Fonts.
 	$fonts_url = album_fonts();
@@ -429,7 +429,9 @@ add_filter( 'body_class', 'album_body_class' );
  */
 function album_post_class( $classes ) {
 
-	if ( $image = get_the_post_thumbnail( get_the_ID() ) ) {
+	$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'album-header' );
+
+	if ( $image_data && $image_data[1] > album_featured_image_min_width() ) {
 
 		$classes[] = 'post-has-thumbnail';
 
@@ -451,23 +453,24 @@ function album_post_class( $classes ) {
 
 	}
 
-	/**
-	 * Remove this if you need to add text contrast to images
-	if ( isset( $image[0] ) ) {
-
-		$tone = album_image_tone( $image[0] );
-
-		if ( $tone ) {
-			$classes[] = $tone;
-		}
-	}
-	 */
-
 	return $classes;
 
 }
 
 add_filter( 'post_class', 'album_post_class' );
+
+
+/**
+ * Specify the minimum width for featured images to be displayed.
+ * If the image is less than this wide then it will display underneath the post title.
+ *
+ * @return int
+ */
+function album_featured_image_min_width() {
+
+	return apply_filters( 'album_single_post_width', 1000 );
+
+}
 
 
 /**

@@ -41,6 +41,12 @@ main {
 			clear: both;
 			float: none;
 
+			img.size-album-header {
+
+				margin-bottom: $grid-line-height * 2;
+
+			}
+
 			@include for-tablet() {
 
 				width: 100%;
@@ -396,6 +402,12 @@ main {
 
 				@include title-border( auto );
 				margin: 0 ( $grid-gutter );
+
+				@include for-tablet() {
+
+					margin: 0 ( $grid-gutter / 2 );
+
+				}
 
 			}
 

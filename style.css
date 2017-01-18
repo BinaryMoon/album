@@ -2980,6 +2980,10 @@ main.full-width .entry-single {
   float: none;
 }
 
+main.full-width .entry-single img.size-album-header {
+  margin-bottom: 3rem;
+}
+
 @media only screen and (max-width: 782px) {
   main.full-width .entry-single {
     width: 100%;
@@ -3309,6 +3313,12 @@ body.single #site-content {
   width: auto;
   height: 0.25rem;
   margin: 0 3rem;
+}
+
+@media only screen and (max-width: 782px) {
+  .content-single article.post-no-thumbnail:before {
+    margin: 0 1.5rem;
+  }
 }
 
 /* comments layout */
