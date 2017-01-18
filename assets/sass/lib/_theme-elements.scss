@@ -836,6 +836,8 @@ form.search-form {
 .entry-archive-header {
 
 	@include grid( 12 );
+	float:none;
+	padding:0;
 
 	.entry-archive-title {
 
