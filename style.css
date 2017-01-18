@@ -4194,6 +4194,24 @@ a.thumbnail img:hover {
   color: #FFFFFF;
 }
 
+.entry-archive-header {
+  width: 100%;
+  float: left;
+  min-height: 1em;
+  padding: 0 4.16667%;
+}
+
+.entry-archive-header .entry-archive-title:before {
+  display: block;
+  clear: both;
+  content: '';
+  background: #BfC1CC;
+  width: 2rem;
+  height: 0.25rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
 .entry-archive-header .entry-archive-title span:not(.vcard) {
   display: block;
   opacity: 0.6;
@@ -4216,7 +4234,7 @@ a.thumbnail img:hover {
   background: #BfC1CC;
   width: 2rem;
   height: 0.25rem;
-  margin: 0.75rem 0 3rem 0;
+  margin: 0.75rem 0 6rem 0;
 }
 
 .modal {
@@ -4570,6 +4588,11 @@ form.search-form button.search-submit {
 
 .the-content .small-caps {
   font-variant: small-caps;
+}
+
+.the-content .aligncenter,
+.the-content .alignnone {
+  margin-bottom: 3rem;
 }
 
 /**

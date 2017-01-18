@@ -835,7 +835,17 @@ form.search-form {
 
 .entry-archive-header {
 
+	@include grid( 12 );
+
 	.entry-archive-title {
+
+		&:before {
+
+			@include title-border;
+			margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+			width: 100%;
+
+		}
 
 		span:not(.vcard) {
 
@@ -848,7 +858,7 @@ form.search-form {
 		&:after {
 
 			@include title-border;
-			margin: ( $grid-line-height / 2 ) 0 ( $grid-line-height * 2 ) 0;
+			margin: ( $grid-line-height / 2 ) 0 ( $grid-line-height * 4 ) 0;
 
 		}
 

@@ -13,19 +13,19 @@
 	get_header();
 ?>
 
+	<header class="entry-archive-header">
+
+		<h1 class="entry-title entry-archive-title">
+			<?php printf( wp_kses( __( '<span>Search results for:</span> %s', 'album' ), array( 'span' => array() ) ), esc_html( get_search_query() ) ); ?>
+		</h1>
+
+	</header>
+
 	<main role="main">
 
 <?php
 	if ( have_posts() ) {
 ?>
-
-		<header class="entry-archive-header">
-
-			<h1 class="entry-title entry-archive-title">
-				<?php printf( wp_kses( __( '<span>Search results for:</span> %s', 'album' ), array( 'span' => array() ) ), esc_html( get_search_query() ) ); ?>
-			</h1>
-
-		</header>
 
 		<div class="search-wrapper">
 			<?php get_search_form(); ?>

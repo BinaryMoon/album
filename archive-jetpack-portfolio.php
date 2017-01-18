@@ -15,21 +15,21 @@
 	get_header();
 ?>
 
+	<header class="entry-archive-header">
+
+<?php
+	the_archive_title( '<h1 class="entry-title entry-archive-title">', '</h1>' );
+	the_archive_description( '<div class="category-description">', '</div>' );
+	album_project_terms();
+?>
+
+	</header>
+
 	<main role="main" class="jetpack-projects-archive">
 
 <?php
 	if ( have_posts() ) {
 ?>
-
-		<header class="entry-archive-header">
-
-<?php
-		the_archive_title( '<h1 class="entry-title entry-archive-title">', '</h1>' );
-		the_archive_description( '<div class="category-description">', '</div>' );
-		album_project_terms();
-?>
-
-		</header>
 
 		<div id="main-content" class="main-content content-posts content-projects">
 
