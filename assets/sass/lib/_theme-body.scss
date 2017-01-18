@@ -140,7 +140,7 @@ main {
 .comment-navigation,
 .post-navigation {
 
-	border: ( $border-width / 2 ) solid $border-color;
+	border: ( $border-width / 2 ) solid $canvas-grey-40;
 	border-width: ( $border-width / 2 ) 0;
 
 	.nav-links {
@@ -173,7 +173,7 @@ main {
 		div:last-child {
 
 			text-align: right;
-			border-left: ( $border-width / 2 ) solid $border-color;
+			border-left: ( $border-width / 2 ) solid $canvas-grey-40;
 
 		}
 
@@ -474,6 +474,10 @@ main {
 			footer {
 
 				margin-bottom: $grid-line-height;
+
+				.avatar {
+					border-radius: 100%;
+				}
 
 				.fn {
 

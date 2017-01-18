@@ -2279,7 +2279,7 @@ main {
     .comment-navigation .nav-links div:last-child,
     .post-navigation .nav-links div:last-child {
       text-align: right;
-      border-left: 1px solid rgba(0, 0, 0, 0.3); }
+      border-left: 1px solid #BfC1CC; }
 
 #main-content {
   margin-bottom: 7.5rem; }
