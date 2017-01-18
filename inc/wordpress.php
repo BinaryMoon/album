@@ -25,7 +25,7 @@
 function album_enqueue() {
 
 	// Styles.
-	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.16' );
+	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.17' );
 
 	// Fonts.
 	$fonts_url = album_fonts();
@@ -494,11 +494,19 @@ function album_post_terms( $content = '' ) {
 	$terms = '';
 
 	// Add Categories.
-	$terms .= '<p class="taxonomy tax-categories">' . get_the_category_list( esc_html_x( ', ', 'Category/ Tag list separator (includes a space after the comma)', 'album' ) ) . '</p>';
+	/* translators: used between list items, there is a space after the comma */
+	$categories_list = get_the_category_list( esc_html__( ', ', 'album' ) );
+	if ( $categories_list ) {
+		/* translators: %1$s will be replaced with a list of categories */
+		$terms .= sprintf( '<p class="taxonomy tax-categories">' . esc_html__( 'Posted in: %1$s', 'album' ) . '</p>', $categories_list ); // WPCS: XSS OK.
+	}
 
 	// Add Tags.
-	if ( get_the_tags( get_the_ID() ) ) {
-		$terms .= '<p class="taxonomy tax-tags">' . get_the_tag_list( '', esc_html_x( ', ', 'Category/ Tag list separator (includes a space after the comma)', 'album' ), '' ) . '</p>';
+	/* translators: used between list items, there is a space after the comma */
+	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'album' ) );
+	if ( $tags_list ) {
+		/* translators: %1$s will be replaced with a list of tags */
+		$terms .= sprintf( '<p class="taxonomy tax-tags">' . esc_html__( 'Tagged as: %1$s', 'album' ) . '</p>', $tags_list ); // WPCS: XSS OK.
 	}
 
 	// Output everything.
