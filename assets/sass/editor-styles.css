@@ -227,3 +227,8 @@ body#tinymce.wp-editor .button:focus, body#tinymce.wp-editor .button:hover {
 body#tinymce.wp-editor .small-caps {
   font-variant: small-caps;
 }
+
+body#tinymce.wp-editor .aligncenter,
+body#tinymce.wp-editor .alignnone {
+  margin-bottom: 3rem;
+}
