@@ -220,4 +220,12 @@ $border-hover-background: linear-gradient( transparent 0%, transparent 60%, $can
 
 	}
 
+	// Styles for images (and other elements) that are centered
+	.aligncenter,
+	.alignnone {
+
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	}
+
 }

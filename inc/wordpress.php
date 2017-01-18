@@ -25,7 +25,7 @@
 function album_enqueue() {
 
 	// Styles.
-	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.17' );
+	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.18' );
 
 	// Fonts.
 	$fonts_url = album_fonts();
@@ -775,3 +775,18 @@ function album_content_intro( $content ) {
 }
 
 add_filter( 'the_content', 'album_content_intro', 8 );
+
+
+/**
+ * Remove paragraphs from images so that they float off to the side in a nice way
+ *
+ * @param string $content The post content to remove p tags from.
+ * @return string
+ */
+function album_remove_paragraphs_from_images( $content ) {
+
+	return preg_replace( '/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content );
+
+}
+
+add_filter( 'the_content' , 'album_remove_paragraphs_from_images', 9999 );
