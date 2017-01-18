@@ -796,7 +796,7 @@ main.full-width main div.sharedaddy {
 }
 
 .content-posts article .post-meta-data .post-lead-category {
-	margin: 1px 0 -4px;
+	margin: 2px 0 -4px;
 }
 
 .content-posts article .entry {
@@ -806,6 +806,7 @@ main.full-width main div.sharedaddy {
 .content-posts article .read-more {
 	border-radius: 0;
 	padding: 0.8rem 1.6rem;
+	padding: 20px;
 }
 
 .device-click .content-posts article .read-more {
