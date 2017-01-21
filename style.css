@@ -4264,7 +4264,6 @@ a.thumbnail img:hover {
   min-height: 1em;
   padding: 0 4.16667%;
   float: none;
-  padding: 0;
 }
 
 .entry-archive-header .entry-archive-title span:not(.vcard) {
@@ -4348,6 +4347,7 @@ a.thumbnail img:hover {
 
 .search-modal form.search-form input.search-field {
   color: #FFFFFF;
+  background: transparent;
 }
 
 .search-modal form.search-form input.search-field::-webkit-input-placeholder {
@@ -4369,8 +4369,7 @@ a.thumbnail img:hover {
 }
 
 .search-modal form.search-form input.search-field:hover, .search-modal form.search-form input.search-field:focus {
-  background: transparent;
-  border-bottom-color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .search-modal form.search-form button.search-submit .icon {
@@ -4385,6 +4384,7 @@ form.search-form input.search-field {
   font-weight: normal;
   padding-left: 3rem;
   padding-right: 1.5rem;
+  border: none;
 }
 
 form.search-form button.search-submit {
