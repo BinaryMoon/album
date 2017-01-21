@@ -71,8 +71,12 @@
 
 				if ( to ) {
 					$( 'img.album-featured-image' ).show();
+					$( 'article' ).addClass( 'post-has-thumbnail' );
+					$( 'article' ).removeClass( 'post-no-thumbnail' );
 				} else {
 					$( 'img.album-featured-image' ).hide();
+					$( 'article' ).removeClass( 'post-has-thumbnail' );
+					$( 'article' ).addClass( 'post-no-thumbnail' );
 				}
 
 			} );
