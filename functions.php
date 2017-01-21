@@ -17,16 +17,14 @@
 /**
  * TODO TO FINISH THE BUILD
  * ---
- * Sort out page template
  * responsive layout
- * pagination styles
  * can we make the projects page display a loading spinner before displaying masonry layout?
- * Add 'intro' from custom excerpts
+ * Add 'intro' from custom excerpts with customizer option to disable this
+ * fix attachment page layout
+ * check content options works as expected
  *
  * Waiting on Darren for Design
  * ---
- * Contributor space, next post, and previous post links
- * Slider layout
  * child menus in responsive layout
  *
  */
