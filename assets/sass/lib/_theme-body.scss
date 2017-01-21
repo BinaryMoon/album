@@ -198,6 +198,7 @@ main {
 		width: 100%;
 		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 		@include clear;
+		clear: both;
 
 		.post-meta-data {
 

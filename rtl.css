@@ -58,7 +58,7 @@ select,
 textarea {
 	padding: 0.75rem 1.5rem;
 	border-radius: 0;
-	border-width: 0 0 1px;
+	border-width: 0 0 2px;
 }
 
 .device-click input.settings-input,
@@ -683,24 +683,24 @@ object {
 	margin-left: 0.5em;
 }
 
-.masthead .menu li {
-	margin-right: 0.5rem;
-	margin-left: 0.5rem;
-}
-
 .masthead .menu .menu-toggle .icon .menu-rows-1,
 .masthead .menu .menu-toggle .icon .menu-rows-2,
 .masthead .menu .menu-toggle .icon .menu-rows-3 {
 	-webkit-transform: rotate(0) translateZ(0);
-	     transform: rotate(0) translateZ(0);
+	        transform: rotate(0) translateZ(0);
 	-webkit-transform-origin: center center;
-	     transform-origin: center center;
+	        transform-origin: center center;
 }
 
 .device-click .masthead .menu .menu-toggle .icon .menu-rows-1,
 .device-click .masthead .menu .menu-toggle .icon .menu-rows-2,
 .device-click .masthead .menu .menu-toggle .icon .menu-rows-3 {
 	transition: all 0.15s ease-in-out;
+}
+
+.masthead .menu li {
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .masthead .menu li {
@@ -753,18 +753,20 @@ main.full-width .entry-single {
 	margin-left: auto;
 }
 
+main.full-width .content-comments,
 main.full-width .contributor,
+main.full-width .post-navigation,
 main.full-width .taxonomies,
 main.full-width div#jp-relatedposts,
-main.full-width main div.sharedaddy {
+main.full-width div.sharedaddy {
 	margin-right: auto;
 	margin-left: auto;
 }
 
 @media only screen and (max-width:782px) {
 	main {
-	float: right;
-	padding: 0 4.16667%;
+		float: right;
+		padding: 0 4.16667%;
 	}
 }
 
@@ -780,13 +782,43 @@ main.full-width main div.sharedaddy {
 
 @media only screen and (max-width:782px) {
 	.sidebar-main {
-	float: right;
-	padding: 0 4.16667%;
+		float: right;
+		padding: 0 4.16667%;
 	}
 }
 
 #site-content {
 	margin: 3rem auto;
+}
+
+.comment-navigation,
+.post-navigation {
+	border-width: 1px 0;
+}
+
+.comment-navigation .nav-links .nav-next,
+.comment-navigation .nav-links .nav-previous,
+.post-navigation .nav-links .nav-next,
+.post-navigation .nav-links .nav-previous {
+	padding: 1.5rem;
+}
+
+.device-click .comment-navigation .nav-links .nav-next .post-title,
+.device-click .comment-navigation .nav-links .nav-previous .post-title,
+.device-click .post-navigation .nav-links .nav-next .post-title,
+.device-click .post-navigation .nav-links .nav-previous .post-title {
+	transition: background 0.4s ease-in-out;
+}
+
+.comment-navigation .nav-links div:first-child,
+.post-navigation .nav-links div:first-child {
+	text-align: right;
+}
+
+.comment-navigation .nav-links div:last-child,
+.post-navigation .nav-links div:last-child {
+	text-align: left;
+	border-right: 1px solid rgba(0,0,0,0.3);
 }
 
 .content-posts article .post-meta-data {
@@ -804,18 +836,14 @@ main.full-width main div.sharedaddy {
 }
 
 .content-posts article .read-more {
-	border-radius: 0;
-	padding: 0.8rem 1.6rem;
-	padding: 20px;
-}
-
-.device-click .content-posts article .read-more {
-	transition: all 0.15s ease-in-out;
+	padding: 1.5rem;
+	border-radius: 0.2rem;
+	border-width: 1px;
 }
 
 .content-posts article .read-more:focus,
 .content-posts article .read-more:hover {
-	box-shadow: none;
+	border-color: #575e6a;
 }
 
 .device-click .content-posts article h2.entry-title a {
@@ -830,8 +858,8 @@ main.full-width main div.sharedaddy {
 
 @media only screen and (max-width:782px) {
 	.content-single article .entry-header {
-	padding-right: 3rem;
-	padding-left: 3rem;
+		padding-right: 3rem;
+		padding-left: 3rem;
 	}
 }
 
@@ -847,9 +875,19 @@ main.full-width main div.sharedaddy {
 	margin: 0 3rem;
 }
 
+@media only screen and (max-width:782px) {
+	.content-single article.post-no-thumbnail:before {
+		margin: 0 1.5rem;
+	}
+}
+
 .content-comments {
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.device-click .content-comments ol.comment-list li.comment footer .fn {
+	transition: background 0.4s ease-in-out;
 }
 
 .error404 .full-width {
@@ -861,8 +899,16 @@ main.full-width main div.sharedaddy {
 	margin: 0.75rem 0 3rem;
 }
 
+.device-click .taxonomies .taxonomy a {
+	transition: background 0.4s ease-in-out;
+}
+
 .pagination span {
 	padding: 0 0.375em;
+}
+
+.pagination span.current {
+	border-radius: 0.2rem;
 }
 
 .contributor {
@@ -880,8 +926,8 @@ main.full-width main div.sharedaddy {
 }
 
 .contributor .buttons a {
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.3em;
+	padding: 1.5rem;
+	border-radius: 0.2rem;
 }
 
 .contributor .buttons a:focus,
@@ -967,7 +1013,7 @@ main.full-width main div.sharedaddy {
 a.thumbnail img {
 	margin: 0 auto;
 	-webkit-transform: rotate3d(0,0,0,0);
-	     transform: rotate3d(0,0,0,0);
+	        transform: rotate3d(0,0,0,0);
 }
 
 .showcase article {
@@ -1072,8 +1118,8 @@ a.thumbnail img {
 }
 
 .infinite-scroll #infinite-handle button {
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.3em;
+	padding: 1.5rem;
+	border-radius: 0.2rem;
 }
 
 .infinite-scroll #infinite-handle button:focus,
@@ -1081,8 +1127,13 @@ a.thumbnail img {
 	border-color: #575e6a;
 }
 
+.entry-archive-header {
+	float: right;
+	padding: 0 4.16667%;
+}
+
 .entry-archive-header .entry-archive-title:after {
-	margin: 0.75rem 0 3rem;
+	margin: 0.75rem 0 6rem;
 }
 
 .modal {
@@ -1090,7 +1141,7 @@ a.thumbnail img {
 	left: 0;
 	right: 0;
 	-webkit-transform: translateY(-100%);
-	     transform: translateY(-100%);
+	        transform: translateY(-100%);
 }
 
 .device-click .modal {
@@ -1104,7 +1155,7 @@ a.thumbnail img {
 
 .modal.display {
 	-webkit-transform: translateY(0);
-	     transform: translateY(0);
+	        transform: translateY(0);
 }
 
 form.search-form input.search-field {
@@ -1233,8 +1284,8 @@ blockquote:before {
 
 .attachment .image-navigation .nav-next a,
 .attachment .image-navigation .nav-previous a {
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.3em;
+	padding: 1.5rem;
+	border-radius: 0.2rem;
 }
 
 .attachment .image-navigation .nav-next a:focus,
@@ -1255,52 +1306,52 @@ blockquote:before {
 	.content-comments ol.comment-list li.comment.depth-8 article,
 	.content-comments ol.comment-list li.comment.depth-9 article,
 	.content-comments ol.comment-list li.comment.depth-10 article {
-	padding-right: 0;
-	padding-left: 0;
+		padding-right: 0;
+		padding-left: 0;
 	}
 	#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
-	margin: 0 0 1.5rem;
+		margin: 0 0 1.5rem;
 	}
 }
 
 @media only screen and (max-width:782px) {
 	.masthead .menu .menu-toggle .icon {
-	margin-right: 0.5em;
-	margin-left: 0;
+		margin-right: 0.5em;
+		margin-left: 0;
 	}
 	.masthead .menu ul.menu-wrap {
-	padding: 6rem 3rem;
-	left: 0;
-	right: 0;
+		padding: 6rem 3rem;
+		left: 0;
+		right: 0;
 	}
 	.masthead .menu ul.menu-wrap li {
-	padding: 0.75rem 1.5rem;
+		padding: 0.75rem 1.5rem;
 	}
 	.masthead .menu ul.menu-wrap li ul {
-	right: 0;
-	left: 0;
+		right: 0;
+		left: 0;
 	}
 	.device-click .masthead .menu ul.menu-wrap li ul a {
-	transition: background 0.4s ease-in-out;
+		transition: background 0.4s ease-in-out;
 	}
 	.masthead .menu.menu-on .icon .menu-rows-1 {
-	-webkit-transform: rotate(45deg) translate3d(22%,220%,0);
-	      transform: rotate(45deg) translate3d(22%,220%,0);
+		-webkit-transform: rotate(45deg) translate3d(22%,220%,0);
+		        transform: rotate(45deg) translate3d(22%,220%,0);
 	}
 	.masthead .menu.menu-on .icon .menu-rows-2 {
-	-webkit-transform: scale3d(0,0,1);
-	      transform: scale3d(0,0,1);
+		-webkit-transform: scale3d(0,0,1);
+		        transform: scale3d(0,0,1);
 	}
 	.masthead .menu.menu-on .icon .menu-rows-3 {
-	-webkit-transform: rotate(-45deg) translate3d(22%,-220%,0);
-	      transform: rotate(-45deg) translate3d(22%,-220%,0);
+		-webkit-transform: rotate(-45deg) translate3d(22%,-220%,0);
+		        transform: rotate(-45deg) translate3d(22%,-220%,0);
 	}
 	.masthead .menu ul ul li.focus > ul,
 	.masthead .menu ul ul li:hover > ul {
-	right: 0;
-	left: 0;
+		right: 0;
+		left: 0;
 	}
 	.masthead .menu li.menu-item-has-children {
-	padding: 0.75rem 1.5rem;
+		padding: 0.75rem 1.5rem;
 	}
 }
