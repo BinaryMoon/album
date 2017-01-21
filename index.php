@@ -15,28 +15,28 @@
 
 	get_header();
 
+	// Display a blog title when the homepage is set to a sub page and the
+	// portfolio (or other custom page) is displayed on the homepage.
+	if ( ! is_front_page() ) {
+
+?>
+
+	<header class="entry-archive-header">
+
+		<h1 class="entry-title entry-archive-title"><?php esc_html_e( 'Blog', 'album' ); ?></h1>
+
+	</header>
+
+<?php
+
+	}
+
 ?>
 
 	<main role="main">
 
 <?php
 	if ( have_posts() ) {
-
-		// Display a blog title when the homepage is set to a sub page and the
-		// portfolio (or other custom page) is displayed on the homepage.
-		if ( ! is_front_page() ) {
-
-?>
-		<header class="entry-archive-header">
-
-			<h1 class="entry-title entry-archive-title"><?php esc_html_e( 'Blog', 'album' ); ?></h1>
-
-		</header>
-
-<?php
-
-		}
-
 ?>
 
 		<div id="main-content" class="main-content content-posts">
