@@ -755,18 +755,22 @@ a.thumbnail {
 
 	}
 
-	.post-date {
-
-		display: block;
-		@include modular-scale( eta );
-		margin-top: -0.25rem;
-
-	}
-
 	a {
 
 		font-weight: bold;
 		@include border-hover;
+
+	}
+
+	&.widget_recent_entries {
+
+		.post-date {
+
+			display: block;
+			@include modular-scale( eta );
+			margin-top: -0.25rem;
+
+		}
 
 	}
 

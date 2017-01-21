@@ -4161,14 +4161,6 @@ a.thumbnail img:hover {
   margin-top: 0.75rem;
 }
 
-.widget .post-date {
-  display: block;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.75;
-  margin-top: -0.25rem;
-}
-
 .widget a {
   font-weight: bold;
   background: -webkit-linear-gradient(transparent 0%, transparent 60%, #58C6FF 60%, #58C6FF 100%);
@@ -4185,6 +4177,14 @@ a.thumbnail img:hover {
 .widget a:hover {
   background-position-y: 0;
   text-decoration: none;
+}
+
+.widget.widget_recent_entries .post-date {
+  display: block;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  margin-top: -0.25rem;
 }
 
 .search-wrapper {
