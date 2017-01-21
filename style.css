@@ -3361,10 +3361,6 @@ body.single #site-content {
   margin-bottom: 1.5rem;
 }
 
-.content-comments ol.comment-list li.comment footer .avatar {
-  border-radius: 100%;
-}
-
 .content-comments ol.comment-list li.comment footer .fn {
   background: -webkit-linear-gradient(transparent 0%, transparent 60%, #58C6FF 60%, #58C6FF 100%);
   background: linear-gradient(transparent 0%, transparent 60%, #58C6FF 60%, #58C6FF 100%);
@@ -3482,6 +3478,10 @@ body.single #site-content {
   border: 2px solid #BfC1CC;
   border-radius: 0.2rem;
   color: #000000;
+}
+
+.avatar {
+  border-radius: 10rem;
 }
 
 /* blog post contributor/ author */
