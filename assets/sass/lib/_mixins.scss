@@ -184,6 +184,13 @@ $border-hover-background: linear-gradient( transparent 0%, transparent 60%, $can
 		margin-bottom: $grid-line-height * $grid-line-height-multiplier * $line-height-margin-multiplier;
 		opacity: 0.8;
 
+		&.intro-excerpt-demo {
+
+			background: lighten( $canvas-yellow, 40% );
+			padding: ( $grid-line-height / 4 ) ( $grid-gutter / 4 );
+
+		}
+
 	}
 
 	// Drop Caps

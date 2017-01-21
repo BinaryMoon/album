@@ -767,9 +767,15 @@ add_filter( 'wp_nav_menu', 'album_nav_menu_html', 10, 2 );
  */
 function album_content_intro( $content ) {
 
-	if ( has_excerpt() ) {
+	if ( has_excerpt() && ( is_customize_preview() || get_theme_mod( 'album_display_single_excerpt', true ) ) ) {
 
-		$content = '<p class="intro">' . get_the_excerpt() . '</p>' . $content;
+		$content = '<p class="intro intro-excerpt">' . get_the_excerpt() . '</p>' . $content;
+
+	}
+
+	if ( ! has_excerpt() && is_customize_preview() ) {
+
+		$content = '<p class="intro intro-excerpt intro-excerpt-demo">' . esc_html__( 'Add a custom excerpt to show a large introduction here.', 'album' ) . '</p>' . $content;
 
 	}
 

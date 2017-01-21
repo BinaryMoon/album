@@ -67,6 +67,28 @@ function album_colour_styles() {
 	}
 <?php
 	}
+
+	if ( is_customize_preview() ) {
+
+		// Setting for single post excerpts.
+		if ( ! get_theme_mod( 'album_display_single_excerpt', true ) ) {
+?>
+	.intro-excerpt {
+		display: none;
+	}
+<?php
+		}
+
+		// Setting for single post featured images.
+		if ( ! get_theme_mod( 'album_display_single_featured_image', true ) ) {
+?>
+	img.album-featured-image {
+		display: none;
+	}
+<?php
+		}
+
+	}
 ?>
 </style>
 <?php

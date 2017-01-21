@@ -183,6 +183,11 @@ body#tinymce.wp-editor .intro {
   opacity: 0.8;
 }
 
+body#tinymce.wp-editor .intro.intro-excerpt-demo {
+  background: #fcf3d0;
+  padding: 0.375rem 0.75rem;
+}
+
 body#tinymce.wp-editor .drop-cap {
   float: left;
   font-family: "Roboto Mono", courier;

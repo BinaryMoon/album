@@ -58,6 +58,51 @@ function album_customizer_settings( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Setting to control whether the featured image is displayed on single
+	 * posts or not.
+	 */
+	$wp_customize->add_setting(
+		'album_display_single_featured_image',
+		array(
+			'default' => true,
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'album_sanitize_checkboxes',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		'album_display_single_featured_image',
+		array(
+			'label' => esc_html__( 'Display the Featured Image on Single posts and pages', 'album' ),
+			'section' => 'album_options',
+			'type' => 'checkbox',
+		)
+	);
+
+	/**
+	 * Setting to control whether the excerpt is displayed on single posts.
+	 */
+	$wp_customize->add_setting(
+		'album_display_single_excerpt',
+		array(
+			'default' => true,
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'album_sanitize_checkboxes',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		'album_display_single_excerpt',
+		array(
+			'label' => esc_html__( 'Prominently display the Excerpt on blog posts.', 'album' ),
+			'section' => 'album_options',
+			'type' => 'checkbox',
+		)
+	);
+
 }
 
 add_action( 'customize_register', 'album_customizer_settings' );
@@ -132,14 +177,6 @@ add_action( 'customize_preview_init', 'album_customize_preview_js' );
  */
 function album_sanitize_checkboxes( $setting ) {
 
-	if ( true === $setting ) {
-
-		return true;
-
-	} else {
-
-		return false;
-
-	}
+	return (bool) $setting;
 
 }

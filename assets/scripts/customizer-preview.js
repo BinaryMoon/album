@@ -50,6 +50,34 @@
 			} );
 		} );
 
+		// Header text color.
+		wp.customize( 'album_display_single_excerpt', function( value ) {
+			value.bind( function( to ) {
+
+				if ( to ) {
+					$( '.intro-excerpt' ).show();
+				} else {
+					$( '.intro-excerpt' ).hide();
+				}
+
+			} );
+		} );
+
+
+
+		// Header text color.
+		wp.customize( 'album_display_single_featured_image', function( value ) {
+			value.bind( function( to ) {
+
+				if ( to ) {
+					$( 'img.album-featured-image' ).show();
+				} else {
+					$( 'img.album-featured-image' ).hide();
+				}
+
+			} );
+		} );
+
 	} );
 
 } )( jQuery, document );

@@ -12,8 +12,15 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'album-header' );
-	$image_min_width = album_featured_image_min_width();
+	$image_data = null;
+
+	// Only display the image if enabled in the customizer.
+	if ( get_theme_mod( 'album_display_single_featured_image', true ) || is_customize_preview() ) {
+
+		$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'album-header' );
+		$image_min_width = album_featured_image_min_width();
+
+	}
 
 ?>
 
@@ -22,7 +29,7 @@
 <?php
 	// If image is too small then insert it under the post title.
 	if ( $image_data && $image_data[1] > $image_min_width ) {
-		the_post_thumbnail( 'album-header' );
+		the_post_thumbnail( 'album-header', array( 'class' => 'album-featured-image' ) );
 	}
 ?>
 
@@ -41,7 +48,7 @@
 
 	// Image is too small so insert it under the post title.
 	if ( $image_data && $image_data[1] <= $image_min_width ) {
-		the_post_thumbnail( 'album-header' );
+		the_post_thumbnail( 'album-header', array( 'class' => 'album-featured-image' ) );
 	}
 
 	the_content(

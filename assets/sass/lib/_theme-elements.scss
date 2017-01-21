@@ -233,13 +233,6 @@
 
 			font-family: $font-family-sans;
 
-			&:after {
-
-				@include title-border();
-				margin: ( $grid-line-height / 2 ) 0;
-
-			}
-
 		}
 
 		h1.entry-title {

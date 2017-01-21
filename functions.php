@@ -18,10 +18,10 @@
  * TODO TO FINISH THE BUILD
  * ---
  * responsive layout
- * can we make the projects page display a loading spinner before displaying masonry layout?
  * Add 'intro' from custom excerpts with customizer option to disable this
  * fix attachment page layout
  * check content options works as expected
+ * add arrows to next and previous post in post navigation
  *
  * Waiting on Darren for Design
  * ---
