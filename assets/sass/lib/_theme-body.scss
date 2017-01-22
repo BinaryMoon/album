@@ -177,6 +177,50 @@ main {
 
 		}
 
+		.meta-nav {
+
+			position: relative;
+
+			&:before, &:after {
+
+				font-family: $font-family-sans;
+
+			}
+
+		}
+
+		.nav-previous {
+
+			.meta-nav {
+
+				&:before {
+
+					position: absolute;
+					left: -1.5em;
+					content: "\2190";
+
+				}
+
+			}
+
+		}
+
+		.nav-next {
+
+			.meta-nav {
+
+				&:before {
+
+					position: absolute;
+					right: -1.5em;
+					content: "\2192";
+
+				}
+
+			}
+
+		}
+
 	}
 
 }
@@ -455,7 +499,7 @@ main {
 			.comment-body {
 
 				//padding: ( $grid-line-height ) ( $grid-gutter / 2 );
-				//margin-bottom: $border-width;
+				margin-bottom: $grid-line-height * 3;
 
 				p {
 
@@ -527,6 +571,12 @@ main {
 			}
 
 		}
+
+	}
+
+	#respond {
+
+		margin-top: $grid-line-height * 5;
 
 	}
 
