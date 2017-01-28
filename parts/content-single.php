@@ -69,7 +69,7 @@
 	// Only needed on blog posts.
 	if ( is_singular( array( 'post' ) ) ) {
 
-		album_contributor();
+		album_author_bio();
 
 	}
 ?>

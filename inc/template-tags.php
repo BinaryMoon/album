@@ -280,13 +280,13 @@ function album_child_pages() {
  */
 function album_contributor( $user_id = null, $post_count = null ) {
 
-	// If no user id set then get th user for the current post.
+	// If no user id set then get the user for the current post.
 	if ( ! $user_id ) {
 		$user_id = get_the_author_meta( 'ID' );
 	}
 
 ?>
-	<div class="contributor">
+	<div class="contributor entry-author">
 		<?php echo get_avatar( $user_id, 140 ); ?>
 		<h2>
 			<a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>" class="author vcard">
