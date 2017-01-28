@@ -17,35 +17,9 @@
 /**
  * TODO BEFORE SUBMISSION
  * ---
+ * test content options
  * test theme with and without jetpack
- * test theme with and without infinite scroll
- * delete unused scripts
- * delete unused customizer controls
- * delete unused svgs
- * theme tags
- * theme description
  * screenshot.png (880 x 660)
- * check custom header size
- * check sticky styles
- * test custom header, with and without
- * responsive styles
- * content_width
- * theme_colors
- * check custom page template styles
- * check custom logo properties are appropriate
- * rtl.css - "gulp rtl --theme album"
- * change google font slugs so they match the font names (in album_fonts() inc/wordpress.php and inc/wpcom.php)
- * theme scan
- * test site logo
- * readme.txt
- * test hiding header and description through customizer works
- * test logo is still visible when you hide the header text
- * test custom header
- * test custom backgrounds
- * remove album_widgets_overlay_body_class function there are no widgets in an overlay
- * check all registered menus are being used
- * check sidebar names and that sidebar display conditions match the sidebars they display
- * test print styles
  * go through required accessibility items - https://make.wordpress.org/themes/handbook/review/accessibility/required/
  */
 
