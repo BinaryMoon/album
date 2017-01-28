@@ -17,7 +17,6 @@
 /**
  * TODO BEFORE SUBMISSION
  * ---
- * test content options
  * test theme with and without jetpack
  * screenshot.png (880 x 660)
  * go through required accessibility items - https://make.wordpress.org/themes/handbook/review/accessibility/required/
