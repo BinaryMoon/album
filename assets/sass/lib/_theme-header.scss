@@ -60,7 +60,7 @@
 
 	}
 
-	// align, menu color
+	// align, menu color.
 	@include display-menu( right, $canvas-grey-10 );
 
 	.menu {
@@ -142,17 +142,9 @@
 
 			}
 
-			&.menu-item-has-children > a,
-			> a {
-
-				padding: 0;
-
-			}
-
 			> a {
 
 				color: $canvas-grey-100;
-
 				@include border-hover;
 
 			}
@@ -160,13 +152,21 @@
 			&.menu-item-has-children {
 
 				padding-right: $grid-gutter;
+				padding-left: 0;
 
-				> a:after {
+				> a {
 
-					right: -1rem;
-					left: auto;
-					opacity: $style-opacity-element;
-					font-size: 0.75rem;
+					padding-left: 0;
+					padding-right: 0;
+
+					&:after {
+
+						right: -1rem;
+						left: auto;
+						opacity: $style-opacity-element;
+						font-size: 0.75rem;
+
+					}
 
 				}
 

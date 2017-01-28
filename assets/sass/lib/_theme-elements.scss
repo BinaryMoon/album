@@ -36,7 +36,7 @@
 
 	span {
 
-		padding: 0 ( $menu-link-padding / 4 );
+		padding: 0 0.3em;
 		display: inline-block;
 
 	}
@@ -496,11 +496,13 @@ a.thumbnail {
 		&.arrow-next {
 
 			right: $grid-gutter / 3;
+			left: auto;
 
 			&:before {
 
 				@include arrow-right( $canvas-white, 12px );
 				margin-right: 29px;
+				margin-left: 0;
 
 			}
 
@@ -509,11 +511,13 @@ a.thumbnail {
 		&.arrow-prev {
 
 			left: $grid-gutter / 3;
+			right: auto;
 
 			&:before {
 
 				@include arrow-left( $canvas-white, 12px );
-				margin-left:29px;
+				margin-left: 29px;
+				margin-right: 0;
 
 			}
 
@@ -677,6 +681,7 @@ a.thumbnail {
 			position: absolute;
 			top: $grid-line-height;
 			right: $grid-gutter;
+			left: auto;
 			@include button;
 			z-index: 1;
 
