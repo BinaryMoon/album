@@ -34,6 +34,10 @@
 		return;
 	}
 
+	if ( is_404() ) {
+		return;
+	}
+
 	// Make sure the sidebar is active.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		return;
