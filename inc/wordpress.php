@@ -25,7 +25,7 @@
 function album_enqueue() {
 
 	// Styles.
-	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.22' );
+	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.23' );
 
 	// Fonts.
 	$fonts_url = album_fonts();
@@ -94,14 +94,7 @@ add_action( 'wp_enqueue_scripts', 'album_enqueue' );
  */
 function album_content_width() {
 
-	$width = 900;
-
-	// If using 'full width' template.
-	if ( is_page_template( 'templates/full-width-page.php' ) ) {
-
-		$width = 780;
-
-	}
+	$width = 960;
 
 	$GLOBALS['content_width'] = apply_filters( 'album_content_width', $width );
 
