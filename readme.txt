@@ -5,9 +5,11 @@ Requires at least: 4.3
 Tested up to: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: Black, Blue, Brown, Gray, Green, Orange, Pink, Purple, Red, Silver, Tan, White, Yellow, Dark, Light, Fixed Layout, Fluid Layout, Responsive Layout, One Column, Two Columns, Three Columns, Four Columns, Left Sidebar, Right Sidebar, Accessibility Ready, Blavatar, BuddyPress, Custom Background, Custom Colors, Custom Header, Custom Menu, Editor Style, Featured Image Header, Featured Images, Flexible Header, Front Page Posting, Full Width Template, Microformats, Post Formats, RTL Language Support, Sticky Post, Theme Options, Threaded Comments, Translation Ready, Holiday, Photoblogging, Seasonal
+Tags: black, gray, white, light, one-column, two-columns, left-sidebar, responsive-layout, accessibility-ready, author-bio, blog-excerpts, classic-menu, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-content-with-pages, featured-images, featured-image-header, flexible-header, infinite-scroll, post-formats, post-slider, rtl-language-support, site-logo, social-menu, sticky-post, testimonials, theme-options, threaded-comments, translation-ready, art, artwork, blog, business, design, fashion, food, photoblogging, photography, portfolio, bright, clean, conservative, contemporary, formal, light, minimal, modern, professional, simple, sophisticated, tech
 
 == Description ==
+
+Album is a portfolio theme for modern designers. With an almost brutalist style Album keeps the design to a minimum to allow your content to shine.
 
 [Theme documentation](https://prothemedesign.com/documentation/theme/album/)
 
@@ -35,5 +37,5 @@ Album includes support for most features in [Jetpack](https://wordpress.org/plug
 
 == Credits ==
 
-* [Open Sans](https://fonts.google.com/specimen/Open+Sans) Font from Google Fonts, licensed under [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
-* [Oswald](https://fonts.google.com/specimen/Oswald) Font from Google Fonts, licensed under [SIL Open Font License, 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+* [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) Font from Google Fonts, licensed under [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+* [Roboto](https://fonts.google.com/specimen/Roboto) Font from Google Fonts, licensed under [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
