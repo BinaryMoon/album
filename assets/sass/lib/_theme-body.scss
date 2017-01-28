@@ -318,6 +318,24 @@ main {
 
 		}
 
+		&.sticky {
+
+			background: rgba( $canvas-white, 0.5 );
+			padding: $grid-line-height ( $grid-gutter / 2 );
+
+			.thumbnail {
+
+				margin: ( -$grid-line-height ) ( $grid-gutter / -2 ) $grid-line-height ( $grid-gutter / -2 );
+
+				&:before {
+
+
+				}
+
+			}
+
+		}
+
 		.read-more {
 
 			@include button-alt( eta, light );

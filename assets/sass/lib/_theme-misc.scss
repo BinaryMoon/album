@@ -50,18 +50,9 @@ blockquote {
 
 .category-description {
 
-	&:after {
-
-		@include title-border;
-		margin: ( $grid-line-height / 2 ) 0 ( $grid-line-height * 3 ) 0;
-
-	}
+	@include intro-text;
 
 }
-
-
-
-
 
 .comment-form-comment textarea {
 

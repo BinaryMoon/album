@@ -179,10 +179,7 @@ $border-hover-background: linear-gradient( transparent 0%, transparent 60%, $can
 	// intro paragraph
 	.intro {
 
-		@include modular-scale( delta );
-		font-family: $font-family-sans;
-		margin-bottom: $grid-line-height * $grid-line-height-multiplier * $line-height-margin-multiplier;
-		opacity: 0.8;
+		@include intro-text;
 
 		&.intro-excerpt-demo {
 
@@ -235,5 +232,14 @@ $border-hover-background: linear-gradient( transparent 0%, transparent 60%, $can
 		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 
 	}
+
+}
+
+@mixin intro-text() {
+
+	@include modular-scale( delta );
+	font-family: $font-family-sans;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier * $line-height-margin-multiplier;
+	opacity: 0.8;
 
 }

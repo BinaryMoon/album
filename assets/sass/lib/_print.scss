@@ -1,0 +1,40 @@
+/**
+ * ## - Album specific Print Styles
+ */
+
+@include for-print() {
+
+	body {
+
+		background: $canvas-white;
+
+	}
+
+	.webpage {
+
+		border: none;
+
+		&:after,
+		&:before {
+
+			display: none;
+
+		}
+
+	}
+
+	.content-single article.post-has-thumbnail .entry-header {
+
+		margin-top: 0;
+		
+	}
+
+	.credits,
+	.content-single article .entry-header {
+
+		padding-left: 10%;
+		padding-right: 10%;
+		background: transparent;
+
+	}
+}
