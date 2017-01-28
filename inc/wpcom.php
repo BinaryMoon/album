@@ -18,18 +18,18 @@ function album_theme_colors() {
 	global $themecolors;
 
 	/**
-	 * Set a default theme color array for WP.com.
+	 * Set a default theme color array for WordPress.com.
 	 *
 	 * @global array $themecolors
 	 */
 	if ( ! isset( $themecolors ) ) {
 
 		$themecolors = array(
-			'bg'     => 'ffffff',
-			'border' => 'eeeeee',
+			'bg'     => 'F1F2F6',
+			'border' => 'E8E9EE',
 			'text'   => '000000',
-			'link'   => 'xxxxxx',
-			'url'    => 'aaaaaa',
+			'link'   => '58c6ff',
+			'url'    => 'BfC1CC',
 		);
 
 	}
@@ -49,16 +49,12 @@ function album_dequeue_fonts( $fonts ) {
 
 	if ( class_exists( 'TypekitData' ) && class_exists( 'CustomDesign' ) && CustomDesign::is_upgrade_active() ) {
 
-	    $custom_fonts = TypekitData::get( 'families' );
+		$custom_fonts = TypekitData::get( 'families' );
 
 		if ( $custom_fonts ) {
 
-			if ( $custom_fonts['headings']['id'] ) {
-				unset( $fonts['key'] );
-			}
-
-			if ( $custom_fonts['body-text']['id'] ) {
-				unset( $fonts['key'] );
+			if ( $custom_fonts['headings']['id'] && $custom_fonts['body-text']['id'] ) {
+				unset( $fonts );
 			}
 		}
 	}
@@ -68,20 +64,3 @@ function album_dequeue_fonts( $fonts ) {
 }
 
 add_action( 'album_fonts', 'album_dequeue_fonts', 11 );
-
-
-/**
- * Add a class to the body letting wordpress.com know about the usage of widgets in an overlay.
- *
- * @param  array $classes Default list of body classes.
- * @return array          Modified list of body classes.
- */
-function album_widgets_overlay_body_class( $classes ) {
-
-	$classes[] = 'widgets-hidden';
-
-	return $classes;
-
-}
-
-add_filter( 'body_class', 'album_widgets_overlay_body_class' );
