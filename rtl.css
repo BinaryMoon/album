@@ -859,6 +859,14 @@ main.full-width div.sharedaddy {
 	float: left;
 }
 
+.content-posts article.sticky {
+	padding: 1.5rem;
+}
+
+.content-posts article.sticky .thumbnail {
+	margin: -1.5rem -1.5rem 1.5rem;
+}
+
 .content-posts article .read-more {
 	padding: 1.5rem;
 	border-radius: 0.2rem;
@@ -923,6 +931,98 @@ main.full-width div.sharedaddy {
 	margin: 0.75rem 0 3rem;
 }
 
+.the-content .contact-form,
+.the-content .PDS_Poll,
+.the-content .sharedaddy,
+.the-content > p,
+.the-content dl,
+.the-content h1,
+.the-content h2,
+.the-content h3,
+.the-content h4,
+.the-content h5,
+.the-content h6,
+.the-content ol,
+.the-content ul {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.the-content ol,
+.the-content ul {
+	padding-right: 3rem;
+	padding-left: 0;
+}
+
+.device-click .the-content a:hover {
+	transition: background 0.4s ease-in-out;
+}
+
+.the-content .intro.intro-excerpt-demo {
+	padding: 0.375rem 0.75rem;
+}
+
+.the-content .drop-cap {
+	float: right;
+	margin: 0 -0.2em 0 0.05em;
+}
+
+.the-content .highlight {
+	padding: 3px 6px;
+	border-radius: 0;
+}
+
+.the-content .button {
+	border-radius: 0;
+	padding: 0.8rem 1.6rem;
+}
+
+.device-click .the-content .button {
+	transition: all 0.15s ease-in-out;
+}
+
+.the-content .button:focus,
+.the-content .button:hover {
+	box-shadow: none;
+}
+
+#footer {
+	padding: 3rem;
+}
+
+#footer:before {
+	margin: 3rem 1.5rem;
+}
+
+#footer .footer-widgets .widget {
+	float: right;
+	padding: 1.5rem;
+}
+
+.credits {
+	padding: 4.5rem 3rem 3rem;
+}
+
+.credits .sep {
+	margin: 0 0.5em;
+}
+
+.credits .footer-wrap {
+	float: right;
+}
+
+.device-click .credits .footer-wrap a {
+	transition: background 0.4s ease-in-out;
+}
+
+.credits .jetpack-social-navigation {
+	float: left;
+}
+
+.credits .jetpack-social-navigation li {
+	margin: 0 0.5rem;
+}
+
 .device-click .taxonomies .taxonomy a {
 	transition: background 0.4s ease-in-out;
 }
@@ -967,14 +1067,6 @@ main.full-width div.sharedaddy {
 .child-page {
 	float: right;
 	padding: 0 6.25%;
-}
-
-.child-page:nth-child(2n+2) {
-	padding-left: 0;
-}
-
-.child-page:nth-child(2n+1) {
-	padding-right: 0;
 }
 
 .content-testimonials .testimonial .entry {
@@ -1199,105 +1291,9 @@ form.search-form button.search-submit {
 	right: 0;
 }
 
-#footer {
-	padding: 3rem;
-}
-
-#footer:before {
-	margin: 3rem 1.5rem;
-}
-
-#footer .footer-widgets .widget {
-	float: right;
-	padding: 1.5rem;
-}
-
-.credits {
-	padding: 4.5rem 3rem 3rem;
-}
-
-.credits .sep {
-	margin: 0 0.5em;
-}
-
-.credits .footer-wrap {
-	float: right;
-}
-
-.device-click .credits .footer-wrap a {
-	transition: background 0.4s ease-in-out;
-}
-
-.credits .jetpack-social-navigation {
-	float: left;
-}
-
-.credits .jetpack-social-navigation li {
-	margin: 0 0.5rem;
-}
-
-.the-content .contact-form,
-.the-content .PDS_Poll,
-.the-content .sharedaddy,
-.the-content > p,
-.the-content dl,
-.the-content h1,
-.the-content h2,
-.the-content h3,
-.the-content h4,
-.the-content h5,
-.the-content h6,
-.the-content ol,
-.the-content ul {
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.the-content ol,
-.the-content ul {
-	padding-right: 3rem;
-	padding-left: 0;
-}
-
-.device-click .the-content a:hover {
-	transition: background 0.4s ease-in-out;
-}
-
-.the-content .intro.intro-excerpt-demo {
-	padding: 0.375rem 0.75rem;
-}
-
-.the-content .drop-cap {
-	float: right;
-	margin: 0 -0.2em 0 0.05em;
-}
-
-.the-content .highlight {
-	padding: 3px 6px;
-	border-radius: 0;
-}
-
-.the-content .button {
-	border-radius: 0;
-	padding: 0.8rem 1.6rem;
-}
-
-.device-click .the-content .button {
-	transition: all 0.15s ease-in-out;
-}
-
-.the-content .button:focus,
-.the-content .button:hover {
-	box-shadow: none;
-}
-
 blockquote:after,
 blockquote:before {
 	margin: 3rem auto;
-}
-
-.category-description:after {
-	margin: 0.75rem 0 4.5rem;
 }
 
 .comment-form-comment textarea {
@@ -1392,5 +1388,13 @@ blockquote:before {
 	}
 	.masthead .menu li.menu-item-has-children {
 		padding: 0.75rem 1.5rem;
+	}
+}
+
+@media print {
+	.content-single article .entry-header,
+	.credits {
+		padding-right: 10%;
+		padding-left: 10%;
 	}
 }
