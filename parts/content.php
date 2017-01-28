@@ -25,6 +25,9 @@
 
 <?php
 	}
+
+	get_template_part( 'parts/post-meta' );
+
 ?>
 
 	<section class="entry entry-archive">
@@ -41,10 +44,5 @@
 
 	</section>
 
-<?php
-
-	get_template_part( 'parts/post-meta' );
-
-?>
 
 </article>

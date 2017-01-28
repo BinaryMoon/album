@@ -90,7 +90,23 @@
 
 						}
 
+						li {
+
+							&:hover {
+
+								background: transparent;
+
+							}
+
+						}
+
 					}
+
+				}
+
+				.sub-menu {
+
+					background: rgba( $canvas-grey-70, 0.8 );
 
 				}
 

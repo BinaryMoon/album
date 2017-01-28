@@ -15,20 +15,6 @@
  */
 
 /**
- * TODO TO FINISH THE BUILD
- * ---
- * responsive layout
- * fix attachment page layout
- * check content options works as expected
- * add arrows to next and previous post in post navigation
- *
- * Waiting on Darren for Design
- * ---
- * child menus in responsive layout
- *
- */
-
-/**
  * TODO BEFORE SUBMISSION
  * ---
  * test theme with and without jetpack
