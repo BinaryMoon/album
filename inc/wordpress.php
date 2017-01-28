@@ -209,11 +209,11 @@ function album_after_setup_theme() {
 	// sized to fill the users monitor.
 	add_image_size( 'album-post-cover', 1500, 900, true );
 
-	// Add selective refresh to widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
-
 	// Attachment page size.
 	add_image_size( 'album-attachment-fullsize', 1200, 9999 );
+
+	// Add selective refresh to widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	// Custom background.
 	add_theme_support(
