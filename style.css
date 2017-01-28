@@ -2686,15 +2686,6 @@ a:hover img {
 }
 
 .masthead .menu li {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.masthead .menu li li {
-  margin: 0;
-}
-
-.masthead .menu li {
   padding: 0.75rem 1.5rem;
 }
 
@@ -2745,7 +2736,7 @@ a:hover img {
 
 .masthead .menu li.menu-item-has-children {
   padding-right: 3rem;
-  padding-left: 0;
+  padding-left: 1.5rem;
 }
 
 .masthead .menu li.menu-item-has-children > a {

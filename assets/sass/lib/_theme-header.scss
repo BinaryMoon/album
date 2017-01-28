@@ -90,19 +90,6 @@
 
 		li {
 
-			margin-left: 0.5rem;
-			margin-right: 0.5rem;
-
-			li {
-
-				margin:0;
-
-			}
-
-		}
-
-		li {
-
 			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
 
 			&:hover {
@@ -152,7 +139,7 @@
 			&.menu-item-has-children {
 
 				padding-right: $grid-gutter;
-				padding-left: 0;
+				padding-left: $grid-gutter / 2;
 
 				> a {
 
