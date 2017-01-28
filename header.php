@@ -35,6 +35,8 @@
 
 	<a href="#site-content" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to content', 'album' ); ?></a>
 
+	<?php the_header_image_tag( array( 'class' => 'album-header-image' ) ); ?>
+
 	<header class="masthead" id="header" role="banner">
 
 		<div class="branding">
