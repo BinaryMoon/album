@@ -17,13 +17,13 @@
 ?>
 <article class="page-404 main-content post-singular no-results not-found">
 
-	<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'album' ); ?></h1>
-
 	<section class="entry">
 
 <?php
 	if ( is_home() && current_user_can( 'publish_posts' ) ) {
 ?>
+
+		<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'album' ); ?></h1>
 
 		<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'album' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
@@ -40,6 +40,8 @@
 <?php
 	} else {
 ?>
+
+		<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'album' ); ?></h1>
 
 		<p><?php esc_html_e( 'It seems we can\'t find what you\'re looking for. Perhaps searching can help.', 'album' ); ?></p>
 
