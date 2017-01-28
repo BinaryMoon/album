@@ -269,7 +269,8 @@ function album_after_setup_theme() {
 	);
 
 	// Editor Style.
-	if ( $fonts_url = album_fonts() ) {
+	$fonts_url = album_fonts();
+	if ( $fonts_url ) {
 		add_editor_style( $fonts_url );
 	}
 
