@@ -688,20 +688,15 @@ object {
 .masthead .menu .menu-toggle .icon .menu-rows-2,
 .masthead .menu .menu-toggle .icon .menu-rows-3 {
 	-webkit-transform: rotate(0) translateZ(0);
-	        transform: rotate(0) translateZ(0);
+	       transform: rotate(0) translateZ(0);
 	-webkit-transform-origin: center center;
-	        transform-origin: center center;
+	       transform-origin: center center;
 }
 
 .device-click .masthead .menu .menu-toggle .icon .menu-rows-1,
 .device-click .masthead .menu .menu-toggle .icon .menu-rows-2,
 .device-click .masthead .menu .menu-toggle .icon .menu-rows-3 {
 	transition: all 0.15s ease-in-out;
-}
-
-.masthead .menu li {
-	margin-right: 0.5rem;
-	margin-left: 0.5rem;
 }
 
 .masthead .menu li {
@@ -719,7 +714,7 @@ object {
 
 .masthead .menu li.menu-item-has-children {
 	padding-left: 3rem;
-	padding-right: 0;
+	padding-right: 1.5rem;
 }
 
 .masthead .menu li.menu-item-has-children > a {
@@ -772,8 +767,8 @@ main.full-width div.sharedaddy {
 
 @media only screen and (max-width:782px) {
 	main {
-		float: right;
-		padding: 0 4.16667%;
+	float: right;
+	padding: 0 4.16667%;
 	}
 }
 
@@ -789,8 +784,8 @@ main.full-width div.sharedaddy {
 
 @media only screen and (max-width:782px) {
 	.sidebar-main {
-		float: right;
-		padding: 0 4.16667%;
+	float: right;
+	padding: 0 4.16667%;
 	}
 }
 
@@ -850,8 +845,8 @@ main.full-width div.sharedaddy {
 
 @media only screen and (max-width:782px) {
 	.content-posts article .post-meta-data .meta {
-		margin-left: 2em;
-		margin-right: 0;
+	margin-left: 2em;
+	margin-right: 0;
 	}
 }
 
@@ -890,8 +885,8 @@ main.full-width div.sharedaddy {
 
 @media only screen and (max-width:782px) {
 	.content-single article .entry-header {
-		padding-right: 3rem;
-		padding-left: 3rem;
+	padding-right: 3rem;
+	padding-left: 3rem;
 	}
 }
 
@@ -909,7 +904,7 @@ main.full-width div.sharedaddy {
 
 @media only screen and (max-width:782px) {
 	.content-single article.post-no-thumbnail:before {
-		margin: 0 1.5rem;
+	margin: 0 1.5rem;
 	}
 }
 
@@ -1112,6 +1107,13 @@ main.full-width div.sharedaddy {
 	float: right;
 }
 
+@media only screen and (max-width:782px) {
+	.jetpack-projects-page .content-projects {
+	margin-right: 0;
+	margin-left: 0;
+	}
+}
+
 .content-projects {
 	margin-right: -1.5rem;
 	margin-left: -1.5rem;
@@ -1129,7 +1131,7 @@ main.full-width div.sharedaddy {
 a.thumbnail img {
 	margin: 0 auto;
 	-webkit-transform: rotate3d(0,0,0,0);
-	        transform: rotate3d(0,0,0,0);
+	       transform: rotate3d(0,0,0,0);
 }
 
 .showcase article {
@@ -1264,7 +1266,7 @@ a.thumbnail img {
 	left: 0;
 	right: 0;
 	-webkit-transform: translateY(-100%);
-	        transform: translateY(-100%);
+	       transform: translateY(-100%);
 }
 
 .device-click .modal {
@@ -1278,7 +1280,7 @@ a.thumbnail img {
 
 .modal.display {
 	-webkit-transform: translateY(0);
-	        transform: translateY(0);
+	       transform: translateY(0);
 }
 
 form.search-form input.search-field {
@@ -1341,60 +1343,60 @@ blockquote:before {
 	.content-comments ol.comment-list li.comment.depth-8 article,
 	.content-comments ol.comment-list li.comment.depth-9 article,
 	.content-comments ol.comment-list li.comment.depth-10 article {
-		padding-right: 0;
-		padding-left: 0;
+	padding-right: 0;
+	padding-left: 0;
 	}
 	#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
-		margin: 0 0 1.5rem;
+	margin: 0 0 1.5rem;
 	}
 }
 
 @media only screen and (max-width:782px) {
 	.masthead .menu .menu-toggle .icon {
-		margin-right: 0.5em;
-		margin-left: 0;
+	margin-right: 0.5em;
+	margin-left: 0;
 	}
 	.masthead .menu ul.menu-wrap {
-		padding: 6rem 3rem;
-		left: 0;
-		right: 0;
+	padding: 6rem 3rem;
+	left: 0;
+	right: 0;
 	}
 	.masthead .menu ul.menu-wrap li {
-		padding: 0.75rem 1.5rem;
+	padding: 0.75rem 1.5rem;
 	}
 	.masthead .menu ul.menu-wrap li ul {
-		right: 0;
-		left: 0;
+	right: 0;
+	left: 0;
 	}
 	.device-click .masthead .menu ul.menu-wrap li ul a {
-		transition: background 0.4s ease-in-out;
+	transition: background 0.4s ease-in-out;
 	}
 	.masthead .menu.menu-on .icon .menu-rows-1 {
-		-webkit-transform: rotate(45deg) translate3d(22%,220%,0);
-		        transform: rotate(45deg) translate3d(22%,220%,0);
+	-webkit-transform: rotate(45deg) translate3d(22%,220%,0);
+	        transform: rotate(45deg) translate3d(22%,220%,0);
 	}
 	.masthead .menu.menu-on .icon .menu-rows-2 {
-		-webkit-transform: scale3d(0,0,1);
-		        transform: scale3d(0,0,1);
+	-webkit-transform: scale3d(0,0,1);
+	        transform: scale3d(0,0,1);
 	}
 	.masthead .menu.menu-on .icon .menu-rows-3 {
-		-webkit-transform: rotate(-45deg) translate3d(22%,-220%,0);
-		        transform: rotate(-45deg) translate3d(22%,-220%,0);
+	-webkit-transform: rotate(-45deg) translate3d(22%,-220%,0);
+	        transform: rotate(-45deg) translate3d(22%,-220%,0);
 	}
 	.masthead .menu ul ul li.focus > ul,
 	.masthead .menu ul ul li:hover > ul {
-		right: 0;
-		left: 0;
+	right: 0;
+	left: 0;
 	}
 	.masthead .menu li.menu-item-has-children {
-		padding: 0.75rem 1.5rem;
+	padding: 0.75rem 1.5rem;
 	}
 }
 
 @media print {
 	.content-single article .entry-header,
 	.credits {
-		padding-right: 10%;
-		padding-left: 10%;
+	padding-right: 10%;
+	padding-left: 10%;
 	}
 }
