@@ -14,14 +14,6 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-/**
- * TODO BEFORE SUBMISSION
- * ---
- * test theme with and without jetpack
- * screenshot.png (880 x 660)
- * go through required accessibility items - https://make.wordpress.org/themes/handbook/review/accessibility/required/
- */
-
 // WordPress specific functionality (actions and filters).
 include( 'inc/wordpress.php' );
 
