@@ -283,6 +283,12 @@
 			opacity: $style-opacity-element;
 			outline: none;
 
+			@include for-tablet {
+
+				display: inline-block;
+
+			}
+
 			&.current-page {
 
 				margin: 0;
@@ -316,12 +322,28 @@
 
 		}
 
+		@include for-tablet {
+
+			width: 100%;
+			float: none;
+
+		}
+
 	}
 
 	.content-projects {
 
 		width: calc( 80% + 3rem );
 		float: left;
+
+		@include for-tablet {
+
+			width: 100%;
+			float: none;
+			margin-left: 0;
+			margin-right: 0;
+
+		}
 
 	}
 
@@ -412,7 +434,31 @@
 
 	}
 
+	@include for-tablet {
+
+		.grid-sizer,
+		article {
+
+			width: 50%;
+
+		}
+
+	}
+
+	@include for-phone {
+
+		.grid-sizer,
+		article {
+
+			width: 100%;
+
+		}
+
+	}
+
 }
+
+
 
 /* post thumbnails generic styles */
 a.thumbnail {

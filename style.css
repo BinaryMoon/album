@@ -3899,6 +3899,12 @@ body.single #site-content {
   outline: none;
 }
 
+@media only screen and (max-width: 782px) {
+  .jetpack-projects-page .projects-terms a {
+    display: inline-block;
+  }
+}
+
 .jetpack-projects-page .projects-terms a.current-page {
   margin: 0;
   opacity: 1;
@@ -3929,9 +3935,25 @@ body.single #site-content {
   margin: 0.75rem 0 1.5rem 0;
 }
 
+@media only screen and (max-width: 782px) {
+  .jetpack-projects-page .projects-terms {
+    width: 100%;
+    float: none;
+  }
+}
+
 .jetpack-projects-page .content-projects {
   width: calc( 80% + 3rem);
   float: left;
+}
+
+@media only screen and (max-width: 782px) {
+  .jetpack-projects-page .content-projects {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .jetpack-projects-archive {
@@ -3991,6 +4013,20 @@ body.single #site-content {
 
 .content-projects article .post-meta-data .post-lead-category {
   display: none;
+}
+
+@media only screen and (max-width: 782px) {
+  .content-projects .grid-sizer,
+  .content-projects article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content-projects .grid-sizer,
+  .content-projects article {
+    width: 100%;
+  }
 }
 
 /* post thumbnails generic styles */
