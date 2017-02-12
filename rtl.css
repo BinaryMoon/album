@@ -688,9 +688,9 @@ object {
 .masthead .menu .menu-toggle .icon .menu-rows-2,
 .masthead .menu .menu-toggle .icon .menu-rows-3 {
 	-webkit-transform: rotate(0) translateZ(0);
-	       transform: rotate(0) translateZ(0);
+	      transform: rotate(0) translateZ(0);
 	-webkit-transform-origin: center center;
-	       transform-origin: center center;
+	      transform-origin: center center;
 }
 
 .device-click .masthead .menu .menu-toggle .icon .menu-rows-1,
@@ -959,7 +959,7 @@ main.full-width div.sharedaddy {
 
 .the-content .drop-cap {
 	float: right;
-	margin: 0 -0.2em 0 0.05em;
+	margin: 0.11em -0.05em 0 0.11em;
 }
 
 .the-content .highlight {
@@ -1131,7 +1131,7 @@ main.full-width div.sharedaddy {
 a.thumbnail img {
 	margin: 0 auto;
 	-webkit-transform: rotate3d(0,0,0,0);
-	       transform: rotate3d(0,0,0,0);
+	      transform: rotate3d(0,0,0,0);
 }
 
 .showcase article {
@@ -1266,7 +1266,7 @@ a.thumbnail img {
 	left: 0;
 	right: 0;
 	-webkit-transform: translateY(-100%);
-	       transform: translateY(-100%);
+	      transform: translateY(-100%);
 }
 
 .device-click .modal {
@@ -1280,7 +1280,7 @@ a.thumbnail img {
 
 .modal.display {
 	-webkit-transform: translateY(0);
-	       transform: translateY(0);
+	      transform: translateY(0);
 }
 
 form.search-form input.search-field {
@@ -1373,15 +1373,15 @@ blockquote:before {
 	}
 	.masthead .menu.menu-on .icon .menu-rows-1 {
 	-webkit-transform: rotate(45deg) translate3d(22%,220%,0);
-	        transform: rotate(45deg) translate3d(22%,220%,0);
+	       transform: rotate(45deg) translate3d(22%,220%,0);
 	}
 	.masthead .menu.menu-on .icon .menu-rows-2 {
 	-webkit-transform: scale3d(0,0,1);
-	        transform: scale3d(0,0,1);
+	       transform: scale3d(0,0,1);
 	}
 	.masthead .menu.menu-on .icon .menu-rows-3 {
 	-webkit-transform: rotate(-45deg) translate3d(22%,-220%,0);
-	        transform: rotate(-45deg) translate3d(22%,-220%,0);
+	       transform: rotate(-45deg) translate3d(22%,-220%,0);
 	}
 	.masthead .menu ul ul li.focus > ul,
 	.masthead .menu ul ul li:hover > ul {

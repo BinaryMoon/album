@@ -1656,11 +1656,6 @@ blockquote.alignleft, blockquote.alignright {
 /**!
  * 3.2 - WordPress.com Specific Styles
  */
-#botd,
-#botd2 {
-	position: absolute;
-}
-
 .PDS_Poll {
 	max-width: 100%;
 }
@@ -1687,11 +1682,6 @@ blockquote.alignleft, blockquote.alignright {
 
 .PDS_Poll input {
 	margin-bottom: 0;
-}
-
-.wp-playlist,
-.mejs-container {
-	margin: 3rem 0;
 }
 
 
@@ -2269,7 +2259,7 @@ blockquote.alignleft, blockquote.alignright {
 	opacity: 0.3;
 }
 
-.content-comments ol.comment-list ul.children {
+.content-comments ol.comment-list .children {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
@@ -2277,7 +2267,7 @@ blockquote.alignleft, blockquote.alignright {
 	position: relative;
 }
 
-.content-comments ol.comment-list ul.children li:last-child {
+.content-comments ol.comment-list .children li:last-child {
 	margin: 0;
 }
 
@@ -2428,6 +2418,11 @@ iframe.instagram-media {
 object {
 	display: block;
 	margin: 3rem auto !important;
+}
+
+.wp-playlist,
+.mejs-container {
+	margin: 3rem 0;
 }
 
 
@@ -3525,7 +3520,7 @@ body.single #site-content {
 	float: left;
 	font-family: "Roboto Mono", courier;
 	font-weight: bold;
-	margin: 0 0.05em 0 -0.2em;
+	margin: 0.11em 0.11em 0 -0.05em;
 	font-size: 64px;
 	font-size: 4rem;
 	line-height: 1.25;

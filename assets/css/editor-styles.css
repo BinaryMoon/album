@@ -192,7 +192,7 @@ body#tinymce.wp-editor .drop-cap {
   float: left;
   font-family: "Roboto Mono", courier;
   font-weight: bold;
-  margin: 0 0.05em 0 -0.2em;
+  margin: 0.11em 0.11em 0 -0.05em;
   font-size: 64px;
   font-size: 4rem;
   line-height: 1.25;

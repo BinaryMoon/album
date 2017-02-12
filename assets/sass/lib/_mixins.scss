@@ -196,7 +196,7 @@ $border-hover-background: linear-gradient( transparent 0%, transparent 60%, $can
 		float: left;
 		font-family: $font-family-serif;
 		font-weight: bold;
-		margin: 0 0.05em 0 -0.2em;
+		margin: 0.11em 0.11em 0 -0.05em;
 		@include modular-scale( alpha );
 		line-height: 0.75;
 
