@@ -8,12 +8,12 @@
  * The head is kept as small as is reasonably possible. Any head content
  * should be hooked into the wp_head filter.
  *
- * Styles and scripts and enqueued through the {@se album_enqueue} function found
+ * Styles and scripts and enqueued through the {@se terminal_enqueue} function found
  * in inc/wordpress.php
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -33,9 +33,9 @@
 
 <div class="webpage">
 
-	<a href="#site-content" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to content', 'album' ); ?></a>
+	<a href="#site-content" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to content', 'terminal' ); ?></a>
 
-	<?php the_header_image_tag( array( 'class' => 'album-header-image' ) ); ?>
+	<?php the_header_image_tag( array( 'class' => 'terminal-header-image' ) ); ?>
 
 	<header class="masthead" id="header" role="banner">
 
@@ -75,12 +75,12 @@
 
 		</div>
 
-		<nav class="menu menu-primary" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'album' ); ?>">
+		<nav class="menu menu-primary" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'terminal' ); ?>">
 
 			<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
 <?php
-	esc_html_e( 'Menu', 'album' );
-	album_svg( 'menu-rows' );
+	esc_html_e( 'Menu', 'terminal' );
+	terminal_svg( 'menu-rows' );
 ?>
 			</button>
 

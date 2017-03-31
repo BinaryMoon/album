@@ -8,7 +8,7 @@
  * @link https://codex.wordpress.org/Theme_Development
  * @link https://codex.wordpress.org/Child_Themes
  *
- * @package Album
+ * @package Terminal
  * @subpackage Template
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License

@@ -4,13 +4,13 @@
  *
  * Is used for image post formats since the layout would be the same for both
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	$image = get_the_post_thumbnail( get_the_ID(), 'album-archive-project' );
+	$image = get_the_post_thumbnail( get_the_ID(), 'terminal-archive-project' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -40,7 +40,7 @@
 
 ?>
 
-		<p><a href="<?php the_permalink(); ?>" class="read-more"><?php album_read_more_text(); ?></a></p>
+		<p><a href="<?php the_permalink(); ?>" class="read-more"><?php terminal_read_more_text(); ?></a></p>
 
 	</section>
 

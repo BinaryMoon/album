@@ -6,10 +6,10 @@
  * Created by Ben Gillbanks <https://prothemedesign.com/>
  * Available under GPL2 license
  *
- * @package Album
+ * @package Terminal
  */
 
-/* global album_site_settings, wp */
+/* global terminal_site_settings, wp */
 
 ;( function( window, document, $ ) {
 
@@ -290,7 +290,7 @@
 				$( '.showcase' ).elementalSlides(
 					{
 						'nav_arrows': true,
-						'autoplay': parseInt( album_site_settings.slider.autoplay )
+						'autoplay': parseInt( terminal_site_settings.slider.autoplay )
 					}
 				);
 
@@ -431,7 +431,7 @@
 							var $element = $( item );
 
 							// Is it the selected item or should we force it to be displayed.
-							if ( $element.hasClass( new_tag ) || 'album-show-all' === tag ) {
+							if ( $element.hasClass( new_tag ) || 'terminal-show-all' === tag ) {
 								// Only display if currently invisble.
 								if ( ! $element.is( ':visible' ) ) {
 									// Make sure it's positioned with masonry.

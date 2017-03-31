@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#footer-php
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -26,12 +26,12 @@
 
 	<section class="credits">
 
-		<?php album_social_links(); ?>
+		<?php terminal_social_links(); ?>
 
 		<div class="footer-wrap" role="contentinfo">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'album' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'album' ); ?>" rel="generator"><?php printf( esc_html__( 'Proudly powered by %s', 'album' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'terminal' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'terminal' ); ?>" rel="generator"><?php printf( esc_html__( 'Proudly powered by %s', 'terminal' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'album' ), 'Album', '<a href="https://prothemedesign.com/" rel="designer">Pro Theme Design</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'terminal' ), 'Terminal', '<a href="https://prothemedesign.com/" rel="designer">Pro Theme Design</a>' ); ?>
 		</div>
 
 	</section>

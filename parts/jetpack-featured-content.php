@@ -4,15 +4,15 @@
  *
  * @link https://jetpack.me/support/featured-content/
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	if ( album_has_featured_posts() ) {
+	if ( terminal_has_featured_posts() ) {
 
-		$featured_posts = album_get_featured_posts( 4 );
+		$featured_posts = terminal_get_featured_posts( 4 );
 ?>
 
 	<section class="showcase">

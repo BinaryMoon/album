@@ -6,7 +6,7 @@
  * types). It can be overriden by creating a new template in the parts folder
  * with the name content-single-[CUSTOM-POST-TYPE].php.
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -29,7 +29,7 @@
 <?php
 	the_content(
 		sprintf(
-			esc_html__( 'Read more %s', 'album' ),
+			esc_html__( 'Read more %s', 'terminal' ),
 			the_title( '<span class="screen-reader-text">', '</span>', false )
 		)
 	);
@@ -40,7 +40,7 @@
 		array(
 			'before'      => '<div class="pagination">',
 			'after'       => '</div>',
-			'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'album' ) . ' </span>%',
+			'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'terminal' ) . ' </span>%',
 		)
 	);
 ?>

@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/reference/functions/get_search_form/
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -17,10 +17,10 @@
 <form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 
 	<label>
-		<span class="screen-reader-text"><?php esc_html_e( 'Search', 'album' ); ?></span>
-		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text" placeholder="<?php echo esc_attr_x( 'Search...', 'search input placeholder text', 'album' ); ?>" />
+		<span class="screen-reader-text"><?php esc_html_e( 'Search', 'terminal' ); ?></span>
+		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text" placeholder="<?php echo esc_attr_x( 'Search...', 'search input placeholder text', 'terminal' ); ?>" />
 	</label>
 
-	<button class="search-submit"><?php album_svg( 'search' ); ?><span class="screen-reader-text"><?php echo esc_html__( 'Search', 'album' ); ?></span></button>
+	<button class="search-submit"><?php terminal_svg( 'search' ); ?><span class="screen-reader-text"><?php echo esc_html__( 'Search', 'terminal' ); ?></span></button>
 
 </form>

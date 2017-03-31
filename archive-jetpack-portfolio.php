@@ -6,7 +6,7 @@
  *
  * @link https://jetpack.com/support/custom-content-types/
  *
- * @package Album
+ * @package Terminal
  * @subpackage Template
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -20,7 +20,7 @@
 <?php
 	the_archive_title( '<h1 class="entry-title entry-archive-title">', '</h1>' );
 	the_archive_description( '<div class="category-description">', '</div>' );
-	album_project_terms();
+	terminal_project_terms();
 ?>
 
 	</header>
@@ -46,8 +46,8 @@
 		the_posts_pagination(
 			array(
 				'mid_size' => 2,
-				'prev_text' => esc_html__( 'Older', 'album' ),
-				'next_text' => esc_html__( 'Newer', 'album' ),
+				'prev_text' => esc_html__( 'Older', 'terminal' ),
+				'next_text' => esc_html__( 'Newer', 'terminal' ),
 			)
 		);
 

@@ -8,7 +8,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Album
+ * @package Terminal
  * @subpackage Template
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -47,8 +47,8 @@
 		the_posts_pagination(
 			array(
 				'mid_size' => 2,
-				'prev_text' => esc_html__( 'Older', 'album' ),
-				'next_text' => esc_html__( 'Newer', 'album' ),
+				'prev_text' => esc_html__( 'Older', 'terminal' ),
+				'next_text' => esc_html__( 'Newer', 'terminal' ),
 			)
 		);
 

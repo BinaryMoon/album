@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#comments-php
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -29,21 +29,21 @@
 		$comment_count = get_comments_number();
 		if ( 1 === $comment_count ) {
 
-			esc_html_e( 'One Comment', 'album' );
+			esc_html_e( 'One Comment', 'terminal' );
 
 		} else {
 
 			printf( // WPCS: XSS OK.
 				/* translators: placeholder is number of comments */
-				esc_html( _nx( '%1$s Comment', '%1$s Comments', $comment_count, 'comments title', 'album' ) ),
+				esc_html( _nx( '%1$s Comment', '%1$s Comments', $comment_count, 'comments title', 'terminal' ) ),
 				(int) number_format_i18n( $comment_count )
 			);
 		}
 ?>
 
 			<a href="#respond" class="scroll-to">
-				<span class="screen-reader-text"><?php esc_html_e( 'Leave a comment', 'album' ); ?></span>
-				<?php esc_html_e( '&rsaquo;', 'album' ); ?>
+				<span class="screen-reader-text"><?php esc_html_e( 'Leave a comment', 'terminal' ); ?></span>
+				<?php esc_html_e( '&rsaquo;', 'terminal' ); ?>
 			</a>
 
 		</h2>
@@ -55,7 +55,7 @@
 			array(
 				'avatar_size' => 80,
 				'short_ping' => true,
-				'reply_text' => album_svg( 'reply', false ) . '<span class="screen-reader-text">' . esc_html__( 'Reply', 'album' ) . '</span>',
+				'reply_text' => terminal_svg( 'reply', false ) . '<span class="screen-reader-text">' . esc_html__( 'Reply', 'terminal' ) . '</span>',
 			)
 		);
 ?>
@@ -75,7 +75,7 @@
 				'title_reply_after'  => '</h2>',
 				'cancel_reply_before' => '',
 				'cancel_reply_after' => '',
-				'cancel_reply_link' => album_svg( 'close', false ) . '<span class="screen-reader-text">' . esc_html__( 'Cancel Reply', 'album' ) . '</span>',
+				'cancel_reply_link' => terminal_svg( 'close', false ) . '<span class="screen-reader-text">' . esc_html__( 'Cancel Reply', 'terminal' ) . '</span>',
 			)
 		);
 
@@ -83,7 +83,7 @@
 ?>
 
 		<div class="user-icon-container">
-			<?php album_svg( 'user' ); ?>
+			<?php terminal_svg( 'user' ); ?>
 		</div>
 
 	</section>

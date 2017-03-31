@@ -2,7 +2,7 @@
 /**
  * Contributors Listing Template Partial
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -27,6 +27,6 @@ foreach ( $contributors as $contributor_id ) {
 
 	}
 
-	album_contributor( $contributor_id, $post_count );
+	terminal_contributor( $contributor_id, $post_count );
 
 }

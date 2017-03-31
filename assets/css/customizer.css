@@ -1,8 +1,8 @@
-.album-sortable {
+.terminal-sortable {
   margin-bottom: 15px;
 }
 
-.album-sortable li {
+.terminal-sortable li {
   border: 1px solid #ddd;
   padding: 5px 10px;
   background: #fff;
@@ -14,25 +14,25 @@
   color: #333;
 }
 
-.album-sortable li:hover {
+.terminal-sortable li:hover {
   background: #f3f3f5;
   color: #0073aa;
 }
 
-.album-sortable li.ui-sortable-helper {
+.terminal-sortable li.ui-sortable-helper {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.album-sortable li:last-child {
+.terminal-sortable li:last-child {
   border-bottom: 1px solid #ddd;
 }
 
-.album-sortable li.album-highlight {
+.terminal-sortable li.terminal-highlight {
   height: 18px;
   background: #f3f3f5;
 }
 
-.album-close {
+.terminal-close {
   padding: 0 10px;
   color: #900;
   position: absolute;

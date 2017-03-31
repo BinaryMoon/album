@@ -894,7 +894,7 @@ main.full-width div.sharedaddy {
 	margin: 0 1rem;
 }
 
-.content-single article img.album-featured-image {
+.content-single article img.terminal-featured-image {
 	margin: 0 auto;
 }
 
@@ -1328,7 +1328,7 @@ blockquote:before {
 	border-color: #575e6a;
 }
 
-.album-header-image {
+.terminal-header-image {
 	margin: 0 auto;
 }
 

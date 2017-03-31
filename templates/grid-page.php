@@ -6,7 +6,7 @@
  *
  * Template Name: Child Page Grid
  *
- * @package Album
+ * @package Terminal
  * @subpackage PageTemplate
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -39,7 +39,7 @@
 <?php
 
 	// Get a list of the children for the current page.
-	$child_pages = album_child_pages();
+	$child_pages = terminal_child_pages();
 
 	// If there are any children then display them below in a grid.
 	if ( $child_pages->have_posts() ) {

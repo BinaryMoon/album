@@ -9,7 +9,7 @@
  *
  * Uses `parts/content.php` as a fallback if no quotes are found.
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -35,8 +35,8 @@
 
 		<span class="permalink">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				<?php echo esc_html_x( '#', 'A symbol used to link to a blog post', 'album' ); ?>
-				<span class="screen-reader-text"><?php printf( esc_html__( 'Permanent link to %s', 'album' ), get_the_title() ); ?></span>
+				<?php echo esc_html_x( '#', 'A symbol used to link to a blog post', 'terminal' ); ?>
+				<span class="screen-reader-text"><?php printf( esc_html__( 'Permanent link to %s', 'terminal' ), get_the_title() ); ?></span>
 			</a>
 		</span>
 

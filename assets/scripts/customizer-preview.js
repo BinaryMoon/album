@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#javascript-driven-widget-support
  *
- * @package Album
+ * @package Terminal
  */
 /* global jQuery, document, wp */
 
@@ -51,7 +51,7 @@
 		} );
 
 		// Header text color.
-		wp.customize( 'album_display_single_excerpt', function( value ) {
+		wp.customize( 'terminal_display_single_excerpt', function( value ) {
 			value.bind( function( to ) {
 
 				if ( to ) {
@@ -66,15 +66,15 @@
 
 
 		// Header text color.
-		wp.customize( 'album_display_single_featured_image', function( value ) {
+		wp.customize( 'terminal_display_single_featured_image', function( value ) {
 			value.bind( function( to ) {
 
 				if ( to ) {
-					$( 'img.album-featured-image' ).show();
+					$( 'img.terminal-featured-image' ).show();
 					$( 'article' ).addClass( 'post-has-thumbnail' );
 					$( 'article' ).removeClass( 'post-no-thumbnail' );
 				} else {
-					$( 'img.album-featured-image' ).hide();
+					$( 'img.terminal-featured-image' ).hide();
 					$( 'article' ).removeClass( 'post-has-thumbnail' );
 					$( 'article' ).addClass( 'post-no-thumbnail' );
 				}

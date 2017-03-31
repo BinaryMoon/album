@@ -2,7 +2,7 @@
  * ## - Elements
  * Search form, author meta box, and other generic, reusable, elements.
  */
-// @package Album
+// @package Terminal
 
 /* taxonomies - categories and tags on single posts */
 .taxonomies {
@@ -497,7 +497,7 @@ a.thumbnail {
 	@include clear;
 	position: relative;
 	height: 0;
-	padding-bottom: $album-cover-height;
+	padding-bottom: $terminal-cover-height;
 	margin-bottom: $grid-line-height * 3;
 
 	article {

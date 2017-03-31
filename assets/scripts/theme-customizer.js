@@ -6,7 +6,7 @@
  * Created by Ben Gillbanks <http://www.binarymoon.co.uk/>
  * Available under GPL2 license
  *
- * @package Album
+ * @package Terminal
  */
 
 /* global wp */
@@ -17,13 +17,13 @@
 
 	$( document ).ready( function() {
 
-		$( '.album-category-checkbox' ).on( 'change', function(){
+		$( '.terminal-category-checkbox' ).on( 'change', function(){
 
 			var $this = $( this );
-			var id = $this.closest( 'li' ).find( '.album-hidden-categories' ).prop( 'id' );
+			var id = $this.closest( 'li' ).find( '.terminal-hidden-categories' ).prop( 'id' );
 			var categories = [];
 
-			$this.closest( 'li' ).find( '.album-category-checkbox' ).each( function() {
+			$this.closest( 'li' ).find( '.terminal-category-checkbox' ).each( function() {
 
 				var $this = $( this );
 				if ( true === $this.prop( 'checked' ) ) {
@@ -37,13 +37,13 @@
 
 		});
 
-		$( '.album-dragdrop-select' ).on( 'change', function(){
+		$( '.terminal-dragdrop-select' ).on( 'change', function(){
 
 			var $this = $( this );
 			var selected = $this.find( ':selected' );
 			var new_li = '<li data-value="' + selected.val() + '">' + selected.text() + '</li>';
 
-			$this.parent().find( '.album-sortable' ).append( new_li );
+			$this.parent().find( '.terminal-sortable' ).append( new_li );
 			list_add_close_button();
 
 			$this.val( 'default' );
@@ -53,8 +53,8 @@
 
 		});
 
-		$( '.album-sortable' ).sortable({
-			placeholder: 'album-highlight',
+		$( '.terminal-sortable' ).sortable({
+			placeholder: 'terminal-highlight',
 			update: function() {
 				list_update();
 			}
@@ -66,13 +66,13 @@
 
 	var list_close_button = function( element ) {
 
-		var close = $( '<a href="" class="album-close">x</a>' );
+		var close = $( '<a href="" class="terminal-close">x</a>' );
 		$( element ).append( close );
 
 		close.on( 'click', function() {
 			var $this = $( this );
 			var parent = $this.parent();
-			var select = $this.closest( '.customize-control' ).find( '.album-dragdrop-select' );
+			var select = $this.closest( '.customize-control' ).find( '.terminal-dragdrop-select' );
 			$this.remove();
 
 			var new_option = '<option value="' + parent.data( 'value' ) + '">' + parent.text() + '</option>';
@@ -86,9 +86,9 @@
 
 	var list_update = function() {
 
-		$( '.album-sortable' ).each( function() {
+		$( '.terminal-sortable' ).each( function() {
 			var list = [];
-			var id = $( this ).closest( 'li' ).find( '.album-hidden-categories' ).prop( 'id' );
+			var id = $( this ).closest( 'li' ).find( '.terminal-hidden-categories' ).prop( 'id' );
 			$( this ).find( 'li' ).each(function() {
 				list.push( $( this ).data( 'value' ) );
 			});
@@ -99,9 +99,9 @@
 
 	var list_add_close_button = function() {
 
-		$( '.album-sortable li' ).each(function(){
+		$( '.terminal-sortable li' ).each(function(){
 
-			if ( 0 === $( this ).find( 'a.album-close' ).length ) {
+			if ( 0 === $( this ).find( 'a.terminal-close' ).length ) {
 				list_close_button( this );
 			}
 

@@ -7,7 +7,7 @@
  *
  * Template Name: Portfolio
  *
- * @package Album
+ * @package Terminal
  * @subpackage PageTemplate
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -45,7 +45,7 @@
 
 <?php
 
-	album_project_terms();
+	terminal_project_terms();
 
 	$query = new WP_Query(
 		array(

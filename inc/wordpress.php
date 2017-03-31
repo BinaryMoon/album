@@ -8,7 +8,7 @@
  * For more information on hooks, actions, and filters,
  * {@link https://codex.wordpress.org/Plugin_API}
  *
- * @package Album
+ * @package Terminal
  * @subpackage WordPress
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -18,21 +18,13 @@
  * Enqueue scripts, styles, and fonts.
  *
  * Also sets javascript properties that need to access PHP.
- * Fonts are created with {@see album_fonts}.
  *
  * @global array $wp_scripts
  */
-function album_enqueue() {
+function terminal_enqueue() {
 
 	// Styles.
-	wp_enqueue_style( 'album-style', get_stylesheet_uri(), null, '1.24' );
-
-	// Fonts.
-	$fonts_url = album_fonts();
-
-	if ( $fonts_url ) {
-		wp_enqueue_style( 'album-fonts', $fonts_url, array(), null );
-	}
+	wp_enqueue_style( 'terminal-style', get_stylesheet_uri(), null, '1.24' );
 
 	// Javascript.
 	// Always loaded in customizer for cases where widgets are added to an empty sidebar.
@@ -40,29 +32,29 @@ function album_enqueue() {
 		wp_enqueue_script( 'masonry' );
 	}
 
-	wp_enqueue_script( 'album-script-main', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.2', false );
+	wp_enqueue_script( 'terminal-script-main', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.2', false );
 
-	if ( album_has_featured_posts() ) {
-		wp_enqueue_script( 'album-script-slider', get_theme_file_uri( '/assets/scripts/jquery.slider.js' ), array( 'jquery' ), '1.5.1', false );
+	if ( terminal_has_featured_posts() ) {
+		wp_enqueue_script( 'terminal-script-slider', get_theme_file_uri( '/assets/scripts/jquery.slider.js' ), array( 'jquery' ), '1.5.1', false );
 	}
 
 	// Localized Javascript strings and provide access to common properties.
 	wp_localize_script(
-		'album-script-main',
-		'album_site_settings',
+		'terminal-script-main',
+		'terminal_site_settings',
 		array(
 			// Translation strings.
 			'i18n' => array(
-				'slide_next' => esc_html__( 'Next Slide', 'album' ),
-				'slide_prev' => esc_html__( 'Previous Slide', 'album' ),
+				'slide_next' => esc_html__( 'Next Slide', 'terminal' ),
+				'slide_prev' => esc_html__( 'Previous Slide', 'terminal' ),
 				/* translators: # is the slide number, it will be replaced with 1/ 2/ 3 etc */
-				'slide_number' => esc_html__( 'Slide #', 'album' ),
-				'slide_controls_label' => esc_html__( 'Slider Buttons', 'album' ),
-				'menu' => esc_html__( 'Menu', 'album' ),
+				'slide_number' => esc_html__( 'Slide #', 'terminal' ),
+				'slide_controls_label' => esc_html__( 'Slider Buttons', 'terminal' ),
+				'menu' => esc_html__( 'Menu', 'terminal' ),
 			),
 			// Slider settings.
 			'slider' => array(
-				'autoplay' => ( get_theme_mod( 'album_autoplay_slider', true ) ) ? 1 : 0,
+				'autoplay' => ( get_theme_mod( 'terminal_autoplay_slider', true ) ) ? 1 : 0,
 			),
 			// Properties that are usable through javascript.
 			'is' => array(
@@ -80,7 +72,7 @@ function album_enqueue() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'album_enqueue' );
+add_action( 'wp_enqueue_scripts', 'terminal_enqueue' );
 
 
 /**
@@ -92,54 +84,15 @@ add_action( 'wp_enqueue_scripts', 'album_enqueue' );
  *
  * @global int $content_width
  */
-function album_content_width() {
+function terminal_content_width() {
 
 	$width = 960;
 
-	$GLOBALS['content_width'] = apply_filters( 'album_content_width', $width );
+	$GLOBALS['content_width'] = apply_filters( 'terminal_content_width', $width );
 
 }
 
-add_action( 'after_setup_theme', 'album_content_width', 0 );
-
-
-/**
- * Get url for embedding Google fonts.
- *
- * Output can be filtered with 'album_fonts' filter.
- *
- * @return string|boolean Font url or false if there are no fonts.
- */
-function album_fonts() {
-
-	$fonts = array();
-
-	/* translators: If there are characters in your language that are not supported by Roboto Mono, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== esc_html_x( 'on', 'Roboto Mono: on or off', 'album' ) ) {
-		$fonts['roboto-mono'] = 'Roboto Mono:400,700';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Roboto, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== esc_html_x( 'on', 'Roboto: on or off', 'album' ) ) {
-		$fonts['roboto'] = 'Roboto:100,400,700';
-	}
-
-	// Filter fonts. Allows them to be disabled/ added to.
-	$fonts = apply_filters( 'album_fonts', $fonts );
-
-	if ( $fonts ) {
-		// Build font embed query string.
-		$query_args = array(
-			'family' => rawurlencode( implode( '|', $fonts ) ),
-			'subset' => rawurlencode( 'latin,latin-ext' ),
-		);
-
-		return add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return false;
-
-}
+add_action( 'after_setup_theme', 'terminal_content_width', 0 );
 
 
 /**
@@ -149,9 +102,9 @@ function album_fonts() {
  * @param string $relation_type The relation type the URLs are printed.
  * @return array URLs to print for resource hints.
  */
-function album_resource_hints( $urls, $relation_type ) {
+function terminal_resource_hints( $urls, $relation_type ) {
 
-	if ( wp_style_is( 'album-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+	if ( wp_style_is( 'terminal-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
@@ -164,17 +117,15 @@ function album_resource_hints( $urls, $relation_type ) {
 
 }
 
-add_filter( 'wp_resource_hints', 'album_resource_hints', 10, 2 );
+add_filter( 'wp_resource_hints', 'terminal_resource_hints', 10, 2 );
 
 
 /**
  * Set up all the theme properties and extras.
- *
- * Also adds fonts to editor styles {@see album_fonts}.
  */
-function album_after_setup_theme() {
+function terminal_after_setup_theme() {
 
-	load_theme_textdomain( 'album', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'terminal', get_template_directory() . '/languages' );
 
 	// Title Tag.
 	add_theme_support( 'title-tag' );
@@ -186,24 +137,24 @@ function album_after_setup_theme() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Attachment (image.php) page links.
-	add_image_size( 'album-attachment', 250, 250, true );
+	add_image_size( 'terminal-attachment', 250, 250, true );
 
 	// Ideal header image size.
-	add_image_size( 'album-header', 1500, 500, true );
+	add_image_size( 'terminal-header', 1500, 500, true );
 
 	// Archive/ homepage thumbnails.
-	add_image_size( 'album-archive', 900, 600, true );
+	add_image_size( 'terminal-archive', 900, 600, true );
 
 	// Archive/ homepage thumbnails.
-	add_image_size( 'album-archive-project', 600, 9999 );
+	add_image_size( 'terminal-archive-project', 600, 9999 );
 
 	// Image for slider and post/ page headers. This needs to be big because it
 	// will is fixed position with size set to cover, which means it will be
 	// sized to fill the users monitor.
-	add_image_size( 'album-post-cover', 1500, 900, true );
+	add_image_size( 'terminal-post-cover', 1500, 900, true );
 
 	// Attachment page size.
-	add_image_size( 'album-attachment-fullsize', 1200, 9999 );
+	add_image_size( 'terminal-attachment-fullsize', 1200, 9999 );
 
 	// Add selective refresh to widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -212,7 +163,7 @@ function album_after_setup_theme() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'album_custom_background',
+			'terminal_custom_background',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -257,21 +208,16 @@ function album_after_setup_theme() {
 	// Menus.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Header Top', 'album' ),
+			'menu-1' => esc_html__( 'Header Top', 'terminal' ),
 		)
 	);
 
-	// Editor Style.
-	$fonts_url = album_fonts();
-	if ( $fonts_url ) {
-		add_editor_style( $fonts_url );
-	}
-
+	// Editor styles.
 	add_editor_style( 'assets/css/editor-styles.css' );
 
 }
 
-add_action( 'after_setup_theme', 'album_after_setup_theme' );
+add_action( 'after_setup_theme', 'terminal_after_setup_theme' );
 
 
 /**
@@ -279,14 +225,14 @@ add_action( 'after_setup_theme', 'album_after_setup_theme' );
  *
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  */
-function album_widgets_init() {
+function terminal_widgets_init() {
 
 	// Sidebar.
 	register_sidebar(
 		array(
-			'name' => esc_html__( 'Sidebar Widgets', 'album' ),
+			'name' => esc_html__( 'Sidebar Widgets', 'terminal' ),
 			'id' => 'sidebar-1',
-			'description' => esc_html__( 'Widgets that display on the side of your website', 'album' ),
+			'description' => esc_html__( 'Widgets that display on the side of your website', 'terminal' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-wrap">',
 			'after_widget' => '</div></section>',
 			'before_title' => '<h2 class="widget-title">',
@@ -297,9 +243,9 @@ function album_widgets_init() {
 	// Footer Widgets.
 	register_sidebar(
 		array(
-			'name' => esc_html__( 'Footer Widgets', 'album' ),
+			'name' => esc_html__( 'Footer Widgets', 'terminal' ),
 			'id' => 'sidebar-2',
-			'description' => esc_html__( 'Widgets that display at the bottom of your website. They are arranged in 4 columns and lined up automatically to make the best use of the space available.', 'album' ),
+			'description' => esc_html__( 'Widgets that display at the bottom of your website. They are arranged in 4 columns and lined up automatically to make the best use of the space available.', 'terminal' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-wrap">',
 			'after_widget' => '</div></section>',
 			'before_title' => '<h2 class="widget-title">',
@@ -309,7 +255,7 @@ function album_widgets_init() {
 
 }
 
-add_action( 'widgets_init', 'album_widgets_init' );
+add_action( 'widgets_init', 'terminal_widgets_init' );
 
 
 /**
@@ -320,13 +266,13 @@ add_action( 'widgets_init', 'album_widgets_init' );
  * @param int $length length of excerpt.
  * @return int
  */
-function album_excerpt_length( $length ) {
+function terminal_excerpt_length( $length ) {
 
 	return 60;
 
 }
 
-add_filter( 'excerpt_length', 'album_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'terminal_excerpt_length', 999 );
 
 
 /**
@@ -335,7 +281,7 @@ add_filter( 'excerpt_length', 'album_excerpt_length', 999 );
  * @param array $params list of menu parameters.
  * @return string
  */
-function album_nav_menu( $params ) {
+function terminal_nav_menu( $params ) {
 
 	$echo = $params['echo'];
 
@@ -370,12 +316,12 @@ function album_nav_menu( $params ) {
 /**
  * Add additional body classes to body_class function call.
  *
- * Checks to see if theme has featured posts using {@see album_has_featured_posts}.
+ * Checks to see if theme has featured posts using {@see terminal_has_featured_posts}.
  *
  * @param array $classes Array of body classes.
  * @return array
  */
-function album_body_class( $classes ) {
+function terminal_body_class( $classes ) {
 
 	if ( is_multi_author() ) {
 		$classes[] = 'multi-author-true';
@@ -391,7 +337,7 @@ function album_body_class( $classes ) {
 		$classes[] = 'themes-sidebar2-active';
 	}
 
-	if ( album_has_featured_posts() ) {
+	if ( terminal_has_featured_posts() ) {
 		$classes[] = 'themes-has-featured-posts';
 	}
 
@@ -411,7 +357,7 @@ function album_body_class( $classes ) {
 
 }
 
-add_filter( 'body_class', 'album_body_class' );
+add_filter( 'body_class', 'terminal_body_class' );
 
 
 /**
@@ -421,11 +367,11 @@ add_filter( 'body_class', 'album_body_class' );
  * @param array $classes Array of post classes.
  * @return array
  */
-function album_post_class( $classes ) {
+function terminal_post_class( $classes ) {
 
-	$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'album-header' );
+	$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'terminal-header' );
 
-	if ( $image_data && $image_data[1] > album_featured_image_min_width() ) {
+	if ( $image_data && $image_data[1] > terminal_featured_image_min_width() ) {
 
 		$classes[] = 'post-has-thumbnail';
 
@@ -451,7 +397,7 @@ function album_post_class( $classes ) {
 
 }
 
-add_filter( 'post_class', 'album_post_class' );
+add_filter( 'post_class', 'terminal_post_class' );
 
 
 /**
@@ -460,9 +406,9 @@ add_filter( 'post_class', 'album_post_class' );
  *
  * @return int
  */
-function album_featured_image_min_width() {
+function terminal_featured_image_min_width() {
 
-	return apply_filters( 'album_single_post_width', 1000 );
+	return apply_filters( 'terminal_single_post_width', 1000 );
 
 }
 
@@ -476,7 +422,7 @@ function album_featured_image_min_width() {
  * @param string $content The original post content.
  * @return string The modified post content.
  */
-function album_post_terms( $content = '' ) {
+function terminal_post_terms( $content = '' ) {
 
 	// Ignore if on archive pages.
 	if ( ! is_single() ) {
@@ -492,18 +438,18 @@ function album_post_terms( $content = '' ) {
 
 	// Add Categories.
 	/* translators: used between list items, there is a space after the comma */
-	$categories_list = get_the_category_list( esc_html__( ', ', 'album' ) );
+	$categories_list = get_the_category_list( esc_html__( ', ', 'terminal' ) );
 	if ( $categories_list ) {
 		/* translators: %1$s will be replaced with a list of categories */
-		$terms .= sprintf( '<p class="taxonomy tax-categories">' . esc_html__( 'Posted in: %1$s', 'album' ) . '</p>', $categories_list ); // WPCS: XSS OK.
+		$terms .= sprintf( '<p class="taxonomy tax-categories">' . esc_html__( 'Posted in: %1$s', 'terminal' ) . '</p>', $categories_list ); // WPCS: XSS OK.
 	}
 
 	// Add Tags.
 	/* translators: used between list items, there is a space after the comma */
-	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'album' ) );
+	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'terminal' ) );
 	if ( $tags_list ) {
 		/* translators: %1$s will be replaced with a list of tags */
-		$terms .= sprintf( '<p class="taxonomy tax-tags">' . esc_html__( 'Tagged as: %1$s', 'album' ) . '</p>', $tags_list ); // WPCS: XSS OK.
+		$terms .= sprintf( '<p class="taxonomy tax-tags">' . esc_html__( 'Tagged as: %1$s', 'terminal' ) . '</p>', $tags_list ); // WPCS: XSS OK.
 	}
 
 	// Output everything.
@@ -513,7 +459,7 @@ function album_post_terms( $content = '' ) {
 
 }
 
-add_filter( 'the_content', 'album_post_terms' );
+add_filter( 'the_content', 'terminal_post_terms' );
 
 
 /**
@@ -525,7 +471,7 @@ add_filter( 'the_content', 'album_post_terms' );
  * @param string $content The content to be wrapped.
  * @return string Modified content with html wrapper.
  */
-function album_wrapper_content( $content ) {
+function terminal_wrapper_content( $content ) {
 
 	if ( ! is_singular() ) {
 
@@ -544,7 +490,7 @@ function album_wrapper_content( $content ) {
 
 }
 
-add_filter( 'the_content', 'album_wrapper_content', 9 );
+add_filter( 'the_content', 'terminal_wrapper_content', 9 );
 
 
 /**
@@ -554,7 +500,7 @@ add_filter( 'the_content', 'album_wrapper_content', 9 );
  * @param string $title Archive title.
  * @return string Archive title with inserted span around prefix.
  */
-function album_wrap_the_archive_title( $title ) {
+function terminal_wrap_the_archive_title( $title ) {
 
 	// Skip if the site isn't LTR, this is visual, not functional.
 	// Should try to work out an elegant solution that works for both directions.
@@ -574,7 +520,7 @@ function album_wrap_the_archive_title( $title ) {
 
 }
 
-add_filter( 'get_the_archive_title', 'album_wrap_the_archive_title' );
+add_filter( 'get_the_archive_title', 'terminal_wrap_the_archive_title' );
 
 
 /**
@@ -585,7 +531,7 @@ add_filter( 'get_the_archive_title', 'album_wrap_the_archive_title' );
  * @param string $cat_list HTML containing list of categories/ tags.
  * @return string
  */
-function album_category_list_span( $cat_list ) {
+function terminal_category_list_span( $cat_list ) {
 
 	$cat_list = str_replace( 'tag">', 'tag"><span>', $cat_list );
 	$cat_list = str_replace( '</a>', '</span></a>', $cat_list );
@@ -594,8 +540,8 @@ function album_category_list_span( $cat_list ) {
 
 }
 
-add_filter( 'the_category', 'album_category_list_span' );
-add_filter( 'the_tags', 'album_category_list_span' );
+add_filter( 'the_category', 'terminal_category_list_span' );
+add_filter( 'the_tags', 'terminal_category_list_span' );
 
 
 /**
@@ -609,7 +555,7 @@ add_filter( 'the_tags', 'album_category_list_span' );
  * @param string $menu_html Page menu in a html list.
  * @return string
  */
-function album_change_menu( $menu_html = '' ) {
+function terminal_change_menu( $menu_html = '' ) {
 
 	$menu_html = str_replace( 'page_item_has_children', 'menu-item-has-children', $menu_html );
 
@@ -617,7 +563,7 @@ function album_change_menu( $menu_html = '' ) {
 
 }
 
-add_filter( 'wp_page_menu','album_change_menu' );
+add_filter( 'wp_page_menu','terminal_change_menu' );
 
 
 /**
@@ -628,7 +574,7 @@ add_filter( 'wp_page_menu','album_change_menu' );
  *
  * @link https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
  */
-function album_theme_colour() {
+function terminal_theme_colour() {
 
 	// Use the user defined background colour.
 	$colour = get_background_color();
@@ -641,7 +587,7 @@ function album_theme_colour() {
 
 }
 
-add_filter( 'wp_head', 'album_theme_colour' );
+add_filter( 'wp_head', 'terminal_theme_colour' );
 
 
 /**
@@ -653,7 +599,7 @@ add_filter( 'wp_head', 'album_theme_colour' );
  * @param  string $html Link html.
  * @return string       Modified html.
  */
-function album_link_pages_link( $html ) {
+function terminal_link_pages_link( $html ) {
 
 	$html = str_replace( '<a ', '<a class="page-numbers" ', $html );
 
@@ -668,17 +614,17 @@ function album_link_pages_link( $html ) {
 
 }
 
-add_filter( 'wp_link_pages_link', 'album_link_pages_link' );
+add_filter( 'wp_link_pages_link', 'terminal_link_pages_link' );
 
 
 /**
- * Include svg symbols so that they can be 'used' with the {@see album_svg}
+ * Include svg symbols so that they can be 'used' with the {@see terminal_svg}
  * function.
  *
  * This uses `wp_footer` to place the svgs at the bottom of the page, which now
  * works in all major browsers.
  */
-function album_include_svg_icons() {
+function terminal_include_svg_icons() {
 
 	// Define SVG sprite file.
 	$svg_icons = get_template_directory() . '/assets/svg/svg.svg';
@@ -696,13 +642,13 @@ function album_include_svg_icons() {
 
 }
 
-add_action( 'wp_footer', 'album_include_svg_icons' );
+add_action( 'wp_footer', 'terminal_include_svg_icons' );
 
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function album_pingback_header() {
+function terminal_pingback_header() {
 
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">';
@@ -710,7 +656,7 @@ function album_pingback_header() {
 
 }
 
-add_action( 'wp_head', 'album_pingback_header' );
+add_action( 'wp_head', 'terminal_pingback_header' );
 
 
 /**
@@ -720,7 +666,7 @@ add_action( 'wp_head', 'album_pingback_header' );
  * @param  object $args The menu parameters from the original menu object.
  * @return string
  */
-function album_nav_menu_html( $html, $args ) {
+function terminal_nav_menu_html( $html, $args ) {
 
 	// Only display this in the top menu.
 	if ( 'menu-1' !== $args->theme_location ) {
@@ -731,7 +677,7 @@ function album_nav_menu_html( $html, $args ) {
 	$search = '</ul>';
 
 	// Search button to add to end of menu.
-	$replace = '<li class="search"><button type="button">' . album_svg( 'search', false ) . '</button></li>';
+	$replace = '<li class="search"><button type="button">' . terminal_svg( 'search', false ) . '</button></li>';
 
 	// Location of end of menu.
 	// Note: this is strRpos - so searches from the end of the string to find
@@ -748,7 +694,7 @@ function album_nav_menu_html( $html, $args ) {
 
 }
 
-add_filter( 'wp_nav_menu', 'album_nav_menu_html', 10, 2 );
+add_filter( 'wp_nav_menu', 'terminal_nav_menu_html', 10, 2 );
 
 
 /**
@@ -759,9 +705,9 @@ add_filter( 'wp_nav_menu', 'album_nav_menu_html', 10, 2 );
  * @param  string $content The post content.
  * @return string
  */
-function album_content_intro( $content ) {
+function terminal_content_intro( $content ) {
 
-	if ( has_excerpt() && ( is_customize_preview() || get_theme_mod( 'album_display_single_excerpt', true ) ) ) {
+	if ( has_excerpt() && ( is_customize_preview() || get_theme_mod( 'terminal_display_single_excerpt', true ) ) ) {
 
 		$content = '<p class="intro intro-excerpt">' . get_the_excerpt() . '</p>' . $content;
 
@@ -769,7 +715,7 @@ function album_content_intro( $content ) {
 
 	if ( ! has_excerpt() && is_customize_preview() ) {
 
-		$content = '<p class="intro intro-excerpt intro-excerpt-demo">' . esc_html__( 'Add a custom excerpt to show a large introduction here.', 'album' ) . '</p>' . $content;
+		$content = '<p class="intro intro-excerpt intro-excerpt-demo">' . esc_html__( 'Add a custom excerpt to show a large introduction here.', 'terminal' ) . '</p>' . $content;
 
 	}
 
@@ -777,7 +723,7 @@ function album_content_intro( $content ) {
 
 }
 
-add_filter( 'the_content', 'album_content_intro', 8 );
+add_filter( 'the_content', 'terminal_content_intro', 8 );
 
 
 /**
@@ -786,10 +732,10 @@ add_filter( 'the_content', 'album_content_intro', 8 );
  * @param string $content The post content to remove p tags from.
  * @return string
  */
-function album_remove_paragraphs_from_images( $content ) {
+function terminal_remove_paragraphs_from_images( $content ) {
 
 	return preg_replace( '/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content );
 
 }
 
-add_filter( 'the_content' , 'album_remove_paragraphs_from_images', 9999 );
+add_filter( 'the_content' , 'terminal_remove_paragraphs_from_images', 9999 );

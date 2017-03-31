@@ -1,7 +1,7 @@
 /**
  * ## - General Properties
  */
-// @package Album
+// @package Terminal
 
 body {
 }
@@ -44,50 +44,5 @@ a {
 }
 
 .webpage {
-
-	border: $canvas-grey-10 solid 1.5rem;
-
-	&:after,
-	&:before {
-
-		position: fixed;
-		left: 0;
-		right: 0;
-		height: 1.5rem;
-		content: '';
-		background: $canvas-grey-10;
-		z-index: layer( border );
-
-	}
-
-	&:before {
-
-		top: 0;
-
-		.admin-bar & {
-
-			top: $wp-admin-bar-height;
-
-		}
-
-	}
-
-	&:after {
-
-		bottom: 0;
-
-	}
-
-	@include for-tablet {
-
-		border: none;
-
-		&:before,
-		&:after {
-
-			display: none;
-
-		}
-	}
 
 }

@@ -4,14 +4,14 @@
  *
  * Assigns a background image that fades as the user scrolls
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
 	$styles = array();
-	$image = album_archive_image_url( get_the_ID(), 'album-post-cover' );
+	$image = terminal_archive_image_url( get_the_ID(), 'terminal-post-cover' );
 	$title_tag = 'h2';
 
 	if ( is_singular() || is_front_page() ) {
@@ -35,7 +35,7 @@
 
 <?php
 	if ( is_page() ) {
-		album_breadcrumbs();
+		terminal_breadcrumbs();
 	}
 
 	if ( ! is_singular() || is_front_page() ) {

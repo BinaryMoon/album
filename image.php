@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Album
+ * @package Terminal
  * @subpackage Template
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -41,7 +41,7 @@
 			<section class="entry">
 
 				<div class="attachment-image">
-					<?php echo wp_get_attachment_link( get_the_ID(), 'album-attachment-fullsize' ); ?>
+					<?php echo wp_get_attachment_link( get_the_ID(), 'terminal-attachment-fullsize' ); ?>
 				</div>
 
 				<div class="attachment-description">
@@ -64,13 +64,13 @@
 				<nav id="image-navigation" class="navigation image-navigation" role="navigation">
 					<div class="nav-links">
 						<span class="nav-parent">
-							<a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" rev="attachment" class="attachment-parent"><?php esc_html_e( '&lsaquo; Return to post', 'album' ); ?></a>
+							<a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" rev="attachment" class="attachment-parent"><?php esc_html_e( '&lsaquo; Return to post', 'terminal' ); ?></a>
 						</span>
 						<span class="nav-previous">
-							<?php previous_image_link( false, esc_html__( 'Previous Image', 'album' ) ); ?>
+							<?php previous_image_link( false, esc_html__( 'Previous Image', 'terminal' ) ); ?>
 						</span>
 						<span class="nav-next">
-							<?php next_image_link( false, esc_html__( 'Next Image', 'album' ) ); ?>
+							<?php next_image_link( false, esc_html__( 'Next Image', 'terminal' ) ); ?>
 						</span>
 					</div>
 				</nav>

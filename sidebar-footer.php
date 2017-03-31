@@ -6,12 +6,12 @@
  * assigned to specified sidebar.
  *
  * A body class is added if the theme has widgets to display here
- * {@see album_body_class}. This helps with custom css that adjusts the page
+ * {@see terminal_body_class}. This helps with custom css that adjusts the page
  * when no widgets exist.
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#sidebar-php
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License

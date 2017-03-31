@@ -3,7 +3,7 @@ body#tinymce.wp-editor {
   font-size: 1rem;
   line-height: 1.75;
   font-weight: normal;
-  font-family: "Roboto Mono", courier;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   color: #252628;
   direction: ltr;
   font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
@@ -21,7 +21,7 @@ body#tinymce.wp-editor html {
   font-size: 1rem;
   line-height: 1.75;
   font-weight: normal;
-  font-family: "Roboto Mono", courier;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   color: #252628;
   direction: ltr;
   font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
@@ -37,7 +37,7 @@ body#tinymce.wp-editor h4,
 body#tinymce.wp-editor h5,
 body#tinymce.wp-editor h6 {
   color: #252628;
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-weight: normal;
   margin: 0 0 2.25rem 0;
 }
@@ -123,7 +123,7 @@ body#tinymce.wp-editor p:empty {
 body#tinymce.wp-editor pre {
   margin: 3rem 0;
   background: #1a1b1d;
-  color: #58C6FF;
+  color: #2067B2;
   padding: 1.5rem 1.5rem;
   overflow: auto;
   display: block;
@@ -155,12 +155,12 @@ body#tinymce.wp-editor ol {
 }
 
 body#tinymce.wp-editor a {
-  color: #0293DD;
+  color: #2067B2;
 }
 
 body#tinymce.wp-editor a:hover {
-  color: #016ba0;
-  background: linear-gradient(transparent 0%, transparent 60%, #58C6FF 60%, #58C6FF 100%);
+  color: #17497e;
+  background: linear-gradient(transparent 0%, transparent 60%, #2067B2 60%, #2067B2 100%);
   background-position-y: 1em;
   background-repeat: no-repeat;
 }
@@ -178,7 +178,7 @@ body#tinymce.wp-editor .intro {
   font-size: 28px;
   font-size: 1.75rem;
   line-height: 1.5;
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   margin-bottom: 4.5rem;
   opacity: 0.8;
 }
@@ -190,9 +190,9 @@ body#tinymce.wp-editor .intro.intro-excerpt-demo {
 
 body#tinymce.wp-editor .drop-cap {
   float: left;
-  font-family: "Roboto Mono", courier;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: bold;
-  margin: 0 0.05em 0 -0.2em;
+  margin: 0.11em 0.11em 0 -0.05em;
   font-size: 64px;
   font-size: 4rem;
   line-height: 1.25;
@@ -212,7 +212,7 @@ body#tinymce.wp-editor .button {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
   letter-spacing: 0.05em;
   text-align: center;

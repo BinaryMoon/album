@@ -1,7 +1,7 @@
 /**
  * ## - Footer
  */
-// @package Album
+// @package Terminal
 
 #footer {
 
@@ -28,7 +28,7 @@
 
 		.grid-sizer {
 
-			width: $album-footer-widget-width;
+			width: $terminal-footer-widget-width;
 
 		}
 
@@ -36,7 +36,7 @@
 
 			float: left;
 			padding: $grid-line-height ( $grid-gutter / 2 );
-			width: $album-footer-widget-width;
+			width: $terminal-footer-widget-width;
 
 		}
 

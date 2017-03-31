@@ -8,7 +8,7 @@
  *
  * @link https://jetpack.com/support/custom-content-types/
  *
- * @package Album
+ * @package Terminal
  * @subpackage Template
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -23,7 +23,7 @@
 
 	if ( have_posts() ) {
 
-		if ( $image = album_testimonials_image() ) {
+		if ( $image = terminal_testimonials_image() ) {
 
 			$image_allowed_properties = array(
 				'src' => array(),
@@ -45,8 +45,8 @@
 
 		<header class="entry-archive-header">
 
-			<h1 class="entry-title entry-archive-title"><?php album_testimonials_title(); ?></h1>
-			<?php album_testimonials_description( '<div class="category-description">', '</div>' ); ?>
+			<h1 class="entry-title entry-archive-title"><?php terminal_testimonials_title(); ?></h1>
+			<?php terminal_testimonials_description( '<div class="category-description">', '</div>' ); ?>
 
 		</header>
 

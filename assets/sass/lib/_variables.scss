@@ -1,8 +1,8 @@
-// @package Album
+// @package Terminal
 
 // font overrides
-$font-family-sans: 'Roboto', 'Helvetica Neue', sans-serif;
-$font-family-serif: 'Roboto Mono', courier;
+$font-family-sans: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+$font-family-serif: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 $font-base: 16;
 $font-family-body: $font-family-serif;
 $font-family-header: $font-family-sans;
@@ -16,8 +16,8 @@ $debug: false;
 $canvas-white: #FFFFFF;
 //$canvas-green: #2ECC71;
 //$canvas-green-dark: darken( $canvas-green, 12% );
-$canvas-blue: #58C6FF;
-$canvas-blue-dark: #0293DD;
+$canvas-blue: #2067B2;
+$canvas-blue-dark: #2067B2;
 //$canvas-red: #E74C3C;
 //$canvas-red-dark: darken( $canvas-red, 12% );
 //$canvas-purple: #9B59B6;
@@ -43,7 +43,7 @@ $canvas-grey-1: lighten( $canvas-grey-100, 99% );
 
 // main colour, used through the theme
 $canvas-color: $canvas-blue;
-$canvas-background: $canvas-grey-5;
+$canvas-background: $canvas-white;
 
 $link-color: $canvas-grey-100;
 
@@ -70,8 +70,8 @@ $form-input-border-color: $canvas-grey-30;
 $form-input-border-focus: $canvas-grey-100;
 $form-input-border-width: 0 0 $border-width 0;
 
-$album-cover-height: 36%;
-$album-footer-widget-width: 33.3%;
+$terminal-cover-height: 36%;
+$terminal-footer-widget-width: 33.3%;
 
 $style-opacity-element: 0.6;
 

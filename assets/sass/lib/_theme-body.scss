@@ -2,7 +2,7 @@
  * ## - Body
  * Site content, blog posts etc
  */
-// @package Album
+// @package Terminal
 
 
 body {
@@ -41,7 +41,7 @@ main {
 			clear: both;
 			float: none;
 
-			img.size-album-header {
+			img.size-terminal-header {
 
 				margin-bottom: $grid-line-height * 2;
 
@@ -461,7 +461,7 @@ main {
 
 		}
 
-		img.album-featured-image {
+		img.terminal-featured-image {
 
 			display: block;
 			margin: 0 auto;

@@ -2,13 +2,13 @@
 /**
  * Child Pages Listing
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	$image = get_the_post_thumbnail( get_the_ID(), 'album-archive' );
+	$image = get_the_post_thumbnail( get_the_ID(), 'terminal-archive' );
 ?>
 
 <div class="child-page">

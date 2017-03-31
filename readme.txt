@@ -1,4 +1,4 @@
-=== Album ===
+=== Terminal ===
 
 Contributors: binarymoon
 Requires at least: 4.3
@@ -9,9 +9,9 @@ Tags: black, gray, white, light, one-column, two-columns, left-sidebar, responsi
 
 == Description ==
 
-Album is a portfolio theme for modern designers. With an almost brutalist style Album keeps the design to a minimum to allow your content to shine.
+Terminal is a portfolio theme for modern designers. With an almost brutalist style Terminal keeps the design to a minimum to allow your content to shine.
 
-[Theme documentation](https://prothemedesign.com/documentation/theme/album/)
+[Theme documentation](https://prothemedesign.com/documentation/theme/terminal/)
 
 == Installation ==
 
@@ -23,9 +23,9 @@ Album is a portfolio theme for modern designers. With an almost brutalist style 
 
 = Does this theme support any plugins? =
 
-Album includes support for [Styleguide](https://wordpress.org/plugins/styleguide/) - a plugin that allows you to change fonts, and colours in WordPress themes.
+Terminal includes support for [Styleguide](https://wordpress.org/plugins/styleguide/) - a plugin that allows you to change fonts, and colours in WordPress themes.
 
-Album includes support for most features in [Jetpack](https://wordpress.org/plugins/jetpack/), including Infinite Scroll, Featured Content, and Site Logo.
+Terminal includes support for most features in [Jetpack](https://wordpress.org/plugins/jetpack/), including Infinite Scroll, Featured Content, and Site Logo.
 
 == Changelog ==
 

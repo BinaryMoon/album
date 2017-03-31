@@ -2,7 +2,7 @@
 /**
  * Jetpack Compatibility File
  *
- * @package Album
+ * @package Terminal
  * @subpackage Jetpack
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @link https://jetpack.com/
@@ -18,7 +18,7 @@
  * @link https://jetpack.com/support/responsive-videos/
  * @link https://jetpack.com/support/social-menu/
  */
-function album_jetpack_init() {
+function terminal_jetpack_init() {
 
 	// Add support for Infinite scroll.
 	add_theme_support(
@@ -28,7 +28,7 @@ function album_jetpack_init() {
 			'footer_widgets' => 'sidebar-2',
 			'footer' => 'footer-widgets',
 			'posts_per_page' => 16,
-			'render' => 'album_infinite_scroll_render',
+			'render' => 'terminal_infinite_scroll_render',
 			'wrapper' => false,
 		)
 	);
@@ -37,7 +37,7 @@ function album_jetpack_init() {
 	add_theme_support(
 		'featured-content',
 		array(
-			'featured_content_filter' => 'album_get_featured_posts',
+			'featured_content_filter' => 'terminal_get_featured_posts',
 			'max_posts' => 4,
 			'post_types' => array( 'post', 'page', 'jetpack-portfolio' ),
 		)
@@ -63,7 +63,7 @@ function album_jetpack_init() {
 			'blog-display' => 'excerpt',
 			'author-bio' => true,
 			'post-details' => array(
-				'stylesheet' => 'album-style',
+				'stylesheet' => 'terminal-style',
 				'date' => '.posted-on',
 				'categories' => '.tax-categories',
 				'tags' => '.tax-tags',
@@ -73,13 +73,13 @@ function album_jetpack_init() {
 
 }
 
-add_action( 'after_setup_theme', 'album_jetpack_init' );
+add_action( 'after_setup_theme', 'terminal_jetpack_init' );
 
 
 /**
  * Render infinite scroll content using template parts.
  */
-function album_infinite_scroll_render() {
+function terminal_infinite_scroll_render() {
 
 	while ( have_posts() ) {
 
@@ -97,9 +97,9 @@ function album_infinite_scroll_render() {
  *
  * @return array List of featured posts.
  */
-function album_get_featured_posts() {
+function terminal_get_featured_posts() {
 
-	return apply_filters( 'album_get_featured_posts', array() );
+	return apply_filters( 'terminal_get_featured_posts', array() );
 
 }
 
@@ -110,7 +110,7 @@ function album_get_featured_posts() {
  * @param integer $minimum Minimum number of posts to return. If there's less than this return false.
  * @return boolean True if has featured posts, otherwise false.
  */
-function album_has_featured_posts( $minimum = 1 ) {
+function terminal_has_featured_posts( $minimum = 1 ) {
 
 	// Only show if on the front page or the blog page.
 	if ( ! is_front_page() && ! is_home() ) {
@@ -128,7 +128,7 @@ function album_has_featured_posts( $minimum = 1 ) {
 	}
 
 	$minimum = absint( $minimum );
-	$featured_posts = apply_filters( 'album_get_featured_posts', array() );
+	$featured_posts = apply_filters( 'terminal_get_featured_posts', array() );
 
 	if ( ! is_array( $featured_posts ) ) {
 		return false;
@@ -149,30 +149,30 @@ function album_has_featured_posts( $minimum = 1 ) {
  * @param array $settings Default Infinite Scroll settings.
  * @return array Modified Infinite Scroll settings.
  */
-function album_infinite_scroll_js_settings( $settings ) {
+function terminal_infinite_scroll_js_settings( $settings ) {
 
 	// Change the text that is displayed in the 'More posts' button.
 	// Posts is quite specific and doesn't work so well with custom post types.
-	$settings['text'] = esc_html__( '&darr; Load More', 'album' );
+	$settings['text'] = esc_html__( '&darr; Load More', 'terminal' );
 
 	return $settings;
 
 }
 
-add_filter( 'infinite_scroll_js_settings', 'album_infinite_scroll_js_settings' );
+add_filter( 'infinite_scroll_js_settings', 'terminal_infinite_scroll_js_settings' );
 
 
 /**
  * Get Jetpack Testimonials Title.
  */
-function album_testimonials_title() {
+function terminal_testimonials_title() {
 
 	$jetpack_options = get_theme_mod( 'jetpack_testimonials' );
 
 	if ( ! empty( $jetpack_options['page-title'] ) ) {
 		echo esc_html( $jetpack_options['page-title'] );
 	} else {
-		esc_html_e( 'Testimonials', 'album' );
+		esc_html_e( 'Testimonials', 'terminal' );
 	}
 
 }
@@ -185,7 +185,7 @@ function album_testimonials_title() {
  * @param string $after html to display after testimonials description.
  * @return boolean|string Testimonials description, or false if no description exists.
  */
-function album_testimonials_description( $before = '', $after = '' ) {
+function terminal_testimonials_description( $before = '', $after = '' ) {
 
 	$jetpack_options = get_theme_mod( 'jetpack_testimonials' );
 	$content = '';
@@ -214,14 +214,14 @@ function album_testimonials_description( $before = '', $after = '' ) {
  *
  * @return string Testimonials image or empty string if no image set.
  */
-function album_testimonials_image() {
+function terminal_testimonials_image() {
 
 	$jetpack_options = get_theme_mod( 'jetpack_testimonials' );
 	$image = '';
 
 	if ( '' !== $jetpack_options['featured-image'] ) {
 
-		$image = wp_get_attachment_image( (int) $jetpack_options['featured-image'], 'album-header' );
+		$image = wp_get_attachment_image( (int) $jetpack_options['featured-image'], 'terminal-header' );
 
 	}
 
@@ -236,13 +236,13 @@ function album_testimonials_image() {
  * This is so that Projects, Testimonials, and other Custom Post Types work as
  * expected. Is hooked into `after_switch_theme`.
  */
-function album_flush_rewrite_rules() {
+function terminal_flush_rewrite_rules() {
 
 	flush_rewrite_rules();
 
 }
 
-add_action( 'after_switch_theme', 'album_flush_rewrite_rules' );
+add_action( 'after_switch_theme', 'terminal_flush_rewrite_rules' );
 
 
 /**
@@ -251,7 +251,7 @@ add_action( 'after_switch_theme', 'album_flush_rewrite_rules' );
  * Breadcrumbs will not display on blog posts, but may display on other custom
  * post types.
  */
-function album_breadcrumbs() {
+function terminal_breadcrumbs() {
 
 	// Check Jetpack Breadcrumbs are available before outputting them.
 	if ( function_exists( 'jetpack_breadcrumbs' ) ) {
@@ -269,7 +269,7 @@ function album_breadcrumbs() {
  * This is a wrapper for 'jetpack_social_menu' and stops PHP errors if Jetpack
  * is not enabled.
  */
-function album_social_links() {
+function terminal_social_links() {
 
 	// Check Jetpack Social Menu is available before trying to display it.
 	if ( function_exists( 'jetpack_social_menu' ) ) {
@@ -286,7 +286,7 @@ function album_social_links() {
  *
  * The styles are taken care of by the default theme styles, so custom styles are not required.
  */
-function album_remove_jetpack_stylesheets() {
+function terminal_remove_jetpack_stylesheets() {
 
 	// Remove contact form styles.
 	wp_dequeue_style( 'grunion.css' );
@@ -299,7 +299,7 @@ function album_remove_jetpack_stylesheets() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'album_remove_jetpack_stylesheets', 100 );
+add_action( 'wp_enqueue_scripts', 'terminal_remove_jetpack_stylesheets', 100 );
 
 
 /**
@@ -318,7 +318,7 @@ add_filter( 'jetpack_implode_frontend_css', '__return_false' );
  * @param string $html Video html.
  * @return string html wrapper with the video wrapper.
  */
-function album_video_wrapper( $html ) {
+function terminal_video_wrapper( $html ) {
 
 	// If Jetpack integrated function exists then uses that.
 	if ( function_exists( 'jetpack_responsive_videos_embed_html' ) ) {
@@ -345,7 +345,7 @@ function album_video_wrapper( $html ) {
  * @param array $thumbnail_size Default thumbnail properties.
  * @return array
  */
-function album_related_posts_thumbnail_size( $thumbnail_size ) {
+function terminal_related_posts_thumbnail_size( $thumbnail_size ) {
 
 	$thumbnail_size['width'] = 400;
 	$thumbnail_size['height'] = 300;
@@ -354,7 +354,7 @@ function album_related_posts_thumbnail_size( $thumbnail_size ) {
 
 }
 
-add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'album_related_posts_thumbnail_size' );
+add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'terminal_related_posts_thumbnail_size' );
 
 
 /**
@@ -362,7 +362,7 @@ add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'album_related_posts_t
  *
  * @return null
  */
-function album_author_bio() {
+function terminal_author_bio() {
 
 	$options = get_theme_support( 'jetpack-content-options' );
 	$author_bio = ( ! empty( $options[0]['author-bio'] ) ) ? $options[0]['author-bio'] : null;
@@ -383,6 +383,6 @@ function album_author_bio() {
 	}
 
 	// Display the author bio.
-	album_contributor();
+	terminal_contributor();
 
 }

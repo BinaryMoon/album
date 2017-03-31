@@ -6,7 +6,7 @@
  *
  * Uses `parts/content.php` as a fallback if no videos are found.
  *
- * @package Album
+ * @package Terminal
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -28,7 +28,7 @@
 
 <?php
 
-	echo album_video_wrapper( $video[0] );
+	echo terminal_video_wrapper( $video[0] );
 
 	get_template_part( 'parts/post-meta' );
 
@@ -44,7 +44,7 @@
 
 ?>
 
-		<p><a href="<?php the_permalink(); ?>" class="read-more"><?php album_read_more_text(); ?></a></p>
+		<p><a href="<?php the_permalink(); ?>" class="read-more"><?php terminal_read_more_text(); ?></a></p>
 
 	</section>
 

@@ -7,7 +7,7 @@
  *
  * @link https://jetpack.com/support/custom-content-types/
  *
- * @package Album
+ * @package Terminal
  * @subpackage Template
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
