@@ -14,6 +14,52 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
+/**
+ * TO BUILD
+ *
+ * Replace menu with an overlay menu that has a simple menu link
+ * Add sidebar to single post pages
+ * Add full width template
+ * Change next and previous post links on single posts
+ * Add &rarr to 'read more' link on blog post listing
+ */
+
+/**
+ * TODO BEFORE SUBMISSION
+ * ---
+ * test theme with and without jetpack
+ * test theme with and without infinite scroll
+ * delete unused scripts
+ * delete unused customizer controls
+ * delete unused svgs
+ * theme tags
+ * theme description
+ * screenshot.png (880 x 660)
+ * check custom header size
+ * check sticky styles
+ * test custom header, with and without
+ * responsive styles
+ * set content_width (in granule_content_width and granule_after_setup_theme)
+ * theme_colors
+ * check custom page template styles
+ * check custom logo properties are appropriate
+ * rtl.css - "gulp rtl --theme granule"
+ * change google font slugs so they match the font names (in granule_fonts() inc/wordpress.php and inc/wpcom.php)
+ * theme scan
+ * test site logo
+ * readme.txt
+ * test hiding header and description through customizer works
+ * test logo is still visible when you hide the header text
+ * test custom header
+ * test custom backgrounds
+ * remove granule_widgets_overlay_body_class function there are no widgets in an overlay
+ * check all registered menus are being used
+ * check sidebar names and that sidebar display conditions match the sidebars they display
+ * test print styles
+ * go through required accessibility items - https://make.wordpress.org/themes/handbook/review/accessibility/required/
+ */
+
+
 // WordPress specific functionality (actions and filters).
 include( 'inc/wordpress.php' );
 

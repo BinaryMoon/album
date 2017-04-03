@@ -13,13 +13,6 @@
 
 	}
 
-	&:before {
-
-		@include title-border( auto );
-		margin: ( $grid-line-height * 2 ) ( $grid-gutter / 2 );
-
-	}
-
 	.footer-widgets {
 
 		margin-bottom: $grid-line-height * 3;
@@ -82,12 +75,6 @@
 	.footer-wrap {
 
 		float: left;
-
-		a {
-
-			@include border-hover;
-
-		}
 
 	}
 

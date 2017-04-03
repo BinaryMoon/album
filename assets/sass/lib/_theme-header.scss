@@ -5,15 +5,14 @@
 
 .masthead {
 
-	padding: ( $grid-line-height * 2 ) grid-gutter( 12 );
+	padding: ( $grid-line-height * 4 ) grid-gutter( 12 );
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	background: $canvas-color;
 
 	.branding {
 
-		/*@replace fade-in 1.2s, slide-from-right 1.2s*/
-		@include animation( #{fade-in 1.2s, slide-from-left 1.2s} );
 		min-width: 25%;
 
 		.custom-logo-link {
@@ -41,8 +40,7 @@
 		.site-title {
 
 			font-family: $font-family-header;
-			@include modular-scale( epsilon );
-			font-weight: bold;
+			@include modular-scale( delta );
 			margin: 0;
 			display: block;
 
@@ -50,24 +48,19 @@
 
 		.site-description {
 
-			font-family: $font-family-serif;
-			@include modular-scale( eta );
+			font-family: $font-family-header;
+			@include modular-scale( zeta );
 			margin: 0;
 			display: block;
-			opacity: $style-opacity-element;
 
 		}
 
 	}
 
 	// align, menu color.
-	@include display-menu( right, $canvas-grey-10 );
+	@include display-menu( right, $canvas-white );
 
 	.menu {
-
-		/*@replace fade-in 1.2s, slide-from-left 1.2s*/
-		@include animation( #{fade-in 1.2s, slide-from-right 1.2s} );
-		//@include modular-scale( zeta );
 
 		.menu-toggle {
 
@@ -106,11 +99,10 @@
 				button {
 
 					background: transparent;
-					color: $canvas-grey-100;
+					color: $canvas-white;
 					line-height: 1;
 					padding: 0;
 					vertical-align: middle;
-					opacity: $style-opacity-element;
 
 					&:hover {
 
@@ -131,8 +123,7 @@
 
 			> a {
 
-				color: $canvas-grey-100;
-				@include border-hover;
+				color: $canvas-white;
 
 			}
 
@@ -179,12 +170,6 @@
 
 					}
 
-					&:hover {
-
-						background-color: $canvas-white;
-
-					}
-
 					&.current-menu-item > a {
 
 						box-shadow: none;
@@ -199,7 +184,6 @@
 
 				font-weight: bold;
 				text-decoration: none;
-				background: $border-hover-background;
 
 			}
 

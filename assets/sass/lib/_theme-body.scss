@@ -157,8 +157,6 @@ main {
 
 				font-weight: bold;
 
-				@include border-hover;
-
 			}
 
 		}
@@ -259,15 +257,7 @@ main {
 
 			.post-lead-category {
 
-				@include modular-scale( zeta );
-				margin: 2px 0 -4px 0;
-				font-weight: 600;
-
-			}
-
-			.posted-on {
-
-				opacity: $style-opacity-element;
+				font-weight: bold;
 
 			}
 
@@ -338,22 +328,16 @@ main {
 
 		.read-more {
 
-			@include button-alt( eta, light );
+			@include button;
 			padding: 0.5rem 1.5rem;
 
 		}
 
 		h2.entry-title {
 
-			@include modular-scale( delta );
-			font-weight: bold;
-			margin: 0;
-
-			a {
-
-				@include border-hover;
-
-			}
+			@include modular-scale( gamma, 1.2 );
+			margin-bottom: $grid-line-height / 2;
+			//font-weight: bold;
 
 		}
 
@@ -485,7 +469,6 @@ main {
 
 			&:before {
 
-				@include title-border( auto );
 				margin: 0 ( $grid-gutter );
 
 				@include for-tablet() {
@@ -557,12 +540,6 @@ main {
 			footer {
 
 				margin-bottom: $grid-line-height;
-
-				.fn {
-
-					@include border-hover;
-
-				}
 
 			}
 

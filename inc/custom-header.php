@@ -23,7 +23,7 @@ function terminal_custom_header_support() {
 			'terminal_custom_header',
 			array(
 				// 'default-image' => '%s/images/x.jpg',
-				'default-text-color' => '000000',
+				'default-text-color' => 'ffffff',
 				'random-default' => false,
 				'width' => 1500,
 				'height' => 500,

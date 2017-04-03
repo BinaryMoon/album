@@ -1,8 +1,8 @@
 === Terminal ===
 
-Contributors: binarymoon
-Requires at least: 4.3
-Tested up to: 4.5
+Contributors: binarymoon, cutout
+Requires at least: 4.7
+Tested up to: 4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, gray, white, light, one-column, two-columns, left-sidebar, responsive-layout, accessibility-ready, author-bio, blog-excerpts, classic-menu, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-content-with-pages, featured-images, featured-image-header, flexible-header, infinite-scroll, post-formats, post-slider, rtl-language-support, site-logo, social-menu, sticky-post, testimonials, theme-options, threaded-comments, translation-ready, art, artwork, blog, business, design, fashion, food, photoblogging, photography, portfolio, bright, clean, conservative, contemporary, formal, light, minimal, modern, professional, simple, sophisticated, tech

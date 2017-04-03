@@ -16,8 +16,8 @@ $debug: false;
 $canvas-white: #FFFFFF;
 //$canvas-green: #2ECC71;
 //$canvas-green-dark: darken( $canvas-green, 12% );
-$canvas-blue: #2067B2;
-$canvas-blue-dark: #2067B2;
+$canvas-blue: #0073aa;
+$canvas-blue-dark: #0073aa;
 //$canvas-red: #E74C3C;
 //$canvas-red-dark: darken( $canvas-red, 12% );
 //$canvas-purple: #9B59B6;
@@ -45,12 +45,12 @@ $canvas-grey-1: lighten( $canvas-grey-100, 99% );
 $canvas-color: $canvas-blue;
 $canvas-background: $canvas-white;
 
-$link-color: $canvas-grey-100;
+$link-color: $canvas-color;
 
 $comments-margin: 4%;
 
-$body-copy-color: #252628;
-$body-header-color: #252628;
+$body-copy-color: #000000;
+$body-header-color: #000000;
 
 // grid sizes
 //$grid-line-height: $line-height * 1rem;
@@ -63,12 +63,12 @@ $border-width: 2px;
 $border-radius: 0;
 
 $canvas-pre-color: $canvas-color;
-$canvas-pre-background: $canvas-grey-90;
+$canvas-pre-background: $canvas-color;
 
 $form-input-background: $canvas-white;
-$form-input-border-color: $canvas-grey-30;
+$form-input-border-color: $canvas-grey-100;
 $form-input-border-focus: $canvas-grey-100;
-$form-input-border-width: 0 0 $border-width 0;
+$form-input-border-width: $border-width;
 
 $terminal-cover-height: 36%;
 $terminal-footer-widget-width: 33.3%;
@@ -86,7 +86,7 @@ $font-sizes: (
 	// giga: ( size: 6.25rem, height: 1 ),
 	// mega: ( size: 5rem, height: 1.25 ),
 	// alpha: ( size: 4rem, height: 1.25 ),
-	beta: ( size: 3.64706rem, height: 1.25 ),
+	//beta: ( size: 3.64706rem, height: 1.25 ),
 	// gamma: ( size: 2.5rem, height: 1.25 ),
 	// delta: ( size: 1.75rem, height: 1.5 ),
 	// epsilon: ( size: 1.25rem, height: 1.5 ),
