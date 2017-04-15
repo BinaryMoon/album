@@ -337,20 +337,6 @@
 				}
 			);
 
-			// Fade post cover headers on scroll.
-			$( window ).on(
-				'scroll',
-				function() {
-
-					var new_opacity = 0.4 - $( window ).scrollTop() / 1300;
-					// Don't change opacity on every scroll event to help smooth things out.
-					if ( new_opacity >= 0 ) {
-						$( '.post-cover .post-image' ).css( 'opacity', new_opacity );
-					}
-
-				}
-			);
-
 			// Display and hide search overlay modal.
 			$( 'nav .search-toggle' ).on(
 				'click',
