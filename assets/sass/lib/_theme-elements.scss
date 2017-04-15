@@ -221,26 +221,21 @@
 
 	.content-projects-header {
 
-		padding: 14% 0 13% 0;
-		@include animation( slide-from-left 1.2s );
+		padding: ( $grid-line-height * 2 ) 0;
+		background: $canvas-color;
+		margin-bottom: $grid-line-height * 2;
 
 		.entry,
 		h1.entry-title {
 
 			font-family: $font-family-sans;
+			color: $canvas-white;
 
 		}
 
 		h1.entry-title {
 
-			@include modular-scale( beta );
-
-			&:after {
-
-				@include title-border();
-				margin: ( $grid-line-height / 2 ) 0;
-
-			}
+			@include modular-scale( mega );
 
 		}
 
@@ -309,13 +304,6 @@
 			@include modular-scale( zeta );
 			margin-bottom: $grid-line-height / 2;
 			font-weight: bold;
-
-			&:after {
-
-				@include title-border;
-				margin: ( $grid-line-height / 2 ) 0 ( $grid-line-height ) 0;
-
-			}
 
 		}
 
@@ -488,14 +476,19 @@ a.thumbnail {
 }
 
 /* featured content */
-// often displayed as a slider
+.showcase-container {
+
+	@include grid( 12 );
+	margin-bottom: $grid-line-height * 2;
+
+}
+
 .showcase {
 
 	@include clear;
 	position: relative;
 	height: 0;
 	padding-bottom: $terminal-cover-height;
-	margin-bottom: $grid-line-height * 3;
 
 	article {
 
@@ -676,13 +669,6 @@ a.thumbnail {
 			color: $canvas-white;
 			line-height: 1.05;
 
-			&:after {
-
-				@include title-border;
-				margin-top: $grid-line-height;
-
-			}
-
 			@include for-tablet() {
 
 				@include modular-scale( delta );
@@ -792,7 +778,6 @@ a.thumbnail {
 
 		&:after {
 
-			@include title-border;
 			margin: ( $grid-line-height / 4 ) 0 ( $grid-line-height ) 0;
 
 		}
@@ -803,12 +788,6 @@ a.thumbnail {
 	ul li + li {
 
 		margin-top: 0.75rem;
-
-	}
-
-	a {
-
-		font-weight: bold;
 
 	}
 
@@ -914,13 +893,6 @@ form.search-form {
 			display: block;
 			opacity: $style-opacity-element;
 			@include post-meta-data;
-
-		}
-
-		&:after {
-
-			@include title-border;
-			margin: ( $grid-line-height / 2 ) 0 ( $grid-line-height * 2 ) 0;
 
 		}
 

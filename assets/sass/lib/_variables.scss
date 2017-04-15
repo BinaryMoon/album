@@ -20,7 +20,7 @@ $canvas-blue: #0073aa;
 $canvas-blue-dark: #0073aa;
 //$canvas-red: #E74C3C;
 //$canvas-red-dark: darken( $canvas-red, 12% );
-//$canvas-purple: #9B59B6;
+$canvas-purple: #916BB3;
 //$canvas-purple-dark: darken( $canvas-purple, 12% );
 $canvas-yellow: #F1C40F;
 $canvas-yellow-dark: darken( $canvas-yellow, 12% );
@@ -42,7 +42,7 @@ $canvas-grey-5: #F1F2F6;
 $canvas-grey-1: lighten( $canvas-grey-100, 99% );
 
 // main colour, used through the theme
-$canvas-color: $canvas-blue;
+$canvas-color: $canvas-purple;
 $canvas-background: $canvas-white;
 
 $link-color: $canvas-color;
@@ -101,6 +101,7 @@ $layer: (
 	showcase_nav: 50,
 	infinite_footer: 50,
 	menu_dropdown: 100,
+	menu_overlay: 102,
 	menu_toggle: 101,
 	border: 150,
 	modal: 200,

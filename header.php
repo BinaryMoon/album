@@ -35,28 +35,23 @@
 
 	<a href="#site-content" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to content', 'terminal' ); ?></a>
 
-	<?php the_header_image_tag( array( 'class' => 'terminal-header-image' ) ); ?>
-
 	<header class="masthead" id="header" role="banner">
 
 		<div class="branding">
 <?php
 	the_custom_logo();
-?>
 
-			<div class="site-name">
-<?php
 	if ( is_front_page() && ! is_paged() ) {
 ?>
-				<h1 class="site-title">
-					<?php bloginfo( 'name' ); ?>
-				</h1>
+			<h1 class="site-title">
+				<?php bloginfo( 'name' ); ?>
+			</h1>
 <?php
 	} else {
 ?>
-				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</p>
+			<p class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</p>
 <?php
 	}
 
@@ -65,13 +60,12 @@
 
 	if ( $description || is_customize_preview() ) {
 ?>
-				<p class="site-description">
-					<?php echo $description; /* WPCS: xss ok. */ ?>
-				</p>
+			<p class="site-description">
+				<?php echo $description; /* WPCS: xss ok. */ ?>
+			</p>
 <?php
 	}
 ?>
-			</div>
 
 		</div>
 
@@ -96,11 +90,28 @@
 	);
 ?>
 
+			<button type="button" class="search-toggle">
+<?php
+	esc_html_e( 'Search', 'terminal' );
+	terminal_svg( 'search' );
+?>
+			 </button>
+
 		</nav>
 
 	</header>
 
-	<?php do_action( 'before' ); ?>
+<?php
+
+	the_header_image_tag(
+		array(
+			'class' => 'terminal-header-image',
+		)
+	);
+
+	do_action( 'before' );
+
+?>
 
 	<div class="container" id="site-content">
 <?php

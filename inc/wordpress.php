@@ -660,44 +660,6 @@ add_action( 'wp_head', 'terminal_pingback_header' );
 
 
 /**
- * Add search at the end of the menu.
- *
- * @param  string $html The existing menu html.
- * @param  object $args The menu parameters from the original menu object.
- * @return string
- */
-function terminal_nav_menu_html( $html, $args ) {
-
-	// Only display this in the top menu.
-	if ( 'menu-1' !== $args->theme_location ) {
-		return $html;
-	}
-
-	// Item to search for.
-	$search = '</ul>';
-
-	// Search button to add to end of menu.
-	$replace = '<li class="search"><button type="button">' . terminal_svg( 'search', false ) . '</button></li>';
-
-	// Location of end of menu.
-	// Note: this is strRpos - so searches from the end of the string to find
-	// the last item.
-	$pos = strrpos( $html, $search );
-
-	// Make sure end of menu is found.
-	if ( false !== $pos ) {
-		// Insert Item.
-		$html = substr_replace( $html, $replace, $pos, strlen( $search ) );
-	}
-
-	return $html;
-
-}
-
-add_filter( 'wp_nav_menu', 'terminal_nav_menu_html', 10, 2 );
-
-
-/**
  * Display a content intro.
  *
  * This is added to a low priority so that it is inserted before the wrapper.

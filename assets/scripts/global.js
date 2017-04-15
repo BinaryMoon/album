@@ -352,7 +352,7 @@
 			);
 
 			// Display and hide search overlay modal.
-			$( 'nav li.search button' ).on(
+			$( 'nav .search-toggle' ).on(
 				'click',
 				function() {
 					var modal = $( '.search-modal' );

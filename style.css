@@ -216,7 +216,7 @@ textarea {
 }
 
 ::selection {
-  background: #0073aa;
+  background: #916BB3;
   color: #FFFFFF;
 }
 
@@ -356,8 +356,8 @@ p:empty {
 
 pre {
   margin: 3rem 0;
-  background: #0073aa;
-  color: #0073aa;
+  background: #916BB3;
+  color: #916BB3;
   padding: 1.5rem 1.5rem;
   overflow: auto;
   display: block;
@@ -590,10 +590,14 @@ button {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .device-click input[type=submit], .device-click
@@ -609,7 +613,7 @@ button:focus,
 button:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 label {
@@ -736,7 +740,7 @@ table caption {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   text-align: left;
@@ -910,7 +914,7 @@ main div.sharedaddy h3.sd-title {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   margin: 0 0 0.75rem 0;
@@ -965,7 +969,7 @@ main div#jp-relatedposts {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   margin: 0;
 }
@@ -1092,7 +1096,7 @@ div.jetpack-testimonial-shortcode:after {
 
 div.jetpack-testimonial-shortcode .testimonial-entry {
   margin: 0;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 1.5rem;
 }
 
 div.jetpack-testimonial-shortcode .testimonial-entry-content {
@@ -1135,6 +1139,12 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry {
 
 div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1) {
   clear: both;
+}
+
+@media only screen and (max-width: 600px) {
+  div.jetpack-testimonial-shortcode.column-2 .testimonial-entry, div.jetpack-testimonial-shortcode.column-3 .testimonial-entry, div.jetpack-testimonial-shortcode.column-4 .testimonial-entry {
+    width: 100%;
+  }
 }
 
 .entry-breadcrumbs {
@@ -1196,7 +1206,7 @@ form.contact-form div.clear-form {
   font-size: 1rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -1214,7 +1224,7 @@ form.contact-form div.clear-form {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
@@ -1235,10 +1245,14 @@ form.contact-form div.clear-form {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .device-click .woocommerce #respond input#submit, .device-click
@@ -1257,23 +1271,27 @@ form.contact-form div.clear-form {
 .woocommerce input.button:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-  background: #0073aa;
+  background: #916BB3;
   color: #FFFFFF;
   display: inline-block;
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .device-click .woocommerce #respond input#submit.alt, .device-click
@@ -1292,7 +1310,7 @@ form.contact-form div.clear-form {
 .woocommerce input.button.alt:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 .woocommerce .the-content {
@@ -1453,6 +1471,14 @@ form.contact-form div.clear-form {
 
 blockquote.alignleft, blockquote.alignright {
   max-width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  blockquote.alignleft, blockquote.alignright {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /*@noflip*/
@@ -1691,7 +1717,7 @@ blockquote.alignleft, blockquote.alignright {
 
 .widget.widget_flickr #flickr_badge_uber_wrapper td a,
 .widget.widget_flickr #flickr_badge_wrapper td a {
-  color: #0073aa;
+  color: #916BB3;
 }
 
 .widget.widget_flickr #flickr_badge_uber_wrapper td a:focus, .widget.widget_flickr #flickr_badge_uber_wrapper td a:hover,
@@ -1781,7 +1807,7 @@ blockquote.alignleft, blockquote.alignright {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.6;
   display: block;
@@ -2026,7 +2052,7 @@ blockquote.alignleft, blockquote.alignright {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
@@ -2118,7 +2144,7 @@ blockquote.alignleft, blockquote.alignright {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
@@ -2177,7 +2203,7 @@ blockquote.alignleft, blockquote.alignright {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
@@ -2299,36 +2325,16 @@ object {
  * ## - General Properties
  */
 a {
-  color: #0073aa;
-}
-
-.device-click a {
-  transition: all 0.15s ease-in-out;
+  color: #916BB3;
+  text-decoration: none;
 }
 
 a img {
   backface-visibility: hidden;
-  opacity: 1;
-}
-
-.device-click a img {
-  transition: opacity 0.15s ease-in-out;
 }
 
 a:hover {
-  text-decoration: none;
-}
-
-.device-click a:hover {
-  transition: all 0.15s ease-in-out;
-}
-
-a:hover img {
-  opacity: 0.9;
-}
-
-.device-click a:hover img {
-  transition: opacity 0.15s ease-in-out;
+  text-decoration: underline;
 }
 
 .container {
@@ -2347,15 +2353,20 @@ a:hover img {
  * ## - Header
  */
 .masthead {
-  padding: 6rem 4.16667%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #0073aa;
+  padding: 3rem 4.16667%;
+  background: #916BB3;
+  margin-bottom: 3rem;
+}
+
+.masthead:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .masthead .branding {
   min-width: 25%;
+  float: left;
 }
 
 .masthead .branding .custom-logo-link {
@@ -2370,10 +2381,6 @@ a:hover img {
   display: block;
 }
 
-.masthead .branding .site-name {
-  float: left;
-}
-
 .masthead .branding .site-title {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 28px;
@@ -2381,6 +2388,7 @@ a:hover img {
   line-height: 1.5;
   margin: 0;
   display: block;
+  font-weight: normal;
 }
 
 .masthead .branding .site-description {
@@ -2393,8 +2401,7 @@ a:hover img {
 }
 
 .masthead .menu {
-  position: relative;
-  text-align: right;
+  float: right;
 }
 
 .masthead .menu:after {
@@ -2403,234 +2410,108 @@ a:hover img {
   clear: both;
 }
 
-.masthead .menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  z-index: 100;
-}
-
-.masthead .menu li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-.masthead .menu li a {
-  display: block;
-  padding: 0 0;
-  position: relative;
-}
-
-.masthead .menu li.menu-item-has-children > a {
-  padding-right: 1.2em;
-  padding-left: 0;
-}
-
-.masthead .menu li.menu-item-has-children > a:after {
-  position: absolute;
-  border: 0.4em solid transparent;
-  content: "";
-  top: 45%;
-  top: calc( 50% - ( 0.4em / 2 ));
-  right: 0;
-  left: auto;
-  border-bottom-width: 0;
-  border-top-color: currentColor;
-}
-
-.masthead .menu li.current-menu-item > a {
-  text-decoration: underline;
-}
-
-.masthead .menu li ul {
-  position: absolute;
-  width: 16rem;
-  background: #FFFFFF;
-  left: -999em;
-}
-
-.masthead .menu li ul:after {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  left: -2rem;
-  right: auto;
-  bottom: -2rem;
-  top: 1.5rem;
-  content: '';
-}
-
-.masthead .menu li ul ul {
-  top: 0;
-  left: -999em;
-  right: auto;
-}
-
-.masthead .menu li ul ul:before {
-  display: none;
-}
-
-.masthead .menu li ul li {
-  position: relative;
-  display: block;
-  float: none;
-}
-
-.masthead .menu li ul li a {
-  color: #000000;
-}
-
-.masthead .menu li ul li a:focus, .masthead .menu li ul li a:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-
-.masthead .menu li ul li.menu-item-has-children > a:after {
-  top: 35%;
-  top: calc( 50% - 0.4em);
-  border-top-color: transparent;
-  border-left-color: currentColor;
-  border-top-width: 0.4em;
-  border-bottom-width: 0.4em;
-  border-right-width: 0;
-}
-
-.masthead .menu li ul li:last-child {
-  border: none;
-}
-
-.masthead .menu li ul li.current-menu-item > a {
-  font-weight: bold;
-}
-
-.masthead .menu li.focus > ul, .masthead .menu li:hover > ul {
-  left: auto;
-  right: auto;
-}
-
-.masthead .menu ul ul li.focus > ul, .masthead .menu ul ul li:hover > ul {
-  left: 100%;
-  right: auto;
-}
-
-.masthead .menu .menu-toggle {
-  display: none;
-  border: none;
+.masthead .menu button {
+  float: right;
   background: transparent;
-  cursor: pointer;
-  margin: 0;
-  width: 100%;
+  color: #FFFFFF;
+  position: relative;
+  padding-right: 2.25rem;
+  padding-left: 1.25rem;
 }
 
-.masthead .menu .menu-toggle:before {
-  margin-right: 0.5em;
-  color: currentColor;
-}
-
-.masthead .menu .menu-toggle:focus {
-  outline: thin dotted;
+.masthead .menu button .icon {
+  position: absolute;
+  right: 0;
 }
 
 .masthead .menu .menu-toggle .icon {
-  fill: currentColor;
+  margin-top: -0.4rem;
 }
 
-.masthead .menu.menu-on .menu-toggle {
-  margin-bottom: 1.5rem;
+.masthead .menu .search-toggle .icon {
+  height: 1.4rem;
+  margin-top: -0.25rem;
 }
 
-.masthead .menu .menu-toggle .icon .menu-rows-1,
-.masthead .menu .menu-toggle .icon .menu-rows-2,
-.masthead .menu .menu-toggle .icon .menu-rows-3 {
-  transform: rotate3d(0, 0, 1, 0) translate3d(0, 0, 0);
-  opacity: 1;
-  transform-origin: center center;
+.masthead .menu ul.menu-wrap {
+  background: rgba(26, 27, 29, 0.95);
+  padding: 6rem 3rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 102;
+  margin: 0;
+  display: none;
 }
 
-.device-click .masthead .menu .menu-toggle .icon .menu-rows-1, .device-click
-.masthead .menu .menu-toggle .icon .menu-rows-2, .device-click
-.masthead .menu .menu-toggle .icon .menu-rows-3 {
-  transition: all 0.15s ease-in-out;
-}
-
-.masthead .menu li {
+.masthead .menu ul.menu-wrap li {
+  display: block;
   padding: 0.75rem 1.5rem;
 }
 
-.masthead .menu li:hover {
-  cursor: pointer;
+.masthead .menu ul.menu-wrap li a {
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
-.masthead .menu li.search {
-  padding-left: 1rem;
-  padding-right: 0;
+.masthead .menu ul.menu-wrap li ul {
+  display: block;
+  padding: 0 0 0 3rem;
 }
 
-.masthead .menu li.search button {
+.masthead .menu ul.menu-wrap li ul li:hover {
   background: transparent;
+}
+
+.masthead .menu.menu-on ul.menu-wrap {
+  display: block;
+  animation: fade-in 0.8s, slide-from-top 0.8s;
+}
+
+.masthead .menu.menu-on .menu-toggle {
   color: #FFFFFF;
-  line-height: 1;
-  padding: 0;
-  vertical-align: middle;
+  margin: 0;
 }
 
-.masthead .menu li.search button:hover {
-  opacity: 1;
+.masthead .menu.menu-on .icon .menu-rows-1 {
+  transform: rotate3d(0, 0, 1, 45deg) translate3d(22%, 220%, 0);
 }
 
-.masthead .menu li.search svg {
-  height: 1em;
-  width: 1em;
+.masthead .menu.menu-on .icon .menu-rows-2 {
+  transform: scale3d(0, 0, 1);
+  opacity: 0;
 }
 
-.masthead .menu li > a {
-  color: #FFFFFF;
+.masthead .menu.menu-on .icon .menu-rows-3 {
+  transform: rotate3d(0, 0, 1, -45deg) translate3d(22%, -220%, 0);
+}
+
+.masthead .menu ul ul li.focus > ul,
+.masthead .menu ul ul li:hover > ul {
+  left: 0;
+  right: 0;
 }
 
 .masthead .menu li.menu-item-has-children {
-  padding-right: 3rem;
-  padding-left: 1.5rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .masthead .menu li.menu-item-has-children > a {
-  padding-left: 0;
-  padding-right: 0;
+  margin-bottom: 0.75rem;
 }
 
 .masthead .menu li.menu-item-has-children > a:after {
-  right: -1rem;
-  left: auto;
-  opacity: 0.6;
-  font-size: 0.75rem;
+  display: none;
 }
 
-.masthead .menu li ul li {
-  line-height: 1.35;
-}
-
-.device-click .masthead .menu li ul li {
-  transition: all 0.2s ease-in-out;
-}
-
-.masthead .menu li ul li a {
-  background: transparent;
-}
-
-.masthead .menu li ul li a:hover {
-  text-decoration: none;
-  box-shadow: none;
-}
-
-.masthead .menu li ul li.current-menu-item > a {
-  box-shadow: none;
-}
-
-.masthead .menu li.current-menu-item > a {
-  font-weight: bold;
-  text-decoration: none;
+.masthead .menu li.search button {
+  color: #FFFFFF;
 }
 
 a.header-image {
@@ -2722,11 +2603,6 @@ main.full-width .contributor {
   padding: 0 4.16667%;
 }
 
-.sidebar-main .widget {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 1.5rem 2.25rem;
-}
-
 @media only screen and (max-width: 782px) {
   .sidebar-main {
     width: 100%;
@@ -2760,7 +2636,7 @@ body.single #site-content {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   display: block;
 }
@@ -2901,15 +2777,6 @@ body.single #site-content {
   margin-bottom: 1.5rem;
 }
 
-.content-posts article.sticky {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 1.5rem 1.5rem;
-}
-
-.content-posts article.sticky .thumbnail {
-  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
-}
-
 .content-posts article .read-more {
   background: #000000;
   color: #FFFFFF;
@@ -2917,10 +2784,14 @@ body.single #site-content {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   padding: 0.5rem 1.5rem;
 }
 
@@ -2931,7 +2802,7 @@ body.single #site-content {
 .content-posts article .read-more:focus, .content-posts article .read-more:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 .content-posts article h2.entry-title {
@@ -2939,6 +2810,7 @@ body.single #site-content {
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 0.75rem;
+  letter-spacing: -0.05em;
 }
 
 .content-posts article.format-audio .wp-playlist,
@@ -3097,16 +2969,6 @@ body.single #site-content {
   font-weight: lighter;
 }
 
-.error404 .page-404 .entry-title:after {
-  display: block;
-  clear: both;
-  content: '';
-  background: #000000;
-  width: 1rem;
-  height: 2px;
-  margin: 0.75rem 0 3rem 0;
-}
-
 /**
  * ## - The Content
  * Styles for blog post content
@@ -3209,10 +3071,14 @@ body.single #site-content {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .device-click .the-content .button {
@@ -3222,7 +3088,7 @@ body.single #site-content {
 .the-content .button:focus, .the-content .button:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 .the-content .small-caps {
@@ -3281,7 +3147,6 @@ body.single #site-content {
 }
 
 .credits {
-  background: #E8E9EE;
   padding: 4.5rem 3rem 3rem 3rem;
 }
 
@@ -3387,7 +3252,7 @@ body.single #site-content {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
@@ -3410,10 +3275,14 @@ body.single #site-content {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   padding: .6rem 1.2rem;
 }
 
@@ -3424,7 +3293,7 @@ body.single #site-content {
 .contributor .buttons a:focus, .contributor .buttons a:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 /* child pages (on child page template) */
@@ -3488,7 +3357,7 @@ body.single #site-content {
 }
 
 .content-testimonials .testimonial .entry a {
-  color: #0073aa;
+  color: #916BB3;
   font-weight: bold;
 }
 
@@ -3510,7 +3379,7 @@ body.single #site-content {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   display: block;
   text-align: center;
@@ -3530,29 +3399,21 @@ body.single #site-content {
 }
 
 .jetpack-projects-page .content-projects-header {
-  padding: 14% 0 13% 0;
-  animation: slide-from-left 1.2s;
+  padding: 3rem 0;
+  background: #916BB3;
+  margin-bottom: 3rem;
 }
 
 .jetpack-projects-page .content-projects-header .entry,
 .jetpack-projects-page .content-projects-header h1.entry-title {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  color: #FFFFFF;
 }
 
 .jetpack-projects-page .content-projects-header h1.entry-title {
-  font-size: 52px;
-  font-size: 3.25rem;
+  font-size: 80px;
+  font-size: 5rem;
   line-height: 1.25;
-}
-
-.jetpack-projects-page .content-projects-header h1.entry-title:after {
-  display: block;
-  clear: both;
-  content: '';
-  background: #000000;
-  width: 1rem;
-  height: 2px;
-  margin: 0.75rem 0;
 }
 
 .jetpack-projects-page .content-projects-header .entry {
@@ -3611,16 +3472,6 @@ body.single #site-content {
   line-height: 1.75;
   margin-bottom: 0.75rem;
   font-weight: bold;
-}
-
-.jetpack-projects-page .projects-terms .project-terms-intro:after {
-  display: block;
-  clear: both;
-  content: '';
-  background: #000000;
-  width: 1rem;
-  height: 2px;
-  margin: 0.75rem 0 1.5rem 0;
 }
 
 @media only screen and (max-width: 782px) {
@@ -3740,16 +3591,23 @@ a.thumbnail img:hover {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
 /* featured content */
+.showcase-container {
+  width: 100%;
+  float: left;
+  min-height: 1em;
+  padding: 0 4.16667%;
+  margin-bottom: 3rem;
+}
+
 .showcase {
   position: relative;
   height: 0;
   padding-bottom: 36%;
-  margin-bottom: 4.5rem;
 }
 
 .showcase:after {
@@ -3902,7 +3760,7 @@ a.thumbnail img:hover {
   bottom: 0;
   left: 0;
   opacity: 0.4;
-  background: #0073aa center center fixed no-repeat;
+  background: #916BB3 center center fixed no-repeat;
   background-size: cover;
 }
 
@@ -3925,16 +3783,6 @@ a.thumbnail img:hover {
   max-width: 48rem;
   color: #FFFFFF;
   line-height: 1.05;
-}
-
-.post-cover .entry .entry-title:after {
-  display: block;
-  clear: both;
-  content: '';
-  background: #000000;
-  width: 1rem;
-  height: 2px;
-  margin-top: 1.5rem;
 }
 
 @media only screen and (max-width: 782px) {
@@ -3974,10 +3822,14 @@ a.thumbnail img:hover {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   z-index: 1;
 }
 
@@ -3988,7 +3840,7 @@ a.thumbnail img:hover {
 .post-cover .edit-link a:focus, .post-cover .edit-link a:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 .post-gallery:after {
@@ -4034,22 +3886,12 @@ a.thumbnail img:hover {
 }
 
 .widget .widget-title:after {
-  display: block;
-  clear: both;
-  content: '';
-  background: #000000;
-  width: 1rem;
-  height: 2px;
   margin: 0.375rem 0 1.5rem 0;
 }
 
 .widget ol li + li,
 .widget ul li + li {
   margin-top: 0.75rem;
-}
-
-.widget a {
-  font-weight: bold;
 }
 
 .widget.widget_recent_entries .post-date {
@@ -4071,7 +3913,7 @@ a.thumbnail img:hover {
   font-size: 1rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
@@ -4092,7 +3934,7 @@ a.thumbnail img:hover {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
@@ -4108,10 +3950,14 @@ a.thumbnail img:hover {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .device-click .infinite-scroll #infinite-handle button {
@@ -4121,7 +3967,7 @@ a.thumbnail img:hover {
 .infinite-scroll #infinite-handle button:focus, .infinite-scroll #infinite-handle button:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 .entry-archive-header {
@@ -4139,18 +3985,8 @@ a.thumbnail img:hover {
   font-size: 0.75rem;
   line-height: 1.75;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-}
-
-.entry-archive-header .entry-archive-title:after {
-  display: block;
-  clear: both;
-  content: '';
-  background: #000000;
-  width: 1rem;
-  height: 2px;
-  margin: 0.75rem 0 3rem 0;
 }
 
 .modal {
@@ -4268,17 +4104,6 @@ blockquote {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 
-blockquote:after, blockquote:before {
-  display: block;
-  clear: both;
-  content: '';
-  background: #000000;
-  width: 15rem;
-  height: 2px;
-  max-width: 50%;
-  margin: 3rem auto;
-}
-
 .category-description {
   font-size: 28px;
   font-size: 1.75rem;
@@ -4337,10 +4162,14 @@ blockquote:after, blockquote:before {
   text-decoration: none;
   border-radius: 0;
   border: none;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   padding: 0.8rem 1.6rem;
-  letter-spacing: 0.05em;
   text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .device-click .attachment .image-navigation .nav-next a, .device-click
@@ -4353,7 +4182,7 @@ blockquote:after, blockquote:before {
 .attachment .image-navigation .nav-previous a:hover {
   text-decoration: underline;
   box-shadow: none;
-  background: #0073aa;
+  background: #916BB3;
 }
 
 .terminal-header-image {
@@ -4440,89 +4269,6 @@ blockquote:after, blockquote:before {
 }
 
 @media only screen and (max-width: 782px) {
-  .masthead .menu .menu-toggle {
-    display: block;
-    color: #43444b;
-    position: relative;
-    z-index: 101;
-  }
-  .masthead .menu .menu-toggle .icon {
-    vertical-align: middle;
-    margin-left: 0.5em;
-    margin-right: 0;
-  }
-  .masthead .menu ul.menu-wrap {
-    background: rgba(26, 27, 29, 0.95);
-    padding: 6rem 3rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: auto;
-    display: none;
-  }
-  .masthead .menu ul.menu-wrap li {
-    display: block;
-    text-align: center;
-    padding: 0.75rem 1.5rem;
-  }
-  .masthead .menu ul.menu-wrap li a {
-    color: #FFFFFF;
-    display: inline-block;
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  .masthead .menu ul.menu-wrap li ul {
-    position: relative;
-    width: auto;
-    left: 0;
-    right: 0;
-    display: block;
-    background: rgba(87, 94, 106, 0.4);
-  }
-  .masthead .menu ul.menu-wrap li ul li:hover {
-    background: transparent;
-  }
-  .masthead .menu ul.menu-wrap .sub-menu {
-    background: rgba(87, 94, 106, 0.8);
-  }
-  .masthead .menu.menu-on ul.menu-wrap {
-    display: block;
-    animation: fade-in 0.8s, slide-from-top 0.8s;
-  }
-  .masthead .menu.menu-on .menu-toggle {
-    color: #FFFFFF;
-    margin: 0;
-  }
-  .masthead .menu.menu-on .icon .menu-rows-1 {
-    transform: rotate3d(0, 0, 1, 45deg) translate3d(22%, 220%, 0);
-  }
-  .masthead .menu.menu-on .icon .menu-rows-2 {
-    transform: scale3d(0, 0, 1);
-    opacity: 0;
-  }
-  .masthead .menu.menu-on .icon .menu-rows-3 {
-    transform: rotate3d(0, 0, 1, -45deg) translate3d(22%, -220%, 0);
-  }
-  .masthead .menu ul ul li.focus > ul,
-  .masthead .menu ul ul li:hover > ul {
-    left: 0;
-    right: 0;
-  }
-  .masthead .menu li.menu-item-has-children {
-    padding: 0.75rem 1.5rem;
-  }
-  .masthead .menu li.menu-item-has-children > a {
-    margin-bottom: 0.75rem;
-  }
-  .masthead .menu li.menu-item-has-children > a:after {
-    display: none;
-  }
-  .masthead .menu li.search button {
-    color: #FFFFFF;
-  }
   html {
     font-size: 90%;
   }

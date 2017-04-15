@@ -91,9 +91,6 @@ main {
 
 	.widget {
 
-		background:rgba( $canvas-white, 0.5 );
-		padding: $grid-line-height ( $grid-gutter * 0.75 );
-
 	}
 
 	@include for-tablet {
@@ -310,20 +307,6 @@ main {
 
 		&.sticky {
 
-			background: rgba( $canvas-white, 0.5 );
-			padding: $grid-line-height ( $grid-gutter / 2 );
-
-			.thumbnail {
-
-				margin: ( -$grid-line-height ) ( $grid-gutter / -2 ) $grid-line-height ( $grid-gutter / -2 );
-
-				&:before {
-
-
-				}
-
-			}
-
 		}
 
 		.read-more {
@@ -337,7 +320,7 @@ main {
 
 			@include modular-scale( gamma, 1.2 );
 			margin-bottom: $grid-line-height / 2;
-			//font-weight: bold;
+			letter-spacing: -0.05em;
 
 		}
 
@@ -635,13 +618,6 @@ main {
 		.entry-title {
 
 			font-weight: lighter;
-
-			&:after {
-
-				@include title-border;
-				margin: ( $grid-line-height / 2 ) 0 ( $grid-line-height * 2 ) 0;
-
-			}
 
 		}
 

@@ -15,7 +15,9 @@
 		$featured_posts = terminal_get_featured_posts( 4 );
 ?>
 
-	<section class="showcase">
+	<section class="showcase-container">
+
+		<div class="showcase">
 
 <?php
 		foreach ( $featured_posts as $post ) {
@@ -23,13 +25,15 @@
 			setup_postdata( $post );
 ?>
 
-		<article <?php post_class(); ?>>
-			<?php get_template_part( 'parts/post-cover' ); ?>
-		</article>
+			<article <?php post_class(); ?>>
+				<?php get_template_part( 'parts/post-cover' ); ?>
+			</article>
 
 <?php
 		}
 ?>
+
+		</div>
 
 	</section>
 

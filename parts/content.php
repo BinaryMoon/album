@@ -25,24 +25,21 @@
 
 <?php
 	}
-
-	get_template_part( 'parts/post-meta' );
-
 ?>
+
+	<header>
+<?php
+		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		get_template_part( 'parts/post-meta' );
+?>
+	</header>
 
 	<section class="entry entry-archive">
 
-<?php
-
-	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-
-	the_excerpt();
-
-?>
+		<?php the_excerpt(); ?>
 
 		<p><a href="<?php the_permalink(); ?>" class="read-more"><?php terminal_read_more_text(); ?></a></p>
 
 	</section>
-
 
 </article>
