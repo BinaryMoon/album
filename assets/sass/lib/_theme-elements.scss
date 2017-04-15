@@ -501,52 +501,8 @@ a.thumbnail {
 		}
 
 		h2 {
+
 			color: $canvas-white;
-		}
-
-	}
-
-	.arrow {
-
-		position: absolute;
-		z-index: layer( showcase_nav );
-		width: 50px;
-		height: 50px;
-		top: -50%;
-		background: transparent;
-		margin-top: -14.5%;
-		line-height: 50px;
-		text-align: center;
-		padding: 0;
-		border: none;
-
-		&.arrow-next {
-
-			right: $grid-gutter / 3;
-			left: auto;
-
-			&:before {
-
-				@include arrow-right( $canvas-white, 12px );
-				margin-right: 29px;
-				margin-left: 0;
-
-			}
-
-		}
-
-		&.arrow-prev {
-
-			left: $grid-gutter / 3;
-			right: auto;
-
-			&:before {
-
-				@include arrow-left( $canvas-white, 12px );
-				margin-left: 29px;
-				margin-right: 0;
-
-			}
 
 		}
 
@@ -554,64 +510,60 @@ a.thumbnail {
 
 	nav {
 
-		text-align: center;
 		position: absolute;
-		z-index: layer( showcase_nav );
-		bottom: 0.5em;
-		left: 0;
+		bottom: 0;
 		right: 0;
+		left: auto;
+		z-index: layer( showcase_nav );
 
 		.tab {
 
-			background: $canvas-grey-100;
-			margin: $style-spacing;
-			padding: 0;
-			border: 1px solid rgba( $canvas-white, 0.2 );
-			width: 0.4em;
-			height: 0.4em;
-			display: inline-block;
-			position: relative;
-			border-radius: 100%;
-
-			.device-touch & {
-
-				width: 1em;
-				height: 1em;
-
-			}
-
-			&.selected {
-
-				background: $canvas-white;
-
-			}
+			display: none;
 
 		}
 
 	}
 
-	&:focus,
-	&:hover {
-
-		.arrow {
-
-			&:hover {
-
-			}
-
-		}
-
-	}
-
-}
-
-.showcase {
 	.arrow {
-		outline:none;
+
+		width: $grid-gutter;
+		height: $grid-gutter;
+		line-height: $grid-gutter;
+		background: $canvas-background;
+		text-align: center;
+		padding: 0;
+		border: none;
+		display: block;
+		float: right;
+
+		&.arrow-next {
+
+			&:before {
+
+				@include arrow-right( contrast( $canvas-background ), 0.5rem, 1rem );
+
+			}
+
+		}
+
+		&.arrow-prev {
+
+			&:before {
+
+				@include arrow-left( contrast( $canvas-background ), 0.5rem, 1rem );
+
+			}
+
+		}
+
+		&:hover {
+
+			background: $canvas-color;
+
+		}
+
 	}
-	button {
-		outline:none;
-	}
+
 }
 
 .post-cover {
@@ -641,11 +593,12 @@ a.thumbnail {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 0 grid-gutter( 12 ) ( $grid-line-height * 1.5 ) grid-gutter( 12 );
+		padding: 0 ( $grid-gutter * 3 ) ( $grid-line-height * 1.5 ) grid-gutter( 12 );
 
 		.entry-title {
 
-			@include modular-scale( delta );
+			@include modular-scale( gamma );
+			margin-bottom: 0;
 			max-width: 48rem;
 			color: $canvas-white;
 			line-height: 1.05;
