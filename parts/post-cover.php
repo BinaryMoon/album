@@ -44,7 +44,7 @@
 <?php
 	}
 
-	the_title( '<' . $title_tag . ' class="entry-title">', '</' . $title_tag . '>' );
+	the_title( '<' . $title_tag . ' class="entry-title"><span>', '</span></' . $title_tag . '>' );
 
 	if ( ! is_singular() || is_front_page() ) {
 ?>

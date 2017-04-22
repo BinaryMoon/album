@@ -69,35 +69,12 @@
 
 		</div>
 
-		<nav class="menu menu-primary" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'terminal' ); ?>">
-
-			<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
+		<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
 <?php
-	esc_html_e( 'Menu', 'terminal' );
-	terminal_svg( 'menu-rows' );
+esc_html_e( 'Menu', 'terminal' );
+terminal_svg( 'menu-rows' );
 ?>
-			</button>
-
-<?php
-	wp_nav_menu(
-		array(
-			'theme_location' => 'menu-1',
-			'menu_id' => 'nav',
-			'menu_class' => 'menu-wrap',
-			'container' => false,
-			'item_spacing' => 'discard',
-		)
-	);
-?>
-
-			<button type="button" class="search-toggle">
-<?php
-	esc_html_e( 'Search', 'terminal' );
-	terminal_svg( 'search' );
-?>
-			 </button>
-
-		</nav>
+		</button>
 
 	</header>
 
