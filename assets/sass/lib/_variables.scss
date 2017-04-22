@@ -6,7 +6,7 @@ $font-family-serif: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Anti
 $font-base: 16;
 $font-family-body: $font-family-serif;
 $font-family-header: $font-family-sans;
-//$line-height: 1.5;
+$line-height: 1.5;
 $line-height-margin-multiplier: 1.5;
 
 // enable/ disable debug features
@@ -53,10 +53,10 @@ $body-copy-color: #000000;
 $body-header-color: #000000;
 
 // grid sizes
-//$grid-line-height: $line-height * 1rem;
+$grid-line-height: $line-height * 1rem;
 $grid-total-width: 90rem;
 //$grid-line-height-multiplier: 1.5;
-//$grid-gutter: 3em;
+$grid-gutter: 4rem;
 //$grid-column-gutter: 1 / 2;
 //
 $border-width: 2px;
@@ -107,3 +107,7 @@ $layer: (
 	modal: 200,
 	top: 100000
 );
+
+$sidebar-menu-width: $grid-gutter * 8;
+
+$showcase-arrow-size: $grid-line-height * 3;

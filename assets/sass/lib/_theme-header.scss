@@ -52,176 +52,60 @@
 
 	}
 
-
-	.menu {
+	// Used for menu toggle AND search toggle
+	button {
 
 		float: right;
-		@include clear;
+		background: transparent;
+		color: $canvas-white;
+		position: relative;
+		padding-right: 2.5rem;
+		padding-left: 1.25rem;
 
-		// Used for menu toggle AND search toggle
-		button {
+		.icon {
 
-			float: right;
-			background: transparent;
-			color: $canvas-white;
-			position: relative;
-			padding-right: 2.25rem;
-			padding-left: 1.25rem;
-
-			.icon {
-
-				position: absolute;
-				right: 0;
-
-			}
-
-		}
-
-		.menu-toggle {
-
-			.icon {
-
-				margin-top: -0.4rem;
-
-			}
-
-		}
-
-		.search-toggle {
-
-			.icon {
-
-				height: 1.4rem;
-				margin-top: -0.25rem;
-
-			}
-
-		}
-
-		ul.menu-wrap {
-
-			padding: ( $grid-line-height * 4 ) ( $grid-gutter );
-			position: fixed;
-			top: 0;
+			position: absolute;
 			right: 0;
-			bottom: 0;
-			left: 0;
-			overflow: auto;
-			z-index: layer( menu_overlay );
-			margin: 0;
-			display: none;
+			top: 0.6rem;
 
-			li {
+			rect {
 
-				display: block;
-				padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
-
-				a {
-
-					color: $canvas-white;
-					display: inline-block;
-					@include modular-scale( epsilon );
-
-				}
-
-				ul {
-
-					display: block;
-					padding: 0 0 0 $grid-gutter;
-
-					a {
-
-					}
-
-					li {
-
-						&:hover {
-
-							background: transparent;
-
-						}
-
-					}
-
-				}
+				transform-origin: center;
 
 			}
 
 		}
 
-		&.menu-on {
-
-			ul.menu-wrap {
-
-				display: block;
-				@include animation( #{fade-in 0.8s, slide-from-top 0.8s} )
-
-			}
-
-			.menu-toggle {
-
-				color: $canvas-white;
-				margin: 0;
-
-			}
+		body.menu-on & {
 
 			.icon {
 
+				.menu-rows-4,
 				.menu-rows-1 {
-
-					transform: rotate3d(0, 0, 1, 45deg) translate3d( 22%, 220%, 0 );
-
-				}
-
-				.menu-rows-2 {
-
-					transform: scale3d(0, 0, 1);
-					opacity: 0;
-
-				}
-
-				.menu-rows-3 {
-
-					transform: rotate3d(0, 0, 1, -45deg) translate3d( 22%, -220%, 0 );
-
-				}
-			}
-
-		}
-
-		ul ul li.focus > ul,
-		ul ul li:hover > ul {
-
-			left: 0;
-			right: 0;
-
-		}
-
-		li.menu-item-has-children {
-
-			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
-
-			> a {
-
-				margin-bottom: $grid-line-height / 2;
-
-				&:after {
 
 					display: none;
 
 				}
 
+				.menu-rows-2 {
+
+					transform: rotate( 45deg );
+
+				}
+
+				.menu-rows-3 {
+
+					transform: rotate( -45deg );
+
+				}
+
 			}
 
 		}
 
-		li.search button {
-
-			color: $canvas-white;
-
-		}
-
 	}
+
+
 
 }
 

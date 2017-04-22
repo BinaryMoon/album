@@ -526,9 +526,9 @@ a.thumbnail {
 
 	.arrow {
 
-		width: $grid-gutter;
-		height: $grid-gutter;
-		line-height: $grid-gutter;
+		width: $showcase-arrow-size;
+		height: $showcase-arrow-size;
+		line-height: $showcase-arrow-size;
 		background: $canvas-background;
 		text-align: center;
 		padding: 0;
@@ -540,7 +540,7 @@ a.thumbnail {
 
 			&:before {
 
-				@include arrow-right( contrast( $canvas-background ), 0.5rem, 1rem );
+				@include arrow-right( contrast( $canvas-background ), 0.5rem, $grid-line-height + 0.25rem );
 
 			}
 
@@ -550,7 +550,7 @@ a.thumbnail {
 
 			&:before {
 
-				@include arrow-left( contrast( $canvas-background ), 0.5rem, 1rem );
+				@include arrow-left( contrast( $canvas-background ), 0.5rem, $grid-line-height + 0.25rem );
 
 			}
 
@@ -582,7 +582,7 @@ a.thumbnail {
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background: $canvas-color center center fixed no-repeat;
+		background: $canvas-color center center no-repeat;
 		background-size: cover;
 
 	}
@@ -593,15 +593,44 @@ a.thumbnail {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 0 ( $grid-gutter * 3 ) ( $grid-line-height * 1.5 ) grid-gutter( 12 );
+		padding: 0 ( $grid-line-height * 6 ) ( $grid-line-height * 3 ) 0;
+
+		a {
+
+			&:hover {
+
+				text-decoration: none;
+
+				span {
+
+					background: $canvas-color;
+					color: $canvas-white;
+
+				}
+
+			}
+
+		}
 
 		.entry-title {
 
 			@include modular-scale( gamma );
 			margin-bottom: 0;
 			max-width: 48rem;
-			color: $canvas-white;
+			color: $canvas-grey-100;
 			line-height: 1.05;
+
+			span {
+
+				background: $canvas-white;
+				box-decoration-break: clone;
+				display: inline;
+				line-height: 1.4;
+				padding: ( $grid-line-height / 4 ) ( $grid-gutter / 3 );
+				margin-left: $grid-gutter / -3;
+				margin-right: 0;
+
+			}
 
 			@include for-tablet() {
 
@@ -646,7 +675,7 @@ a.thumbnail {
 
 			position: absolute;
 			top: $grid-line-height;
-			right: $grid-gutter;
+			right: $grid-gutter / 2;
 			left: auto;
 			@include button;
 			z-index: 1;
@@ -742,11 +771,6 @@ a.thumbnail {
 // search form
 form.search-form {
 
-
-}
-
-.search-wrapper {
-
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 
 }
@@ -832,101 +856,6 @@ form.search-form {
 
 }
 
-
-.modal {
-
-	background: rgba( $canvas-color, 0.9 );
-	padding: ( $grid-line-height * 4 ) ( $grid-gutter );
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: layer( modal );
-	transform: translateY( -100% );
-	opacity: 0;
-	@include transition( all 0.4s ease-in-out );
-
-	button.close {
-
-		background: transparent;
-		position: absolute;
-		top: $grid-line-height * 2;
-		right: $grid-gutter;
-		left: auto;
-		color:#b6b6b6;
-		&:hover {
-			color: #fff;
-		}
-
-	}
-
-	form {
-
-		max-width: $grid-total-width / 3;
-
-	}
-
-	&.display {
-
-		transform: translateY( 0 );
-		opacity: 1;
-
-	}
-
-}
-
-.search-modal {
-
-	form.search-form {
-
-		input.search-field {
-
-			color: $canvas-white;
-			background: transparent;
-
-			&::-webkit-input-placeholder {
-			   color: rgba( $canvas-white, 0.5 );
-			}
-
-			&:-moz-placeholder { /* Firefox 18- */
-			   color: rgba( $canvas-white, 0.5 );
-			}
-
-			&::-moz-placeholder {  /* Firefox 19+ */
-			   color: rgba( $canvas-white, 0.5 );
-			}
-
-			&:-ms-input-placeholder {
-			   color: rgba( $canvas-white, 0.5 );
-			}
-
-			&:hover,
-			&:focus {
-
-				border-bottom: 1px solid $canvas-white;
-
-			}
-
-		}
-
-		button.search-submit {
-
-			.icon {
-
-				color: $canvas-white;
-
-			}
-
-		}
-
-	}
-
-}
-
 form.search-form {
 
 	max-width: $grid-total-width / 3;
@@ -944,6 +873,107 @@ form.search-form {
 
 		right: auto;
 		left: 0;
+
+	}
+
+}
+
+.overlay-menu {
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	width: $sidebar-menu-width;
+	max-width: 100%;
+	background: $canvas-grey-100;
+	z-index: layer( menu_overlay );
+	padding: ( $grid-line-height * 2 ) ( $grid-gutter / 2 );
+	transform: translateX( $sidebar-menu-width );
+	@include transition;
+
+	.admin-bar & {
+
+		top: $wp-admin-bar-height;
+
+	}
+
+	ul.menu-wrap {
+
+		margin: 0;
+
+		li {
+
+			display: block;
+			padding: ( $grid-line-height / 2 ) 0;
+
+			a {
+
+				color: $canvas-white;
+				display: inline-block;
+				@include modular-scale( epsilon );
+
+			}
+
+			ul {
+
+				display: block;
+				padding: ( $grid-line-height / 2 ) 0 0 0;
+
+				a {
+
+				}
+
+				li {
+
+					&:hover {
+
+						background: transparent;
+
+					}
+
+				}
+
+			}
+
+			&.menu-item-has-children {
+
+				padding-bottom: 0;
+
+			}
+
+		}
+
+	}
+
+	ol,
+	ul {
+
+		li + li {
+
+			margin-top: 0;
+
+		}
+
+	}
+
+	.menu-on & {
+
+		display: block;
+		transform: translateX( 0 );
+		@include transition;
+
+	}
+
+}
+
+body.menu-on {
+
+	.webpage {
+
+		transform: translateX( -$sidebar-menu-width );
+		@include transition;
 
 	}
 
