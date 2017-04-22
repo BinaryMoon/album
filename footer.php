@@ -39,7 +39,7 @@
 </div>
 
 <?php
-	get_template_part( 'parts/search-overlay' );
+	get_template_part( 'parts/overlay-menu' );
 	wp_footer();
 ?>
 
