@@ -17,11 +17,14 @@
 /**
  * TO BUILD
  *
- * Replace menu with an overlay menu that has a simple menu link
  * Add sidebar to single post pages
  * Add full width template
  * Change next and previous post links on single posts
  * Add &rarr to 'read more' link on blog post listing
+ * standardize post title design using post-cover layout
+ * fix projects header layout
+ * standardize projects menu font styles
+ * 
  */
 
 /**
